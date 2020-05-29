@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631102248164A20073D4C7 /* EditCourse.storyboard */; };
+		5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631103248164A30073D4C7 /* EditEvent.storyboard */; };
+		5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631105248164A30073D4C7 /* CreateEventVC.swift */; };
+		5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */; };
+		5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631107248164A30073D4C7 /* EditCourseVC.swift */; };
+		5B631114248164A30073D4C7 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631108248164A30073D4C7 /* RoundedView.swift */; };
+		5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631109248164A30073D4C7 /* EditEventVC.swift */; };
+		5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110A248164A30073D4C7 /* RoundedTextField.swift */; };
+		5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110B248164A30073D4C7 /* RoundedButton.swift */; };
+		5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110C248164A30073D4C7 /* EditAcademyVC.swift */; };
+		5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110D248164A30073D4C7 /* CreateEvent.storyboard */; };
+		5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110E248164A30073D4C7 /* EditAcademy.storyboard */; };
 		5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */; };
 		5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */; };
 		5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */; };
@@ -37,6 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B631102248164A20073D4C7 /* EditCourse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditCourse.storyboard; sourceTree = SOURCE_ROOT; };
+		5B631103248164A30073D4C7 /* EditEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditEvent.storyboard; sourceTree = SOURCE_ROOT; };
+		5B631105248164A30073D4C7 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndeLinedTextfield.swift; sourceTree = "<group>"; };
+		5B631107248164A30073D4C7 /* EditCourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseVC.swift; sourceTree = "<group>"; };
+		5B631108248164A30073D4C7 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		5B631109248164A30073D4C7 /* EditEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventVC.swift; sourceTree = "<group>"; };
+		5B63110A248164A30073D4C7 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		5B63110B248164A30073D4C7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5B63110C248164A30073D4C7 /* EditAcademyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAcademyVC.swift; sourceTree = "<group>"; };
+		5B63110D248164A30073D4C7 /* CreateEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = SOURCE_ROOT; };
+		5B63110E248164A30073D4C7 /* EditAcademy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditAcademy.storyboard; sourceTree = SOURCE_ROOT; };
 		5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalSignupStoryboard.storyboard; sourceTree = "<group>"; };
 		5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
 		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B631104248164A30073D4C7 /* Designs */ = {
+			isa = PBXGroup;
+			children = (
+				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
+				5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */,
+				5B631107248164A30073D4C7 /* EditCourseVC.swift */,
+				5B631108248164A30073D4C7 /* RoundedView.swift */,
+				5B631109248164A30073D4C7 /* EditEventVC.swift */,
+				5B63110A248164A30073D4C7 /* RoundedTextField.swift */,
+				5B63110B248164A30073D4C7 /* RoundedButton.swift */,
+				5B63110C248164A30073D4C7 /* EditAcademyVC.swift */,
+			);
+			path = Designs;
+			sourceTree = SOURCE_ROOT;
+		};
 		8890B81D247857050072C872 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +142,11 @@
 		8890B828247857050072C872 /* KidzoonaAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				5B63110D248164A30073D4C7 /* CreateEvent.storyboard */,
+				5B631104248164A30073D4C7 /* Designs */,
+				5B63110E248164A30073D4C7 /* EditAcademy.storyboard */,
+				5B631102248164A20073D4C7 /* EditCourse.storyboard */,
+				5B631103248164A30073D4C7 /* EditEvent.storyboard */,
 				8890B829247857050072C872 /* AppDelegate.swift */,
 				8890B82B247857050072C872 /* ViewController.swift */,
 				5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */,
@@ -241,7 +285,11 @@
 				5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */,
 				8890B834247857060072C872 /* LaunchScreen.storyboard in Resources */,
 				8890B831247857060072C872 /* Assets.xcassets in Resources */,
+				5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */,
+				5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */,
 				8890B82F247857050072C872 /* Main.storyboard in Resources */,
+				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
+				5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +314,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
 				8890B82C247857050072C872 /* ViewController.swift in Sources */,
+				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
+				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
+				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
+				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
 				5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */,
+				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
+				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
+				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
 			);

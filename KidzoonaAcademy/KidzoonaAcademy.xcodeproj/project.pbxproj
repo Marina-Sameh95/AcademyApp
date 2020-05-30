@@ -31,6 +31,11 @@
 		8890B831247857060072C872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8890B830247857060072C872 /* Assets.xcassets */; };
 		8890B83F247857060072C872 /* KidzoonaAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B83E247857060072C872 /* KidzoonaAcademyTests.swift */; };
 		8890B84A247857060072C872 /* KidzoonaAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B849247857060072C872 /* KidzoonaAcademyUITests.swift */; };
+		8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */; };
+		8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DCFF2481D54300FDA6A8 /* CardCell.swift */; };
+		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
+		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
+		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		8890B845247857060072C872 /* KidzoonaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidzoonaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B849247857060072C872 /* KidzoonaAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidzoonaAcademyUITests.swift; sourceTree = "<group>"; };
 		8890B84B247857060072C872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		8893DCFF2481D54300FDA6A8 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
+		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,7 @@
 				5B631108248164A30073D4C7 /* RoundedView.swift */,
 				5B63110A248164A30073D4C7 /* RoundedTextField.swift */,
 				5B63110B248164A30073D4C7 /* RoundedButton.swift */,
+				8893DCFF2481D54300FDA6A8 /* CardCell.swift */,
 			);
 			path = Designs;
 			sourceTree = SOURCE_ROOT;
@@ -145,6 +156,10 @@
 				8890B82B247857050072C872 /* ViewController.swift */,
 				5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */,
 				5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */,
+				8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */,
+				8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */,
+				8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */,
+				8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -359,12 +374,17 @@
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
 				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
+				8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */,
 				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
 				5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */,
+				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
+				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
 				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
+				8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */,
 				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
+				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -36,6 +36,12 @@
 		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
 		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
 		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
+		88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FAF24827F3E0064C979 /* Settings.storyboard */; };
+		88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB1248288680064C979 /* SettigsViewController.swift */; };
+		88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */; };
+		88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */; };
+		88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB724828C590064C979 /* CreateCourse.storyboard */; };
+		88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
 		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
+		88BE0FAF24827F3E0064C979 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		88BE0FB1248288680064C979 /* SettigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsViewController.swift; sourceTree = "<group>"; };
+		88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcademyProfile.storyboard; sourceTree = "<group>"; };
+		88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyProfileViewController.swift; sourceTree = "<group>"; };
+		88BE0FB724828C590064C979 /* CreateCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCourse.storyboard; sourceTree = "<group>"; };
+		88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +154,9 @@
 				5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */,
 				88408A8E2481923A007A5578 /* Course.storyboard */,
 				88408A902481936B007A5578 /* Event.storyboard */,
+				88BE0FAF24827F3E0064C979 /* Settings.storyboard */,
+				88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */,
+				88BE0FB724828C590064C979 /* CreateCourse.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -160,6 +175,9 @@
 				8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */,
 				8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */,
 				8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */,
+				88BE0FB1248288680064C979 /* SettigsViewController.swift */,
+				88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */,
+				88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -337,8 +355,11 @@
 			files = (
 				5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */,
 				88408A912481936B007A5578 /* Event.storyboard in Resources */,
+				88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */,
+				88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */,
 				8890B831247857060072C872 /* Assets.xcassets in Resources */,
 				5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */,
+				88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */,
 				5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */,
 				5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */,
 				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
@@ -369,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
 				8890B82C247857050072C872 /* ViewController.swift in Sources */,
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
@@ -377,6 +399,7 @@
 				8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */,
 				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
 				5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */,
+				88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */,
 				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
 				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
 				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
@@ -385,6 +408,7 @@
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
 				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
+				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

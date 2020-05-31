@@ -89,7 +89,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthHeaderBlue" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az9-jQ-nzE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuthFullHeader" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="az9-jQ-nzE">
                                 <rect key="frame" x="-182" y="-110" width="718" height="494"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="494" id="aml-uy-Sl0"/>
@@ -131,6 +131,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AuthHeaderBlue" width="728" height="740"/>
+        <image name="AuthFullHeader" width="728" height="740"/>
     </resources>
 </document>

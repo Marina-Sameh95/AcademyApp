@@ -283,11 +283,17 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJU-sB-gnk" customClass="CosmosView" customModule="Cosmos">
+                                                                            <rect key="frame" x="124" y="37" width="120" height="20"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
+                                                                        <constraint firstItem="dJU-sB-gnk" firstAttribute="leading" secondItem="EKp-iI-TOt" secondAttribute="trailing" constant="-55" id="1pJ-Xr-mcb"/>
                                                                         <constraint firstItem="Rd7-xK-eCX" firstAttribute="top" secondItem="EKp-iI-TOt" secondAttribute="bottom" constant="-23" id="9MP-aL-FrC"/>
                                                                         <constraint firstItem="EKp-iI-TOt" firstAttribute="top" secondItem="411-po-p97" secondAttribute="bottom" constant="-18" id="BQz-hg-rNt"/>
+                                                                        <constraint firstItem="dJU-sB-gnk" firstAttribute="top" secondItem="EKp-iI-TOt" secondAttribute="bottom" constant="8" id="Dzw-wB-hRW"/>
                                                                         <constraint firstAttribute="width" constant="323" id="GTs-1g-2dk"/>
                                                                         <constraint firstItem="EKp-iI-TOt" firstAttribute="leading" secondItem="Rd7-xK-eCX" secondAttribute="trailing" constant="8" id="I9g-dP-CF9"/>
                                                                         <constraint firstItem="411-po-p97" firstAttribute="leading" secondItem="EKp-iI-TOt" secondAttribute="trailing" constant="54" id="P0G-td-EEq"/>
@@ -305,6 +311,18 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3P-UO-s14" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="49" y="711" width="306" height="43"/>
+                                                <color key="backgroundColor" red="1" green="0.80135260239999995" blue="0.3639150947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="306" id="9Eg-ZS-Ew1"/>
+                                                    <constraint firstAttribute="height" constant="43" id="hcQ-EM-m6W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Edit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -325,10 +343,12 @@
                                             <constraint firstItem="3PH-14-AD1" firstAttribute="leading" secondItem="xv9-Xu-WPQ" secondAttribute="leading" id="SJQ-Mu-TFw"/>
                                             <constraint firstItem="FOp-Ra-ZkP" firstAttribute="top" secondItem="Xz9-SK-qxc" secondAttribute="bottom" constant="8" id="UDg-WJ-XS5"/>
                                             <constraint firstItem="fbY-0y-ZMI" firstAttribute="leading" secondItem="VBn-SI-JYS" secondAttribute="trailing" constant="-85" id="Ult-RR-g6c"/>
+                                            <constraint firstItem="f3P-UO-s14" firstAttribute="top" secondItem="9kF-gc-gUz" secondAttribute="bottom" constant="-81" id="WnI-3b-e2p"/>
                                             <constraint firstItem="Xz9-SK-qxc" firstAttribute="top" secondItem="lc7-1U-gQy" secondAttribute="bottom" constant="19" id="ZPi-TD-DbK"/>
                                             <constraint firstItem="fbY-0y-ZMI" firstAttribute="leading" secondItem="ruC-XI-mhc" secondAttribute="trailing" constant="-348" id="bPe-EU-R3f"/>
                                             <constraint firstItem="fbY-0y-ZMI" firstAttribute="top" secondItem="ruC-XI-mhc" secondAttribute="bottom" constant="8" id="bXL-mz-Ei5"/>
                                             <constraint firstItem="BD9-PM-h5B" firstAttribute="top" secondItem="3PH-14-AD1" secondAttribute="bottom" constant="8" id="fg4-r4-o53"/>
+                                            <constraint firstItem="9kF-gc-gUz" firstAttribute="leading" secondItem="f3P-UO-s14" secondAttribute="trailing" constant="-331" id="g8A-8S-ABF"/>
                                             <constraint firstItem="lK9-gt-ufD" firstAttribute="leading" secondItem="G05-5F-0Gz" secondAttribute="trailing" constant="-44" id="k6L-cN-fdF"/>
                                             <constraint firstItem="3PH-14-AD1" firstAttribute="leading" secondItem="BD9-PM-h5B" secondAttribute="trailing" constant="-177" id="kw8-fs-cfl"/>
                                             <constraint firstItem="BD9-PM-h5B" firstAttribute="leading" secondItem="G05-5F-0Gz" secondAttribute="trailing" constant="-44" id="tvl-Pw-mGi"/>

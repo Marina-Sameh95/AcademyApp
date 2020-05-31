@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YyC-0W-jrz">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,21 +15,21 @@
             <objects>
                 <viewController id="YyC-0W-jrz" customClass="EditEvent" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kzr-R0-WVY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-SJ-iww">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiK-0F-Ba7">
-                                        <rect key="frame" x="149.5" y="136" width="76" height="76"/>
+                                        <rect key="frame" x="169" y="136" width="76" height="76"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="76" id="kTi-hQ-Uug"/>
                                         </constraints>
                                         <state key="normal" image="AddImg"/>
                                     </button>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4sq-Sp-tba" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="243" width="315" height="50"/>
+                                        <rect key="frame" x="30" y="243" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="OjR-Lv-0I8"/>
                                         </constraints>
@@ -48,7 +48,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="utD-ib-C7f" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="324" width="315" height="50"/>
+                                        <rect key="frame" x="30" y="324" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4JZ-dK-4sg"/>
                                         </constraints>
@@ -57,7 +57,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RvY-qx-bIh" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="405" width="315" height="50"/>
+                                        <rect key="frame" x="30" y="405" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Qcp-c1-TSD"/>
                                         </constraints>
@@ -66,7 +66,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt9-Yy-uAN">
-                                        <rect key="frame" x="319" y="410" width="15" height="15"/>
+                                        <rect key="frame" x="358" y="410" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="fiy-iH-H80"/>
                                             <constraint firstAttribute="width" constant="15" id="n7w-lF-C6R"/>
@@ -87,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-Vr-7QJ" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="202.5" y="486" width="142.5" height="50"/>
+                                        <rect key="frame" x="222" y="486" width="162" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eNH-ED-43W"/>
                                         </constraints>
@@ -96,7 +96,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dicount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p05-xe-DtC">
-                                        <rect key="frame" x="217.5" y="475" width="60" height="21"/>
+                                        <rect key="frame" x="237" y="475" width="60" height="21"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="cKS-ND-3Yd"/>
@@ -106,7 +106,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-dX-hu5" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="567" width="142.5" height="50"/>
+                                        <rect key="frame" x="30" y="567" width="162" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Bb5-9C-6gJ"/>
                                         </constraints>
@@ -115,7 +115,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mG0-2t-lsM" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="202.5" y="567" width="142.5" height="50"/>
+                                        <rect key="frame" x="222" y="567" width="162" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="isi-cQ-lT3"/>
                                         </constraints>
@@ -134,7 +134,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh7-Vv-s6t" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="636" width="315" height="50"/>
+                                        <rect key="frame" x="30" y="636" width="354" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ZSO-Ov-Ys7"/>
@@ -145,7 +145,7 @@
                                         </state>
                                     </button>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vPf-pX-f7C" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="486" width="142.5" height="50"/>
+                                        <rect key="frame" x="30" y="486" width="162" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="yrL-Jv-4UZ"/>
                                         </constraints>
@@ -174,7 +174,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpN-yb-xUg">
-                                        <rect key="frame" x="319" y="491" width="15" height="15"/>
+                                        <rect key="frame" x="358" y="491" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Fhb-si-csS"/>
                                             <constraint firstAttribute="width" constant="15" id="aRp-pp-tpe"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfc-Rr-Wan">
-                                        <rect key="frame" x="319" y="516" width="15" height="15"/>
+                                        <rect key="frame" x="358" y="516" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="F8o-aH-XZR"/>
                                             <constraint firstAttribute="width" constant="15" id="tww-fI-Ngm"/>
@@ -196,7 +196,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyX-us-NWx">
-                                        <rect key="frame" x="319" y="435" width="15" height="15"/>
+                                        <rect key="frame" x="358" y="435" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="EFy-U0-KCT"/>
                                             <constraint firstAttribute="width" constant="15" id="Jsa-Yr-e1k"/>
@@ -207,23 +207,25 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-kY-WgD">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="6NE-ao-p03"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="NhR-oU-CpA"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXW-IK-dk4">
-                                        <rect key="frame" x="142.5" y="37.5" width="90" height="21"/>
+                                        <rect key="frame" x="162" y="43" width="90" height="36"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Cta-9V-fC8"/>
+                                            <constraint firstAttribute="height" constant="36" id="VU6-O7-OzY"/>
                                             <constraint firstAttribute="width" constant="90" id="uTu-ZL-F9m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-o5-TSH">
-                                        <rect key="frame" x="224" y="556" width="46" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-o5-TSH">
+                                        <rect key="frame" x="237" y="556" width="46" height="21"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="jC8-b5-nH4"/>
@@ -256,9 +258,9 @@
                                     <constraint firstItem="QpN-yb-xUg" firstAttribute="leading" secondItem="ctP-Vr-7QJ" secondAttribute="trailing" constant="-26" id="MOK-OV-RIt"/>
                                     <constraint firstItem="RvY-qx-bIh" firstAttribute="leading" secondItem="utD-ib-C7f" secondAttribute="leading" id="MPH-qc-1Nl"/>
                                     <constraint firstAttribute="trailing" secondItem="wh7-Vv-s6t" secondAttribute="trailing" constant="30" id="NzI-qc-oWa"/>
-                                    <constraint firstItem="GXW-IK-dk4" firstAttribute="centerY" secondItem="0Wh-kY-WgD" secondAttribute="centerY" id="Pag-gT-fbq"/>
+                                    <constraint firstItem="GXW-IK-dk4" firstAttribute="centerY" secondItem="0Wh-kY-WgD" secondAttribute="centerY" constant="13" id="Pag-gT-fbq"/>
                                     <constraint firstItem="vyX-us-NWx" firstAttribute="top" secondItem="RvY-qx-bIh" secondAttribute="bottom" constant="-20" id="QHO-Vg-50o"/>
-                                    <constraint firstItem="mG0-2t-lsM" firstAttribute="leading" secondItem="cIL-o5-TSH" secondAttribute="trailing" constant="-84" id="RlZ-jx-aCt"/>
+                                    <constraint firstItem="mG0-2t-lsM" firstAttribute="leading" secondItem="cIL-o5-TSH" secondAttribute="trailing" constant="-61" id="RlZ-jx-aCt"/>
                                     <constraint firstItem="Nfc-Rr-Wan" firstAttribute="leading" secondItem="ctP-Vr-7QJ" secondAttribute="trailing" constant="-26" id="RpX-DS-3ue"/>
                                     <constraint firstItem="mG0-2t-lsM" firstAttribute="centerY" secondItem="Cqq-dX-hu5" secondAttribute="centerY" id="Sp4-70-TxX"/>
                                     <constraint firstItem="ctP-Vr-7QJ" firstAttribute="centerY" secondItem="vPf-pX-f7C" secondAttribute="centerY" id="Sve-4U-OU2"/>
@@ -272,7 +274,7 @@
                                     <constraint firstItem="Osh-if-Ocz" firstAttribute="leading" secondItem="R7J-Kb-P2f" secondAttribute="leading" id="aqq-V1-zKC"/>
                                     <constraint firstItem="mt9-Yy-uAN" firstAttribute="leading" secondItem="RvY-qx-bIh" secondAttribute="trailing" constant="-26" id="ayP-Nf-QmH"/>
                                     <constraint firstItem="Cqq-dX-hu5" firstAttribute="width" secondItem="mG0-2t-lsM" secondAttribute="width" id="dJF-5i-YOT"/>
-                                    <constraint firstAttribute="bottom" secondItem="wh7-Vv-s6t" secondAttribute="bottom" constant="82" id="eY6-6Z-zts"/>
+                                    <constraint firstAttribute="bottom" secondItem="wh7-Vv-s6t" secondAttribute="bottom" constant="210" id="eY6-6Z-zts"/>
                                     <constraint firstItem="vyX-us-NWx" firstAttribute="leading" secondItem="RvY-qx-bIh" secondAttribute="trailing" constant="-26" id="f2b-0S-sLt"/>
                                     <constraint firstItem="0Wh-kY-WgD" firstAttribute="leading" secondItem="fO6-SJ-iww" secondAttribute="leading" id="fOQ-Yz-NrC"/>
                                     <constraint firstItem="utD-ib-C7f" firstAttribute="centerX" secondItem="fO6-SJ-iww" secondAttribute="centerX" id="fR6-Zc-82J"/>
@@ -298,9 +300,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fO6-SJ-iww" firstAttribute="top" secondItem="pee-a9-dfD" secondAttribute="top" id="ANA-ZH-yYF"/>
+                            <constraint firstItem="fO6-SJ-iww" firstAttribute="top" secondItem="pee-a9-dfD" secondAttribute="top" constant="-44" id="ANA-ZH-yYF"/>
                             <constraint firstItem="pee-a9-dfD" firstAttribute="trailing" secondItem="fO6-SJ-iww" secondAttribute="trailing" id="YiW-4i-i2I"/>
-                            <constraint firstItem="pee-a9-dfD" firstAttribute="bottom" secondItem="fO6-SJ-iww" secondAttribute="bottom" id="pgE-oE-KXE"/>
+                            <constraint firstItem="pee-a9-dfD" firstAttribute="bottom" secondItem="fO6-SJ-iww" secondAttribute="bottom" constant="-34" id="pgE-oE-KXE"/>
                             <constraint firstItem="fO6-SJ-iww" firstAttribute="leading" secondItem="pee-a9-dfD" secondAttribute="leading" id="uax-yV-eR0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pee-a9-dfD"/>
@@ -313,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSw-2f-nyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487.19999999999999" y="-717.48768472906409"/>
+            <point key="canvasLocation" x="486.95652173913049" y="-717.85714285714278"/>
         </scene>
     </scenes>
     <resources>

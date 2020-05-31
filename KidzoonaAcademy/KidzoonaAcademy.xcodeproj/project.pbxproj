@@ -7,24 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B15CDEF247EE8A1006ADF06 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15CDEE247EE8A1006ADF06 /* RoundedTextField.swift */; };
-		5B15CDF1247EFAAA006ADF06 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15CDF0247EFAAA006ADF06 /* RoundedButton.swift */; };
-		5B15CDF3247F0B78006ADF06 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B15CDF2247F0B78006ADF06 /* EditAcademy.storyboard */; };
-		5B15CDF5247F0CDC006ADF06 /* EditAcademyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15CDF4247F0CDC006ADF06 /* EditAcademyVC.swift */; };
-		5B15CDF7247F11C3006ADF06 /* UndeLinedTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15CDF6247F11C3006ADF06 /* UndeLinedTextfield.swift */; };
-		5B6310FB24813B0F0073D4C7 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6310FA24813B0F0073D4C7 /* EditEvent.storyboard */; };
-		5B6310FD24813C440073D4C7 /* EditEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6310FC24813C440073D4C7 /* EditEventVC.swift */; };
-		5B6310FF24813E020073D4C7 /* EditCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6310FE24813E020073D4C7 /* EditCourse.storyboard */; };
-		5B63110124813E800073D4C7 /* EditCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110024813E800073D4C7 /* EditCourseVC.swift */; };
-		5BBAF9B0247E67E400675149 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BBAF9AF247E67E400675149 /* CreateEvent.storyboard */; };
-		5BBAF9B3247E886B00675149 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBAF9B2247E886B00675149 /* CreateEventVC.swift */; };
+		5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631102248164A20073D4C7 /* EditCourse.storyboard */; };
+		5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631103248164A30073D4C7 /* EditEvent.storyboard */; };
+		5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631105248164A30073D4C7 /* CreateEventVC.swift */; };
+		5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */; };
+		5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631107248164A30073D4C7 /* EditCourseVC.swift */; };
+		5B631114248164A30073D4C7 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631108248164A30073D4C7 /* RoundedView.swift */; };
+		5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631109248164A30073D4C7 /* EditEventVC.swift */; };
+		5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110A248164A30073D4C7 /* RoundedTextField.swift */; };
+		5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110B248164A30073D4C7 /* RoundedButton.swift */; };
+		5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110C248164A30073D4C7 /* EditAcademyVC.swift */; };
+		5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110D248164A30073D4C7 /* CreateEvent.storyboard */; };
+		5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110E248164A30073D4C7 /* EditAcademy.storyboard */; };
+		5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDB2481C7BB008BCA49 /* Main.storyboard */; };
+		5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */; };
+		5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */; };
+		5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */; };
+		5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */; };
+		88408A8F2481923A007A5578 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A8E2481923A007A5578 /* Course.storyboard */; };
+		88408A912481936B007A5578 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A902481936B007A5578 /* Event.storyboard */; };
 		8890B82A247857050072C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B829247857050072C872 /* AppDelegate.swift */; };
 		8890B82C247857050072C872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B82B247857050072C872 /* ViewController.swift */; };
-		8890B82F247857050072C872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8890B82D247857050072C872 /* Main.storyboard */; };
 		8890B831247857060072C872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8890B830247857060072C872 /* Assets.xcassets */; };
-		8890B834247857060072C872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8890B832247857060072C872 /* LaunchScreen.storyboard */; };
 		8890B83F247857060072C872 /* KidzoonaAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B83E247857060072C872 /* KidzoonaAcademyTests.swift */; };
 		8890B84A247857060072C872 /* KidzoonaAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B849247857060072C872 /* KidzoonaAcademyUITests.swift */; };
+		8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */; };
+		8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DCFF2481D54300FDA6A8 /* CardCell.swift */; };
+		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
+		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
+		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
+		88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FAF24827F3E0064C979 /* Settings.storyboard */; };
+		88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB1248288680064C979 /* SettigsViewController.swift */; };
+		88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */; };
+		88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */; };
+		88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB724828C590064C979 /* CreateCourse.storyboard */; };
+		88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,23 +62,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B15CDEE247EE8A1006ADF06 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		5B15CDF0247EFAAA006ADF06 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		5B15CDF2247F0B78006ADF06 /* EditAcademy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditAcademy.storyboard; sourceTree = "<group>"; };
-		5B15CDF4247F0CDC006ADF06 /* EditAcademyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAcademyVC.swift; sourceTree = "<group>"; };
-		5B15CDF6247F11C3006ADF06 /* UndeLinedTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndeLinedTextfield.swift; sourceTree = "<group>"; };
-		5B6310FA24813B0F0073D4C7 /* EditEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditEvent.storyboard; sourceTree = "<group>"; };
-		5B6310FC24813C440073D4C7 /* EditEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventVC.swift; sourceTree = "<group>"; };
-		5B6310FE24813E020073D4C7 /* EditCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditCourse.storyboard; sourceTree = "<group>"; };
-		5B63110024813E800073D4C7 /* EditCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCourseVC.swift; sourceTree = "<group>"; };
-		5BBAF9AF247E67E400675149 /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
-		5BBAF9B2247E886B00675149 /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		5B631102248164A20073D4C7 /* EditCourse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditCourse.storyboard; path = KidzoonaAcademy/StoryBoards/EditCourse.storyboard; sourceTree = SOURCE_ROOT; };
+		5B631103248164A30073D4C7 /* EditEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditEvent.storyboard; path = KidzoonaAcademy/StoryBoards/EditEvent.storyboard; sourceTree = SOURCE_ROOT; };
+		5B631105248164A30073D4C7 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndeLinedTextfield.swift; sourceTree = "<group>"; };
+		5B631107248164A30073D4C7 /* EditCourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseVC.swift; sourceTree = "<group>"; };
+		5B631108248164A30073D4C7 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		5B631109248164A30073D4C7 /* EditEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventVC.swift; sourceTree = "<group>"; };
+		5B63110A248164A30073D4C7 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		5B63110B248164A30073D4C7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5B63110C248164A30073D4C7 /* EditAcademyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAcademyVC.swift; sourceTree = "<group>"; };
+		5B63110D248164A30073D4C7 /* CreateEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateEvent.storyboard; path = KidzoonaAcademy/StoryBoards/CreateEvent.storyboard; sourceTree = SOURCE_ROOT; };
+		5B63110E248164A30073D4C7 /* EditAcademy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditAcademy.storyboard; path = KidzoonaAcademy/StoryBoards/EditAcademy.storyboard; sourceTree = SOURCE_ROOT; };
+		5C01DEDB2481C7BB008BCA49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalSignupStoryboard.storyboard; sourceTree = "<group>"; };
+		5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
+		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
+		88408A8E2481923A007A5578 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
+		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B829247857050072C872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8890B82B247857050072C872 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8890B82E247857050072C872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8890B830247857060072C872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8890B833247857060072C872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8890B835247857060072C872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8890B83A247857060072C872 /* KidzoonaAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidzoonaAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B83E247857060072C872 /* KidzoonaAcademyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidzoonaAcademyTests.swift; sourceTree = "<group>"; };
@@ -69,6 +92,17 @@
 		8890B845247857060072C872 /* KidzoonaAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidzoonaAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B849247857060072C872 /* KidzoonaAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidzoonaAcademyUITests.swift; sourceTree = "<group>"; };
 		8890B84B247857060072C872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		8893DCFF2481D54300FDA6A8 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
+		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
+		88BE0FAF24827F3E0064C979 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		88BE0FB1248288680064C979 /* SettigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsViewController.swift; sourceTree = "<group>"; };
+		88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcademyProfile.storyboard; sourceTree = "<group>"; };
+		88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyProfileViewController.swift; sourceTree = "<group>"; };
+		88BE0FB724828C590064C979 /* CreateCourse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCourse.storyboard; sourceTree = "<group>"; };
+		88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,30 +130,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BBAF9B1247E883F00675149 /* Designs */ = {
+		5B631104248164A30073D4C7 /* Designs */ = {
 			isa = PBXGroup;
 			children = (
-				5BBAF9B2247E886B00675149 /* CreateEventVC.swift */,
-				5B15CDEE247EE8A1006ADF06 /* RoundedTextField.swift */,
-				5B15CDF0247EFAAA006ADF06 /* RoundedButton.swift */,
-				5B15CDF4247F0CDC006ADF06 /* EditAcademyVC.swift */,
-				5B15CDF6247F11C3006ADF06 /* UndeLinedTextfield.swift */,
-				5B6310FC24813C440073D4C7 /* EditEventVC.swift */,
-				5B63110024813E800073D4C7 /* EditCourseVC.swift */,
+				5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */,
+				5B631108248164A30073D4C7 /* RoundedView.swift */,
+				5B63110A248164A30073D4C7 /* RoundedTextField.swift */,
+				5B63110B248164A30073D4C7 /* RoundedButton.swift */,
+				8893DCFF2481D54300FDA6A8 /* CardCell.swift */,
 			);
 			path = Designs;
+			sourceTree = SOURCE_ROOT;
+		};
+		88408A8924818F64007A5578 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5C01DEDB2481C7BB008BCA49 /* Main.storyboard */,
+				5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */,
+				5B63110E248164A30073D4C7 /* EditAcademy.storyboard */,
+				5B63110D248164A30073D4C7 /* CreateEvent.storyboard */,
+				5B631102248164A20073D4C7 /* EditCourse.storyboard */,
+				5B631103248164A30073D4C7 /* EditEvent.storyboard */,
+				5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */,
+				88408A8E2481923A007A5578 /* Course.storyboard */,
+				88408A902481936B007A5578 /* Event.storyboard */,
+				88BE0FAF24827F3E0064C979 /* Settings.storyboard */,
+				88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */,
+				88BE0FB724828C590064C979 /* CreateCourse.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		88408A8A2481901E007A5578 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
+				5B631107248164A30073D4C7 /* EditCourseVC.swift */,
+				5B631109248164A30073D4C7 /* EditEventVC.swift */,
+				5B63110C248164A30073D4C7 /* EditAcademyVC.swift */,
+				8890B82B247857050072C872 /* ViewController.swift */,
+				5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */,
+				5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */,
+				8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */,
+				8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */,
+				8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */,
+				8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */,
+				88BE0FB1248288680064C979 /* SettigsViewController.swift */,
+				88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */,
+				88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		88408A8C248190CE007A5578 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8890B830247857060072C872 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		88408A8D2481913D007A5578 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8890B829247857050072C872 /* AppDelegate.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		8890B81D247857050072C872 = {
 			isa = PBXGroup;
 			children = (
-				8890B82D247857050072C872 /* Main.storyboard */,
-				8890B832247857060072C872 /* LaunchScreen.storyboard */,
-				5BBAF9AF247E67E400675149 /* CreateEvent.storyboard */,
-				5B15CDF2247F0B78006ADF06 /* EditAcademy.storyboard */,
-				5B6310FA24813B0F0073D4C7 /* EditEvent.storyboard */,
-				5B6310FE24813E020073D4C7 /* EditCourse.storyboard */,
-				5BBAF9B1247E883F00675149 /* Designs */,
 				8890B828247857050072C872 /* KidzoonaAcademy */,
 				8890B83D247857060072C872 /* KidzoonaAcademyTests */,
 				8890B848247857060072C872 /* KidzoonaAcademyUITests */,
@@ -140,9 +221,11 @@
 		8890B828247857050072C872 /* KidzoonaAcademy */ = {
 			isa = PBXGroup;
 			children = (
-				8890B829247857050072C872 /* AppDelegate.swift */,
-				8890B82B247857050072C872 /* ViewController.swift */,
-				8890B830247857060072C872 /* Assets.xcassets */,
+				88408A8D2481913D007A5578 /* Core */,
+				88408A8A2481901E007A5578 /* Scenes */,
+				88408A8924818F64007A5578 /* StoryBoards */,
+				5B631104248164A30073D4C7 /* Designs */,
+				88408A8C248190CE007A5578 /* Resources */,
 				8890B835247857060072C872 /* Info.plist */,
 			);
 			path = KidzoonaAcademy;
@@ -270,13 +353,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B15CDF3247F0B78006ADF06 /* EditAcademy.storyboard in Resources */,
-				8890B834247857060072C872 /* LaunchScreen.storyboard in Resources */,
-				5BBAF9B0247E67E400675149 /* CreateEvent.storyboard in Resources */,
-				5B6310FF24813E020073D4C7 /* EditCourse.storyboard in Resources */,
-				5B6310FB24813B0F0073D4C7 /* EditEvent.storyboard in Resources */,
+				5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */,
+				88408A912481936B007A5578 /* Event.storyboard in Resources */,
+				88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */,
+				88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */,
 				8890B831247857060072C872 /* Assets.xcassets in Resources */,
-				8890B82F247857050072C872 /* Main.storyboard in Resources */,
+				5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */,
+				88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */,
+				5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */,
+				5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */,
+				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
+				5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */,
+				5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */,
+				88408A8F2481923A007A5578 /* Course.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,15 +390,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
+				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
 				8890B82C247857050072C872 /* ViewController.swift in Sources */,
-				5B15CDF1247EFAAA006ADF06 /* RoundedButton.swift in Sources */,
-				5B6310FD24813C440073D4C7 /* EditEventVC.swift in Sources */,
+				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
+				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
+				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
+				8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */,
+				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
+				5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */,
+				88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */,
+				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
+				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
+				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
+				8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */,
+				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
+				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
+				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
+				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
+				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
-				5B15CDF7247F11C3006ADF06 /* UndeLinedTextfield.swift in Sources */,
-				5BBAF9B3247E886B00675149 /* CreateEventVC.swift in Sources */,
-				5B63110124813E800073D4C7 /* EditCourseVC.swift in Sources */,
-				5B15CDF5247F0CDC006ADF06 /* EditAcademyVC.swift in Sources */,
-				5B15CDEF247EE8A1006ADF06 /* RoundedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,25 +443,6 @@
 			targetProxy = 8890B846247857060072C872 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8890B82D247857050072C872 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8890B82E247857050072C872 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8890B832247857060072C872 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8890B833247857060072C872 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8890B84C247857060072C872 /* Debug */ = {

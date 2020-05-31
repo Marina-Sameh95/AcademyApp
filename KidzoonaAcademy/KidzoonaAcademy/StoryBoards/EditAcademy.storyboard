@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="haI-tG-2D5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Edit Academy-->
         <scene sceneID="kbB-x9-RaL">
             <objects>
-                <viewController id="haI-tG-2D5" sceneMemberID="viewController">
+                <viewController id="haI-tG-2D5" customClass="EditAcademy" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ad-hk-JaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j18-Ts-CGc">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-lz-JsB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="818"/>
@@ -162,7 +162,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-9L-nez">
-                                        <rect key="frame" x="142.66666666666666" y="38" width="90" height="20"/>
+                                        <rect key="frame" x="142.66666666666666" y="52" width="90" height="20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -185,7 +185,7 @@
                                     <constraint firstItem="vYw-lz-JsB" firstAttribute="top" secondItem="j18-Ts-CGc" secondAttribute="top" id="LtQ-tJ-SAU"/>
                                     <constraint firstItem="g9U-ar-Nw0" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="Pmz-TZ-13T"/>
                                     <constraint firstItem="aBM-SX-xPG" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="RJL-am-gJq"/>
-                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="centerY" secondItem="j18-Ts-CGc" secondAttribute="centerY" priority="250" id="TDD-mL-zF9"/>
+                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="centerY" secondItem="j18-Ts-CGc" secondAttribute="centerY" priority="250" constant="3" id="TDD-mL-zF9"/>
                                     <constraint firstItem="vYw-lz-JsB" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="Uj0-UX-8hk"/>
                                     <constraint firstAttribute="trailing" secondItem="vYw-lz-JsB" secondAttribute="trailing" id="V2m-UJ-kZC"/>
                                     <constraint firstItem="aOc-5M-wRf" firstAttribute="top" secondItem="aBM-SX-xPG" secondAttribute="bottom" constant="25" id="WLf-QU-3Xh"/>
@@ -193,9 +193,9 @@
                                     <constraint firstItem="vYw-lz-JsB" firstAttribute="leading" secondItem="j18-Ts-CGc" secondAttribute="leading" id="Z2B-Y4-LLg"/>
                                     <constraint firstItem="kIu-0q-XVL" firstAttribute="centerX" secondItem="pSG-nY-bv6" secondAttribute="centerX" id="dCH-5Y-TKR"/>
                                     <constraint firstItem="Xzx-b5-p3C" firstAttribute="leading" secondItem="aOc-5M-wRf" secondAttribute="leading" id="fUJ-rx-TR1"/>
-                                    <constraint firstAttribute="bottom" secondItem="vYw-lz-JsB" secondAttribute="bottom" priority="250" id="jhU-u3-Dnc"/>
+                                    <constraint firstAttribute="bottom" secondItem="vYw-lz-JsB" secondAttribute="bottom" priority="250" constant="-6" id="jhU-u3-Dnc"/>
                                     <constraint firstItem="kfX-Hh-q0r" firstAttribute="top" secondItem="kIu-0q-XVL" secondAttribute="bottom" constant="25" id="kQg-lc-3aj"/>
-                                    <constraint firstItem="AGz-9L-nez" firstAttribute="centerY" secondItem="4T8-ZK-5R4" secondAttribute="centerY" id="kc6-Td-Ifz"/>
+                                    <constraint firstItem="AGz-9L-nez" firstAttribute="centerY" secondItem="4T8-ZK-5R4" secondAttribute="centerY" constant="14" id="kc6-Td-Ifz"/>
                                     <constraint firstItem="lWx-4l-dmY" firstAttribute="top" secondItem="Yrf-BY-5FG" secondAttribute="bottom" constant="23" id="l0X-Sd-cyD"/>
                                     <constraint firstItem="Yrf-BY-5FG" firstAttribute="top" secondItem="IuK-4I-67N" secondAttribute="bottom" constant="5" id="lN0-pQ-OeT"/>
                                     <constraint firstItem="IuK-4I-67N" firstAttribute="leading" secondItem="aOc-5M-wRf" secondAttribute="leading" id="npB-i2-QKs"/>
@@ -210,8 +210,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="j18-Ts-CGc" firstAttribute="top" secondItem="ZAs-mr-QAC" secondAttribute="top" id="3dB-8C-Ljc"/>
-                            <constraint firstItem="ZAs-mr-QAC" firstAttribute="bottom" secondItem="j18-Ts-CGc" secondAttribute="bottom" id="IDN-Jw-8yG"/>
+                            <constraint firstItem="j18-Ts-CGc" firstAttribute="top" secondItem="ZAs-mr-QAC" secondAttribute="top" constant="-44" id="3dB-8C-Ljc"/>
+                            <constraint firstItem="ZAs-mr-QAC" firstAttribute="bottom" secondItem="j18-Ts-CGc" secondAttribute="bottom" constant="-34" id="IDN-Jw-8yG"/>
                             <constraint firstItem="j18-Ts-CGc" firstAttribute="leading" secondItem="ZAs-mr-QAC" secondAttribute="leading" id="Y5S-kc-8om"/>
                             <constraint firstItem="ZAs-mr-QAC" firstAttribute="trailing" secondItem="j18-Ts-CGc" secondAttribute="trailing" id="oVj-Ik-LkX"/>
                         </constraints>
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whq-1j-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.985507246377" y="-94.419642857142847"/>
+            <point key="canvasLocation" x="1628" y="-94.581280788177338"/>
         </scene>
     </scenes>
     <resources>

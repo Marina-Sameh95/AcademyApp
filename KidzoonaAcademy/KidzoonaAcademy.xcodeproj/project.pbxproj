@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179F323B24830C14000A9D82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179F323A24830C14000A9D82 /* Home.storyboard */; };
+		179F324224832608000A9D82 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F324124832608000A9D82 /* HomeVC.swift */; };
+		179F3244248329A1000A9D82 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */; };
+		179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */; };
+		179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */; };
+		179F324A2483313F000A9D82 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179F32492483313F000A9D82 /* SignIn.storyboard */; };
+		179F324E24833182000A9D82 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F324D24833182000A9D82 /* SignInVC.swift */; };
 		5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631102248164A20073D4C7 /* EditCourse.storyboard */; };
 		5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631103248164A30073D4C7 /* EditEvent.storyboard */; };
 		5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631105248164A30073D4C7 /* CreateEventVC.swift */; };
@@ -42,6 +49,7 @@
 		88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */; };
 		88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB724828C590064C979 /* CreateCourse.storyboard */; };
 		88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */; };
+		C17D18C3CE0087D0DCE9E02B /* Pods_KidzoonaAcademy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F916A3D89D04BD37D1B6D11 /* Pods_KidzoonaAcademy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +70,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.release.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.release.xcconfig"; sourceTree = "<group>"; };
+		179F323A24830C14000A9D82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		179F324124832608000A9D82 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
+		179F32492483313F000A9D82 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		179F324D24833182000A9D82 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		1F916A3D89D04BD37D1B6D11 /* Pods_KidzoonaAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidzoonaAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B631102248164A20073D4C7 /* EditCourse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditCourse.storyboard; path = KidzoonaAcademy/StoryBoards/EditCourse.storyboard; sourceTree = SOURCE_ROOT; };
 		5B631103248164A30073D4C7 /* EditEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditEvent.storyboard; path = KidzoonaAcademy/StoryBoards/EditEvent.storyboard; sourceTree = SOURCE_ROOT; };
 		5B631105248164A30073D4C7 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
@@ -79,6 +96,7 @@
 		5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalSignupStoryboard.storyboard; sourceTree = "<group>"; };
 		5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
 		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
+		7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.debug.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.debug.xcconfig"; sourceTree = "<group>"; };
 		88408A8E2481923A007A5578 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17D18C3CE0087D0DCE9E02B /* Pods_KidzoonaAcademy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +149,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		008F0278DC164122FDFDE65B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */,
+				14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		179F323E24832599000A9D82 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				179F324124832608000A9D82 /* HomeVC.swift */,
+				179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */,
+				179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */,
+				179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		179F324B24833149000A9D82 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				179F324C24833160000A9D82 /* SignIn */,
+				179F323E24832599000A9D82 /* Home */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		179F324C24833160000A9D82 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				179F324D24833182000A9D82 /* SignInVC.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		5B631104248164A30073D4C7 /* Designs */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +214,8 @@
 				88BE0FAF24827F3E0064C979 /* Settings.storyboard */,
 				88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */,
 				88BE0FB724828C590064C979 /* CreateCourse.storyboard */,
+				179F323A24830C14000A9D82 /* Home.storyboard */,
+				179F32492483313F000A9D82 /* SignIn.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -164,6 +223,7 @@
 		88408A8A2481901E007A5578 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				179F324B24833149000A9D82 /* Auth */,
 				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
 				5B631107248164A30073D4C7 /* EditCourseVC.swift */,
 				5B631109248164A30073D4C7 /* EditEventVC.swift */,
@@ -205,6 +265,8 @@
 				8890B83D247857060072C872 /* KidzoonaAcademyTests */,
 				8890B848247857060072C872 /* KidzoonaAcademyUITests */,
 				8890B827247857050072C872 /* Products */,
+				008F0278DC164122FDFDE65B /* Pods */,
+				F82C4AB67AF5132706D184BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +311,14 @@
 			path = KidzoonaAcademyUITests;
 			sourceTree = "<group>";
 		};
+		F82C4AB67AF5132706D184BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F916A3D89D04BD37D1B6D11 /* Pods_KidzoonaAcademy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8890B84E247857060072C872 /* Build configuration list for PBXNativeTarget "KidzoonaAcademy" */;
 			buildPhases = (
+				EAC00764F4944321C579F2CC /* [CP] Check Pods Manifest.lock */,
 				8890B822247857050072C872 /* Sources */,
 				8890B823247857050072C872 /* Frameworks */,
 				8890B824247857050072C872 /* Resources */,
+				69974EAF993E51E19EF03C2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,12 +426,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */,
+				179F324A2483313F000A9D82 /* SignIn.storyboard in Resources */,
 				88408A912481936B007A5578 /* Event.storyboard in Resources */,
 				88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */,
 				88BE0FB824828C590064C979 /* CreateCourse.storyboard in Resources */,
 				8890B831247857060072C872 /* Assets.xcassets in Resources */,
 				5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */,
 				88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */,
+				179F323B24830C14000A9D82 /* Home.storyboard in Resources */,
 				5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */,
 				5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */,
 				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
@@ -385,6 +459,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69974EAF993E51E19EF03C2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC00764F4944321C579F2CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KidzoonaAcademy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8890B822247857050072C872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -403,13 +519,18 @@
 				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
 				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
 				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
+				179F3244248329A1000A9D82 /* FirstCollectionViewCell.swift in Sources */,
 				8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */,
 				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
+				179F324224832608000A9D82 /* HomeVC.swift in Sources */,
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
+				179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
 				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
 				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
+				179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */,
+				179F324E24833182000A9D82 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +684,7 @@
 		};
 		8890B84F247857060072C872 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -580,6 +702,7 @@
 		};
 		8890B850247857060072C872 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

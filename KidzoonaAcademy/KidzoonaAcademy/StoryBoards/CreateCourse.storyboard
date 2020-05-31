@@ -37,7 +37,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-PM-LL6">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImg" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-PM-LL6">
                                                 <rect key="frame" x="87" y="126" width="240" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="DeF-xC-Du9"/>
@@ -119,6 +119,9 @@
                                                     <constraint firstAttribute="width" constant="15" id="Vhp-BH-ztj"/>
                                                 </constraints>
                                                 <state key="normal" image="IncreaseArrow"/>
+                                                <connections>
+                                                    <action selector="increaseDiscount:" destination="jh3-5o-gQU" eventType="touchUpInside" id="bWT-qG-8lk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jt-40-Rgp">
                                                 <rect key="frame" x="358" y="653" width="15" height="15"/>
@@ -127,6 +130,9 @@
                                                     <constraint firstAttribute="height" constant="15" id="pWg-vn-X56"/>
                                                 </constraints>
                                                 <state key="normal" image="DecreaseArrow"/>
+                                                <connections>
+                                                    <action selector="decreaseDiscount:" destination="jh3-5o-gQU" eventType="touchUpInside" id="PGQ-nK-kxR"/>
+                                                </connections>
                                             </button>
                                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-p5-8Hp" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="692" width="162" height="50"/>
@@ -228,6 +234,9 @@
                                             <constraint firstAttribute="width" constant="15" id="MEX-cc-eTh"/>
                                         </constraints>
                                         <state key="normal" image="IncreaseArrow"/>
+                                        <connections>
+                                            <action selector="increaseSeats:" destination="jh3-5o-gQU" eventType="touchUpInside" id="MrF-Ad-sze"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Available seats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-So-vus">
                                         <rect key="frame" x="44" y="438" width="118" height="21"/>
@@ -243,6 +252,9 @@
                                             <constraint firstAttribute="width" constant="15" id="mYs-4n-we5"/>
                                         </constraints>
                                         <state key="normal" image="DecreaseArrow"/>
+                                        <connections>
+                                            <action selector="decreaseSeats:" destination="jh3-5o-gQU" eventType="touchUpInside" id="UbB-mr-c5P"/>
+                                        </connections>
                                     </button>
                                     <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-Fh-Ngq" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
                                         <rect key="frame" x="27" y="526" width="354" height="73"/>
@@ -298,6 +310,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="965-wF-Bb1"/>
                     </view>
+                    <connections>
+                        <outlet property="discountTxt" destination="I66-E8-4mw" id="eFo-9l-4Rs"/>
+                        <outlet property="seatsTxt" destination="zWt-O5-b5d" id="XeS-7G-z6e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQq-hR-ihC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,6 +321,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddImg" width="76" height="78"/>
         <image name="DecreaseArrow" width="12" height="12"/>
         <image name="Header" width="375" height="96"/>
         <image name="IncreaseArrow" width="12" height="12"/>

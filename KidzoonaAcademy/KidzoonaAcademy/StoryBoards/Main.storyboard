@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -272,7 +272,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-1X-TtL">
-                                                <rect key="frame" x="20" y="455" width="117" height="24"/>
+                                                <rect key="frame" x="20" y="455" width="109" height="22"/>
                                                 <state key="normal" title="upload files" image="upload">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
@@ -281,13 +281,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**check your e-mail to recieve confirmation message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hU-FE-jqz">
-                                                <rect key="frame" x="20" y="499" width="321" height="16"/>
+                                                <rect key="frame" x="20" y="497" width="321" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.85959311548223349" green="0.056244720568423619" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2A-zN-VCu">
-                                                <rect key="frame" x="20" y="555" width="335" height="40"/>
+                                                <rect key="frame" x="20" y="553" width="335" height="40"/>
                                                 <color key="backgroundColor" red="0.95004051919999999" green="0.69085246320000004" blue="0.2013075054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="2Jd-bi-E1L"/>
@@ -371,11 +371,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-Z0-Ffa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1449" y="27"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AuthHeader" width="595.5" height="777.75"/>
+        <image name="AuthHeader" width="397" height="518.5"/>
         <image name="Line" width="98" height="5"/>
         <image name="Line-1" width="98" height="5"/>
         <image name="unchecked" width="36" height="36"/>

@@ -11,7 +11,7 @@ import UIKit
 class CreateEvent: UIViewController {
     @IBOutlet weak var DiscountTxt: RoundedTextField!
     
-    @IBOutlet weak var seatsTxt: RoundedTextField!
+    @IBOutlet weak var seatTxt: RoundedTextField!
     
     @IBAction func increaseDiscount(_ sender: Any) {
         print(DiscountTxt.text as Any)
@@ -50,12 +50,12 @@ class CreateEvent: UIViewController {
 
     @IBAction func increaseSeats(_ sender: Any)
     {
-        print(seatsTxt.text as Any)
+        print(seatTxt.text as Any)
 //        if (Int(seatsTxt.text ?? "0") ?? 0 < 95)
 //        {
-            let currentSeats = (Int(seatsTxt.text ?? "0") ?? 0) + 1
+            let currentSeats = (Int(seatTxt.text ?? "0") ?? 0) + 1
             print(currentSeats as Any)
-            seatsTxt.text = String(currentSeats)
+            seatTxt.text = String(currentSeats)
             print(DiscountTxt.text as Any )
             
 //        }
@@ -64,17 +64,17 @@ class CreateEvent: UIViewController {
     
     
     @IBAction func decreaseSeats(_ sender: Any) {
-        print(seatsTxt.text as Any)
-        if (Int(seatsTxt.text ?? "0") ?? 0 > 1)
+        print(seatTxt.text as Any)
+        if (Int(seatTxt.text ?? "0") ?? 0 > 1)
         {
-            let currentSeats = (Int(seatsTxt.text ?? "0") ?? 0) - 1
+            let currentSeats = (Int(seatTxt.text ?? "0") ?? 0) - 1
             print(currentSeats as Any)
-            seatsTxt.text = String(currentSeats)
+            seatTxt.text = String(currentSeats)
             print(DiscountTxt.text as Any )
         }
         else
         {
-            seatsTxt.text =  "0"
+            seatTxt.text =  "0"
             
             
         }

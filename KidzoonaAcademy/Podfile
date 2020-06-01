@@ -4,6 +4,7 @@ target 'KidzoonaAcademy' do
 
   use_frameworks!
 pod 'Cosmos', '~> 20.0'
+pod 'FirebaseCore'
 
 
 

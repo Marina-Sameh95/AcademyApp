@@ -6,6 +6,7 @@ target 'KidzoonaAcademy' do
 pod 'Cosmos', '~> 20.0'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 
 
 

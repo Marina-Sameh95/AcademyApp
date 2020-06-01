@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */; };
 		5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */; };
 		5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */; };
+		880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */; };
 		88408A8F2481923A007A5578 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A8E2481923A007A5578 /* Course.storyboard */; };
 		88408A912481936B007A5578 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A902481936B007A5578 /* Event.storyboard */; };
 		8890B82A247857050072C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B829247857050072C872 /* AppDelegate.swift */; };
@@ -97,6 +98,7 @@
 		5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
 		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
 		7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.debug.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.debug.xcconfig"; sourceTree = "<group>"; };
+		880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellTableViewCell.swift; sourceTree = "<group>"; };
 		88408A8E2481923A007A5578 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +157,6 @@
 				7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */,
 				14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -238,6 +239,7 @@
 				88BE0FB1248288680064C979 /* SettigsViewController.swift */,
 				88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */,
 				88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */,
+				880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -508,6 +510,7 @@
 			files = (
 				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
+				880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */,
 				8890B82C247857050072C872 /* ViewController.swift in Sources */,
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,

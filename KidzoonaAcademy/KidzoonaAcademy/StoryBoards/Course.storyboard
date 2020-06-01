@@ -13,7 +13,7 @@
         <!--Course List View Controller-->
         <scene sceneID="ax0-dx-ffI">
             <objects>
-                <viewController id="Ybb-er-5hz" customClass="CourseListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseList" id="Ybb-er-5hz" customClass="CourseListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O8a-YV-ITH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="height" constant="36" id="dMR-z2-kej"/>
                                 </constraints>
                                 <state key="normal" image="AddBtn"/>
+                                <connections>
+                                    <segue destination="Nkh-kc-p2P" kind="show" id="LJ1-ct-ueX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpc-Bs-LeJ">
                                 <rect key="frame" x="165" y="46" width="85" height="34"/>
@@ -47,7 +50,7 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="794"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="daW-zn-ljN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="daW-zn-ljN" customClass="CourseCellTableViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="daW-zn-ljN" id="7pr-1N-gJT">
@@ -104,6 +107,12 @@
                                                 <constraint firstItem="AdY-rb-DUx" firstAttribute="top" secondItem="7pr-1N-gJT" secondAttribute="top" constant="11" id="zzr-QF-YWR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseImg" destination="lOz-pb-uVi" id="Kyz-bJ-yUF"/>
+                                            <outlet property="courseName" destination="dd1-L4-KQP" id="9J9-1e-Rrh"/>
+                                            <outlet property="coursePrice" destination="Ves-EV-13s" id="xWZ-9p-5M9"/>
+                                            <outlet property="courseRegested" destination="sTq-ud-3ra" id="RMi-3s-GTN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -127,13 +136,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xZK-ZZ-ZHx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pdC-ai-Wpk"/>
                     <connections>
                         <outlet property="tableView" destination="p11-Wp-MKh" id="2HI-rb-ayq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ur-gH-3dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="153"/>
+            <point key="canvasLocation" x="1113" y="142"/>
+        </scene>
+        <!--CreateCourse-->
+        <scene sceneID="owR-84-ddc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateCourse" referencedIdentifier="CreateCourse" id="Nkh-kc-p2P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqS-ZT-FsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="269"/>
         </scene>
         <!--Course Profile View Controller-->
         <scene sceneID="bVn-pU-m7V">
@@ -313,7 +331,7 @@
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3P-UO-s14" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
                                                 <rect key="frame" x="49" y="711" width="306" height="43"/>
-                                                <color key="backgroundColor" red="1" green="0.80135260239999995" blue="0.3639150947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="306" id="9Eg-ZS-Ew1"/>
                                                     <constraint firstAttribute="height" constant="43" id="hcQ-EM-m6W"/>
@@ -322,6 +340,9 @@
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="vnp-iT-AUE" kind="show" id="5uR-oa-LNN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -388,10 +409,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sqm-Uj-jkU"/>
                     </view>
+                    <connections>
+                        <outlet property="courseImg" destination="3PH-14-AD1" id="MBa-Gy-W8L"/>
+                        <outlet property="courseName" destination="wFq-el-L77" id="kPc-f4-5Im"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRi-ul-E00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="152.67857142857142"/>
+            <point key="canvasLocation" x="1931.8840579710147" y="152.67857142857142"/>
+        </scene>
+        <!--EditCourse-->
+        <scene sceneID="pRm-EB-xQK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditCourse" referencedIdentifier="EditCourse" id="vnp-iT-AUE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj0-5V-drS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2676.0869565217395" y="152.67857142857142"/>
         </scene>
     </scenes>
     <resources>

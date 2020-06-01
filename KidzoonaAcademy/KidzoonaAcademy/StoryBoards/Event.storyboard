@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--CreateEvent-->
+        <scene sceneID="gU2-cz-PNh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateEvent" referencedIdentifier="CreateEvent" id="mbY-2d-9eG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34s-fi-62d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="255"/>
+        </scene>
         <!--Event List View Controller-->
         <scene sceneID="X2Z-ao-uWF">
             <objects>
@@ -32,6 +40,9 @@
                                     <constraint firstAttribute="width" constant="46" id="a5n-Ub-pw8"/>
                                 </constraints>
                                 <state key="normal" image="AddBtn"/>
+                                <connections>
+                                    <segue destination="mbY-2d-9eG" kind="show" id="mPe-KG-Rx3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uc-8z-bAO">
                                 <rect key="frame" x="165" y="46" width="85" height="34"/>
@@ -158,6 +169,9 @@
                                     <constraint firstAttribute="width" constant="44" id="zBd-ZC-epi"/>
                                 </constraints>
                                 <state key="normal" image="Back"/>
+                                <connections>
+                                    <segue destination="2aR-wm-8IS" kind="show" id="bFK-Z5-oW1"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-dg-fhY">
                                 <rect key="frame" x="0.0" y="105" width="414" height="791"/>
@@ -309,16 +323,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-ql-zh1" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                <rect key="frame" x="86" y="690" width="242" height="43"/>
+                                                <rect key="frame" x="49" y="690" width="301" height="43"/>
                                                 <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="242" id="OoR-aS-wkS"/>
+                                                    <constraint firstAttribute="width" constant="301" id="OoR-aS-wkS"/>
                                                     <constraint firstAttribute="height" constant="43" id="jM9-Kk-Bbb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="cCI-QX-VqI" kind="show" id="UtX-bM-gGQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -340,7 +357,7 @@
                                             <constraint firstItem="mEz-Ls-zo2" firstAttribute="top" secondItem="iZL-50-OCR" secondAttribute="bottom" constant="8" id="NS3-a9-Wew"/>
                                             <constraint firstItem="5cF-d4-UCo" firstAttribute="leading" secondItem="Tff-Vo-8cy" secondAttribute="trailing" constant="-151" id="Olh-C6-g6o"/>
                                             <constraint firstItem="6Gv-sS-tZd" firstAttribute="top" secondItem="0xW-dZ-H8R" secondAttribute="bottom" constant="8" id="Qfc-bB-qOk"/>
-                                            <constraint firstItem="3gr-ql-zh1" firstAttribute="leading" secondItem="34I-3W-1Ff" secondAttribute="trailing" constant="-293" id="T3Y-x2-zqQ"/>
+                                            <constraint firstItem="3gr-ql-zh1" firstAttribute="leading" secondItem="34I-3W-1Ff" secondAttribute="trailing" constant="-330" id="T3Y-x2-zqQ"/>
                                             <constraint firstItem="mEz-Ls-zo2" firstAttribute="leading" secondItem="iZL-50-OCR" secondAttribute="trailing" constant="-47" id="Uc1-eo-GPx"/>
                                             <constraint firstItem="5cF-d4-UCo" firstAttribute="leading" secondItem="dGf-Zq-h9p" secondAttribute="trailing" constant="-49" id="bey-7K-Zee"/>
                                             <constraint firstItem="LWk-TP-mwp" firstAttribute="leading" secondItem="iZL-50-OCR" secondAttribute="trailing" constant="7" id="ccF-H6-9a3"/>
@@ -404,6 +421,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOE-h9-dra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="927.536231884058" y="151.33928571428569"/>
+        </scene>
+        <!--EditEvent-->
+        <scene sceneID="8xY-C4-Iz4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditEvent" referencedIdentifier="EditEvent" id="cCI-QX-VqI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr3-OW-jjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="151"/>
         </scene>
     </scenes>
     <resources>

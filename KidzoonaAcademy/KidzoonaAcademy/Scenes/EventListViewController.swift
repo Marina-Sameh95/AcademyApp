@@ -12,7 +12,8 @@ class EventListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
+
+        override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -48,6 +49,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
         cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
+        
         
         return cell
     }

@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="794"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="r2a-Wz-csY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="r2a-Wz-csY" customClass="EventCellTableViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2a-Wz-csY" id="LRe-Kk-azY">
@@ -116,6 +116,12 @@
                                                 <constraint firstItem="Kw8-yy-aIv" firstAttribute="top" secondItem="LRe-Kk-azY" secondAttribute="top" constant="11" id="tBR-cC-UL1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="1kJ-dJ-UHw" id="xFp-eV-z5r"/>
+                                            <outlet property="eventImg" destination="kaY-HO-k1R" id="195-si-MFG"/>
+                                            <outlet property="eventName" destination="DnN-go-10W" id="mU2-aV-Px1"/>
+                                            <outlet property="eventRegister" destination="gsh-vi-ken" id="E0a-b2-fu3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -150,7 +156,7 @@
         <!--Event Profile View Controller-->
         <scene sceneID="ngE-J2-i5d">
             <objects>
-                <viewController id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventProfile" id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tqn-VL-ZFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +199,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hw2-Tt-Pnp">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hw2-Tt-Pnp" customClass="EventCollectionViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -213,6 +219,9 @@
                                                             <constraint firstItem="wpB-cc-o2K" firstAttribute="top" secondItem="hw2-Tt-Pnp" secondAttribute="top" id="G3A-TF-GFG"/>
                                                             <constraint firstItem="wpB-cc-o2K" firstAttribute="leading" secondItem="hw2-Tt-Pnp" secondAttribute="leading" id="ih1-aq-CBa"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="eventImage" destination="wpB-cc-o2K" id="eMO-Dx-9Zm"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -415,6 +424,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BsC-QW-joF" id="nkj-68-MMZ"/>
+                        <outlet property="eventName" destination="SZV-x4-anT" id="gWc-iv-6Ut"/>
                         <outlet property="sliderPage" destination="KEe-iH-7H1" id="pJt-kW-as3"/>
                     </connections>
                 </viewController>

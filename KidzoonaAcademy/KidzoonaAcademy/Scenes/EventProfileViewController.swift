@@ -11,6 +11,7 @@ import UIKit
 class EventProfileViewController: UIViewController  {
     
 
+    @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var sliderPage: UIPageControl!

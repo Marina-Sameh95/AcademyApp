@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tpV-VT-EZY">
             <objects>
-                <viewController id="rzZ-To-zc1" customClass="ViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="rzZ-To-zc1" customClass="ViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ocw-jr-phw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,11 +168,20 @@
                         <outlet property="academyName" destination="VUC-eF-cah" id="OI5-nX-hU6"/>
                         <outlet property="academyPhone" destination="Han-69-Mpb" id="tUQ-In-nzX"/>
                         <outlet property="uploadFileBtn" destination="Oey-0k-Wr2" id="3mc-Ua-uCz"/>
+                        <segue destination="nZc-Xo-ror" kind="show" identifier="Next" id="yfC-tz-Qzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dk-0f-6zP" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="26.53673163418291"/>
+        </scene>
+        <!--WaitViewController-->
+        <scene sceneID="Pae-EG-ij3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinalSignupStoryboard" referencedIdentifier="WaitViewController" id="nZc-Xo-ror" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6w3-5n-KSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="42"/>
         </scene>
     </scenes>
     <resources>

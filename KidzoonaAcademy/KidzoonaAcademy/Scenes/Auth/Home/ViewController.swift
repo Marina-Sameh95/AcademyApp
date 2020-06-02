@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import FirebaseStorage
 
 
 class ViewController: UIViewController {
@@ -27,10 +28,6 @@ class ViewController: UIViewController {
 //        academy.encode()
 //        let ac1 = Academy.decodeAcademy()
 //        print(ac1.name)
-      
-
-        // Do any additional setup after loading the view, typically from a nib.
-        
    
     }
     
@@ -46,13 +43,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func NextBtnPressed(_ sender: Any) {
-        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText&&academyImgString != "" && fileString != "")
+        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText )
         {
             let academy = Academy(name: academyName.text!, phone: academyPhone.text!, location: academyLocation.text!, img: academyImgString, papers: fileString)
-           // self.performSegue(withIdentifier: "toSecondRegVC", sender: self)
-            
-            
-            
+            academy.encode()
+            performSegue(withIdentifier: "Next", sender: nil)    
     }
     }
     
@@ -69,7 +64,7 @@ class ViewController: UIViewController {
                 academyImgBtn.contentMode = .scaleAspectFit
             }
             else {}
-            uploadImageToFirebase(SelectedImg: pickedImage)
+          //  uploadImageToFirebase(SelectedImg: pickedImage)
             }
         dismiss(animated: true, completion: nil)
     }
@@ -79,33 +74,33 @@ class ViewController: UIViewController {
         return String((0...length-1).map{ _ in letters.randomElement()!})
     }
     
-    func uploadImageToFirebase(SelectedImg: UIImage){
-        let randomInt = Int.random(in: 0..<25)
-        let randomImgName = randomString(length: randomInt)
-        let ref = FirebaseStorage.Storage.storage().reference().child("\(uploading)/\(randomImgName).jpeg")
-        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
-        print("uploadData=\(uploadData)")
-        let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
-                guard metadata != nil else {
-                    return
-                }
-                ref.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
-                        return
-                    }
-                    if (uploading == "Image"){
-                        academyImgString = downloadURL.absoluteString
-                    }
-                    else {
-                        fileString = downloadURL.absoluteString
-                    }
-                    
-                    // let ImgURL = downloadURL.absoluteString
-                    //                    self.sendMsgWithImgURL(ImageURL: ImgURL)
-                    print("URL=\(downloadURL.absoluteString)")
-                    
-                    
-                }}
+//    func uploadImageToFirebase(SelectedImg: UIImage){
+//        let randomInt = Int.random(in: 0..<25)
+//        let randomImgName = randomString(length: randomInt)
+//        let ref = FirebaseStorage.Storage.storage().reference().child("\(uploading)/\(randomImgName).jpeg")
+//        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+//        print("uploadData=\(uploadData)")
+//        let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+//                guard metadata != nil else {
+//                    return
+//                }
+//                ref.downloadURL { (url, error) in
+//                    guard let downloadURL = url else {
+//                        return
+//                    }
+//                    if (self.uploading == "Image"){
+//                        self.academyImgString = downloadURL.absoluteString
+//                    }
+//                    else {
+//                        self.fileString = downloadURL.absoluteString
+//                    }
+//
+//                    // let ImgURL = downloadURL.absoluteString
+//                    //                    self.sendMsgWithImgURL(ImageURL: ImgURL)
+//                    print("URL=\(downloadURL.absoluteString)")
+//
+//
+//                }}
             //            uploadTask.observe(.progress) { (snapshot) in
             //                if let completeUnitCount = snapshot.progress?.completedUnitCount{
             //                    print(completeUnitCount)
@@ -116,7 +111,7 @@ class ViewController: UIViewController {
             //
             //            }
             
-        }}
+      //  }}
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

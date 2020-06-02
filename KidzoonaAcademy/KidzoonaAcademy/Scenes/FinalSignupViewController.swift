@@ -26,6 +26,11 @@ class FinalSignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.indicator.stopAnimating()
+            self.performSegue(withIdentifier: "toFinalSignup", sender: nil)
+        }
 
         signup.layer.cornerRadius = 20
     }

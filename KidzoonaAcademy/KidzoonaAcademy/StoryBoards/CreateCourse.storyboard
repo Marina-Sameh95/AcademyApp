@@ -13,7 +13,7 @@
         <!--Create Course View Controller-->
         <scene sceneID="vJs-Iv-pj7">
             <objects>
-                <viewController id="jh3-5o-gQU" customClass="CreateCourseViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateCourse" id="jh3-5o-gQU" customClass="CreateCourseViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Eq-As-JZm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

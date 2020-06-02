@@ -30,9 +30,15 @@
 		5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110E248164A30073D4C7 /* EditAcademy.storyboard */; };
 		5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDB2481C7BB008BCA49 /* Main.storyboard */; };
 		5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */; };
-		5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */; };
-		5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */; };
+		5C8745DE2485BFAF00F7C39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */; };
+		5C8745E02485C24C00F7C39A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8745DF2485C24B00F7C39A /* AlertController.swift */; };
+		5C8745E22485C56400F7C39A /* FinalSignupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8745E12485C56300F7C39A /* FinalSignupStoryboard.storyboard */; };
+		5C8745E42485C5D700F7C39A /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */; };
+		5C8745E62485C70500F7C39A /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8745E52485C70400F7C39A /* WaitViewController.swift */; };
 		5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */; };
+		880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */; };
+		880C50D32485248F00CAA906 /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */; };
+		880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */; };
 		88408A8F2481923A007A5578 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A8E2481923A007A5578 /* Course.storyboard */; };
 		88408A912481936B007A5578 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A902481936B007A5578 /* Event.storyboard */; };
 		8890B82A247857050072C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B829247857050072C872 /* AppDelegate.swift */; };
@@ -96,10 +102,16 @@
 		5B63110E248164A30073D4C7 /* EditAcademy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditAcademy.storyboard; path = KidzoonaAcademy/StoryBoards/EditAcademy.storyboard; sourceTree = SOURCE_ROOT; };
 		5C01DEDB2481C7BB008BCA49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinalSignupStoryboard.storyboard; sourceTree = "<group>"; };
-		5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
+		5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C8745DF2485C24B00F7C39A /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		5C8745E12485C56300F7C39A /* FinalSignupStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalSignupStoryboard.storyboard; sourceTree = "<group>"; };
+		5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
+		5C8745E52485C70400F7C39A /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
 		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
 		7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.debug.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.debug.xcconfig"; sourceTree = "<group>"; };
+		880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellTableViewCell.swift; sourceTree = "<group>"; };
+		880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
+		880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		88408A8E2481923A007A5578 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +186,7 @@
 		179F324B24833149000A9D82 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				5C8745E72485CA3E00F7C39A /* SignUp */,
 				179F324C24833160000A9D82 /* SignIn */,
 				179F323E24832599000A9D82 /* Home */,
 			);
@@ -200,6 +213,16 @@
 			path = Designs;
 			sourceTree = SOURCE_ROOT;
 		};
+		5C8745E72485CA3E00F7C39A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */,
+				5C8745E52485C70400F7C39A /* WaitViewController.swift */,
+				8890B82B247857050072C872 /* ViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		88408A8924818F64007A5578 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +232,6 @@
 				5B63110D248164A30073D4C7 /* CreateEvent.storyboard */,
 				5B631102248164A20073D4C7 /* EditCourse.storyboard */,
 				5B631103248164A30073D4C7 /* EditEvent.storyboard */,
-				5C64ED7E2480437000E7C1FB /* FinalSignupStoryboard.storyboard */,
 				88408A8E2481923A007A5578 /* Course.storyboard */,
 				88408A902481936B007A5578 /* Event.storyboard */,
 				88BE0FAF24827F3E0064C979 /* Settings.storyboard */,
@@ -217,6 +239,7 @@
 				88BE0FB724828C590064C979 /* CreateCourse.storyboard */,
 				179F323A24830C14000A9D82 /* Home.storyboard */,
 				179F32492483313F000A9D82 /* SignIn.storyboard */,
+				5C8745E12485C56300F7C39A /* FinalSignupStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -230,7 +253,6 @@
 				5B631109248164A30073D4C7 /* EditEventVC.swift */,
 				5B63110C248164A30073D4C7 /* EditAcademyVC.swift */,
 				5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */,
-				5C64ED80248052BA00E7C1FB /* FinalSignupViewController.swift */,
 				8893DCFD2481D4BC00FDA6A8 /* EventListViewController.swift */,
 				8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */,
 				8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */,
@@ -239,6 +261,10 @@
 				88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */,
 				5B315B1B2484571C00218851 /* ViewController.swift */,
 				88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */,
+				880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */,
+				880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */,
+				880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */,
+				5C8745DF2485C24B00F7C39A /* AlertController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -291,6 +317,7 @@
 				88408A8C248190CE007A5578 /* Resources */,
 				8890B835247857060072C872 /* Info.plist */,
 				5B315B1D2484595E00218851 /* Academy.swift */,
+				5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */,
 			);
 			path = KidzoonaAcademy;
 			sourceTree = "<group>";
@@ -427,7 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C64ED7F2480437000E7C1FB /* FinalSignupStoryboard.storyboard in Resources */,
+				5C8745E22485C56400F7C39A /* FinalSignupStoryboard.storyboard in Resources */,
 				179F324A2483313F000A9D82 /* SignIn.storyboard in Resources */,
 				88408A912481936B007A5578 /* Event.storyboard in Resources */,
 				88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */,
@@ -436,6 +463,7 @@
 				5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */,
 				88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */,
 				179F323B24830C14000A9D82 /* Home.storyboard in Resources */,
+				5C8745DE2485BFAF00F7C39A /* GoogleService-Info.plist in Resources */,
 				5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */,
 				5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */,
 				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
@@ -510,13 +538,17 @@
 			files = (
 				5B315B1C2484571C00218851 /* ViewController.swift in Sources */,
 				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
+				880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
+				880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */,
+				8890B82C247857050072C872 /* ViewController.swift in Sources */,
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
 				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
 				8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */,
+				880C50D32485248F00CAA906 /* EventCellTableViewCell.swift in Sources */,
 				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
-				5C64ED81248052BA00E7C1FB /* FinalSignupViewController.swift in Sources */,
+				5C8745E02485C24C00F7C39A /* AlertController.swift in Sources */,
 				88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */,
 				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
 				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
@@ -529,6 +561,8 @@
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
 				179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
+				5C8745E62485C70500F7C39A /* WaitViewController.swift in Sources */,
+				5C8745E42485C5D700F7C39A /* FinalSignupViewController.swift in Sources */,
 				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
 				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,

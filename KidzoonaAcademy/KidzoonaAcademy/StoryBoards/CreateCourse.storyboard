@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Course View Controller-->
+        <scene sceneID="vJs-Iv-pj7">
+            <objects>
+                <viewController storyboardIdentifier="CreateCourse" id="jh3-5o-gQU" customClass="CreateCourseViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Eq-As-JZm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56g-kZ-6iY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOA-hm-1DQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-Jq-ml5">
+                                                <rect key="frame" x="-3" y="-10" width="421" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="S7Y-hD-v7M"/>
+                                                    <constraint firstAttribute="width" constant="421" id="ehO-de-iCT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1d-wh-7ou">
+                                                <rect key="frame" x="139" y="52" width="136" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImg" translatesAutoresizingMaskIntoConstraints="NO" id="rAo-PM-LL6">
+                                                <rect key="frame" x="87" y="126" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="DeF-xC-Du9"/>
+                                                    <constraint firstAttribute="width" constant="240" id="Ol6-mf-Ejd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w39-jp-gBB" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="295" width="354" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="354" id="81b-Wl-RtN"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ZTe-96-VR3"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Course name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV0-G9-fFj">
+                                                <rect key="frame" x="49" y="283" width="106" height="21"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2uf-54-DDN" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="372" width="354" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="354" id="Nt0-gF-LUc"/>
+                                                    <constraint firstAttribute="height" constant="50" id="l03-MP-Ope"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instructor/Coach" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-Bm-qho">
+                                                <rect key="frame" x="47" y="361" width="133" height="21"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bY6-XZ-oSU" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="623" width="162" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="162" id="ZM7-Gz-n8L"/>
+                                                    <constraint firstAttribute="height" constant="50" id="q58-uM-hHR"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Wa-hlG">
+                                                <rect key="frame" x="47" y="616" width="39" height="20.5"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I66-E8-4mw" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="623" width="162" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Rc1-d7-Zb2"/>
+                                                    <constraint firstAttribute="width" constant="162" id="z5Y-dV-Kb9"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dicount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWM-11-Q9W">
+                                                <rect key="frame" x="237" y="612" width="60" height="21"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-L2-1re">
+                                                <rect key="frame" x="358" y="628" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="L4e-SF-LYS"/>
+                                                    <constraint firstAttribute="width" constant="15" id="Vhp-BH-ztj"/>
+                                                </constraints>
+                                                <state key="normal" image="IncreaseArrow"/>
+                                                <connections>
+                                                    <action selector="increaseDiscount:" destination="jh3-5o-gQU" eventType="touchUpInside" id="bWT-qG-8lk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jt-40-Rgp">
+                                                <rect key="frame" x="358" y="653" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="6Ie-xT-lcv"/>
+                                                    <constraint firstAttribute="height" constant="15" id="pWg-vn-X56"/>
+                                                </constraints>
+                                                <state key="normal" image="DecreaseArrow"/>
+                                                <connections>
+                                                    <action selector="decreaseDiscount:" destination="jh3-5o-gQU" eventType="touchUpInside" id="PGQ-nK-kxR"/>
+                                                </connections>
+                                            </button>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0yM-p5-8Hp" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="692" width="162" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="162" id="cnc-xl-9JE"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ynL-Bc-Xgy"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAk-Eh-ijT">
+                                                <rect key="frame" x="49" y="681" width="36" height="21"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hVJ-uq-i3O" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="692" width="162" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RPQ-ny-vAz"/>
+                                                    <constraint firstAttribute="width" constant="162" id="f77-Y1-3NG"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd6-gl-5kT">
+                                                <rect key="frame" x="245" y="680" width="38" height="21"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-Xa-lAm" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="770" width="354" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="354" id="BV9-a4-gFh"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Dee-SM-5BR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Create">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="I66-E8-4mw" firstAttribute="leading" secondItem="sd6-gl-5kT" secondAttribute="trailing" constant="-61" id="0nf-D8-l6C"/>
+                                            <constraint firstItem="GRx-Bm-qho" firstAttribute="top" secondItem="w39-jp-gBB" secondAttribute="bottom" constant="16" id="3jb-4c-vB8"/>
+                                            <constraint firstItem="xWM-11-Q9W" firstAttribute="leading" secondItem="aA8-Wa-hlG" secondAttribute="trailing" constant="151" id="5dV-QC-OOy"/>
+                                            <constraint firstItem="UIV-Xa-lAm" firstAttribute="leading" secondItem="0yM-p5-8Hp" secondAttribute="trailing" constant="-164" id="AGB-Ih-MmQ"/>
+                                            <constraint firstItem="kOx-L2-1re" firstAttribute="leading" secondItem="xWM-11-Q9W" secondAttribute="trailing" constant="61" id="Agu-ld-uXR"/>
+                                            <constraint firstItem="Bdt-Jq-ml5" firstAttribute="leading" secondItem="rAo-PM-LL6" secondAttribute="trailing" constant="-330" id="AyW-f4-2Vx"/>
+                                            <constraint firstItem="sd6-gl-5kT" firstAttribute="top" secondItem="I66-E8-4mw" secondAttribute="bottom" constant="7" id="CRh-Pc-yzC"/>
+                                            <constraint firstItem="Bdt-Jq-ml5" firstAttribute="leading" secondItem="qOA-hm-1DQ" secondAttribute="leading" constant="-3" id="Dus-qF-PWk"/>
+                                            <constraint firstItem="Bdt-Jq-ml5" firstAttribute="leading" secondItem="h1d-wh-7ou" secondAttribute="trailing" constant="-278" id="EhM-nb-WBM"/>
+                                            <constraint firstItem="w39-jp-gBB" firstAttribute="leading" secondItem="rAo-PM-LL6" secondAttribute="trailing" constant="-297" id="FO6-23-wLK"/>
+                                            <constraint firstItem="UIV-Xa-lAm" firstAttribute="top" secondItem="0yM-p5-8Hp" secondAttribute="bottom" constant="28" id="L5q-99-PPk"/>
+                                            <constraint firstItem="rAo-PM-LL6" firstAttribute="leading" secondItem="OV0-G9-fFj" secondAttribute="trailing" constant="-68" id="MqQ-15-RuX"/>
+                                            <constraint firstItem="I66-E8-4mw" firstAttribute="top" secondItem="bY6-XZ-oSU" secondAttribute="bottom" constant="-50" id="VN1-bm-QSE"/>
+                                            <constraint firstItem="2jt-40-Rgp" firstAttribute="top" secondItem="xWM-11-Q9W" secondAttribute="bottom" constant="20" id="WTy-P9-Otw"/>
+                                            <constraint firstItem="h1d-wh-7ou" firstAttribute="top" secondItem="Bdt-Jq-ml5" secondAttribute="bottom" constant="-66" id="YxX-EL-Iz3"/>
+                                            <constraint firstItem="WAk-Eh-ijT" firstAttribute="top" secondItem="bY6-XZ-oSU" secondAttribute="bottom" constant="8" id="ZUr-Ot-bjo"/>
+                                            <constraint firstItem="aA8-Wa-hlG" firstAttribute="top" secondItem="xWM-11-Q9W" secondAttribute="bottom" constant="-17" id="a9G-S1-uzd"/>
+                                            <constraint firstItem="rAo-PM-LL6" firstAttribute="top" secondItem="Bdt-Jq-ml5" secondAttribute="bottom" constant="8" id="cP9-3U-MPJ"/>
+                                            <constraint firstItem="0yM-p5-8Hp" firstAttribute="top" secondItem="bY6-XZ-oSU" secondAttribute="bottom" constant="19" id="cj5-VL-2xU"/>
+                                            <constraint firstItem="kOx-L2-1re" firstAttribute="top" secondItem="xWM-11-Q9W" secondAttribute="bottom" constant="-5" id="cqE-7A-Iip"/>
+                                            <constraint firstItem="2uf-54-DDN" firstAttribute="leading" secondItem="w39-jp-gBB" secondAttribute="trailing" constant="-354" id="e7P-9p-DbT"/>
+                                            <constraint firstItem="bY6-XZ-oSU" firstAttribute="leading" secondItem="WAk-Eh-ijT" secondAttribute="trailing" constant="-53" id="gzJ-Ez-ScZ"/>
+                                            <constraint firstItem="hVJ-uq-i3O" firstAttribute="top" secondItem="I66-E8-4mw" secondAttribute="bottom" constant="19" id="kxa-4Y-5r9"/>
+                                            <constraint firstItem="I66-E8-4mw" firstAttribute="leading" secondItem="bY6-XZ-oSU" secondAttribute="trailing" constant="28" id="n7P-ow-a0w"/>
+                                            <constraint firstItem="w39-jp-gBB" firstAttribute="leading" secondItem="GRx-Bm-qho" secondAttribute="trailing" constant="-150" id="qM9-ve-jRg"/>
+                                            <constraint firstItem="w39-jp-gBB" firstAttribute="top" secondItem="rAo-PM-LL6" secondAttribute="bottom" constant="41" id="rOb-EV-d9y"/>
+                                            <constraint firstItem="OV0-G9-fFj" firstAttribute="top" secondItem="rAo-PM-LL6" secondAttribute="bottom" constant="29" id="rcu-vC-X1V"/>
+                                            <constraint firstItem="Bdt-Jq-ml5" firstAttribute="top" secondItem="qOA-hm-1DQ" secondAttribute="top" constant="-10" id="rdh-lA-HQ1"/>
+                                            <constraint firstItem="2jt-40-Rgp" firstAttribute="leading" secondItem="xWM-11-Q9W" secondAttribute="trailing" constant="61" id="rt7-OU-kBc"/>
+                                            <constraint firstItem="0yM-p5-8Hp" firstAttribute="leading" secondItem="bY6-XZ-oSU" secondAttribute="trailing" constant="-162" id="tWf-Q7-09H"/>
+                                            <constraint firstItem="hVJ-uq-i3O" firstAttribute="leading" secondItem="I66-E8-4mw" secondAttribute="trailing" constant="-162" id="vmM-Hy-BnS"/>
+                                            <constraint firstItem="2uf-54-DDN" firstAttribute="top" secondItem="w39-jp-gBB" secondAttribute="bottom" constant="27" id="yN5-G7-TMo"/>
+                                        </constraints>
+                                    </view>
+                                    <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-O5-b5d" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="449" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="50e-ni-Oa9"/>
+                                            <constraint firstAttribute="width" constant="354" id="9Qf-Ha-umF"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1la-Lw-ITY">
+                                        <rect key="frame" x="355" y="454" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="A2M-f1-hae"/>
+                                            <constraint firstAttribute="width" constant="15" id="MEX-cc-eTh"/>
+                                        </constraints>
+                                        <state key="normal" image="IncreaseArrow"/>
+                                        <connections>
+                                            <action selector="increaseSeats:" destination="jh3-5o-gQU" eventType="touchUpInside" id="MrF-Ad-sze"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Available seats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-So-vus">
+                                        <rect key="frame" x="44" y="438" width="118" height="21"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-YA-Sei">
+                                        <rect key="frame" x="355" y="479" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="JbQ-X1-tKY"/>
+                                            <constraint firstAttribute="width" constant="15" id="mYs-4n-we5"/>
+                                        </constraints>
+                                        <state key="normal" image="DecreaseArrow"/>
+                                        <connections>
+                                            <action selector="decreaseSeats:" destination="jh3-5o-gQU" eventType="touchUpInside" id="UbB-mr-c5P"/>
+                                        </connections>
+                                    </button>
+                                    <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-Fh-Ngq" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="526" width="354" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="73" id="T5t-fo-RvN"/>
+                                            <constraint firstAttribute="width" constant="354" id="ogP-PW-aOB"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNN-uG-hPV">
+                                        <rect key="frame" x="44" y="515" width="88" height="21"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bY6-XZ-oSU" firstAttribute="top" secondItem="rE5-Fh-Ngq" secondAttribute="bottom" constant="24" id="1XB-2E-eS3"/>
+                                    <constraint firstItem="qOA-hm-1DQ" firstAttribute="leading" secondItem="56g-kZ-6iY" secondAttribute="leading" id="3Lv-ep-bik"/>
+                                    <constraint firstItem="Rxv-YA-Sei" firstAttribute="leading" secondItem="CQz-So-vus" secondAttribute="trailing" constant="193" id="Ddx-NS-ei3"/>
+                                    <constraint firstItem="YNN-uG-hPV" firstAttribute="top" secondItem="zWt-O5-b5d" secondAttribute="bottom" constant="16" id="Hkg-x3-TFb"/>
+                                    <constraint firstItem="1la-Lw-ITY" firstAttribute="top" secondItem="CQz-So-vus" secondAttribute="bottom" constant="-5" id="Kkt-qV-xUn"/>
+                                    <constraint firstItem="rE5-Fh-Ngq" firstAttribute="leading" secondItem="aA8-Wa-hlG" secondAttribute="trailing" constant="-59" id="LjV-0c-muc"/>
+                                    <constraint firstItem="CQz-So-vus" firstAttribute="top" secondItem="2uf-54-DDN" secondAttribute="bottom" constant="16" id="OlT-wI-v1I"/>
+                                    <constraint firstItem="1la-Lw-ITY" firstAttribute="leading" secondItem="CQz-So-vus" secondAttribute="trailing" constant="193" id="VwZ-w1-wVI"/>
+                                    <constraint firstItem="qOA-hm-1DQ" firstAttribute="centerX" secondItem="56g-kZ-6iY" secondAttribute="centerX" id="W4y-bN-5eo"/>
+                                    <constraint firstItem="qOA-hm-1DQ" firstAttribute="centerY" secondItem="56g-kZ-6iY" secondAttribute="centerY" id="ZOT-7T-H8q"/>
+                                    <constraint firstItem="qOA-hm-1DQ" firstAttribute="top" secondItem="56g-kZ-6iY" secondAttribute="top" id="c1M-Gi-NDe"/>
+                                    <constraint firstAttribute="bottom" secondItem="qOA-hm-1DQ" secondAttribute="bottom" id="eyx-My-jro"/>
+                                    <constraint firstItem="2uf-54-DDN" firstAttribute="leading" secondItem="zWt-O5-b5d" secondAttribute="trailing" constant="-351" id="fRD-fG-Adb"/>
+                                    <constraint firstAttribute="trailing" secondItem="qOA-hm-1DQ" secondAttribute="trailing" id="frf-cD-kxN"/>
+                                    <constraint firstItem="rE5-Fh-Ngq" firstAttribute="top" secondItem="zWt-O5-b5d" secondAttribute="bottom" constant="27" id="g7I-3a-6hC"/>
+                                    <constraint firstItem="rE5-Fh-Ngq" firstAttribute="leading" secondItem="bY6-XZ-oSU" secondAttribute="trailing" constant="-167" id="jVG-pc-oBE"/>
+                                    <constraint firstItem="aA8-Wa-hlG" firstAttribute="top" secondItem="rE5-Fh-Ngq" secondAttribute="bottom" constant="17" id="pNK-ks-Lku"/>
+                                    <constraint firstItem="2uf-54-DDN" firstAttribute="leading" secondItem="CQz-So-vus" secondAttribute="trailing" constant="-132" id="rnz-tm-UTM"/>
+                                    <constraint firstItem="zWt-O5-b5d" firstAttribute="top" secondItem="2uf-54-DDN" secondAttribute="bottom" constant="27" id="upF-4M-DmZ"/>
+                                    <constraint firstItem="zWt-O5-b5d" firstAttribute="leading" secondItem="YNN-uG-hPV" secondAttribute="trailing" constant="-105" id="vyt-HA-Lkw"/>
+                                    <constraint firstItem="rE5-Fh-Ngq" firstAttribute="leading" secondItem="zWt-O5-b5d" secondAttribute="trailing" constant="-354" id="wjF-zE-HqM"/>
+                                    <constraint firstItem="Rxv-YA-Sei" firstAttribute="top" secondItem="CQz-So-vus" secondAttribute="bottom" constant="20" id="ya8-aH-3DT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="56g-kZ-6iY" firstAttribute="leading" secondItem="2Eq-As-JZm" secondAttribute="leading" id="3DS-od-HtP"/>
+                            <constraint firstAttribute="bottom" secondItem="56g-kZ-6iY" secondAttribute="bottom" id="Ad2-Ma-O2m"/>
+                            <constraint firstAttribute="trailing" secondItem="56g-kZ-6iY" secondAttribute="trailing" id="KbQ-eK-x5L"/>
+                            <constraint firstItem="56g-kZ-6iY" firstAttribute="top" secondItem="2Eq-As-JZm" secondAttribute="top" id="bTs-qB-2xa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="965-wF-Bb1"/>
+                    </view>
+                    <connections>
+                        <outlet property="discountTxt" destination="I66-E8-4mw" id="eFo-9l-4Rs"/>
+                        <outlet property="seatsTxt" destination="zWt-O5-b5d" id="XeS-7G-z6e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQq-hR-ihC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457.97101449275368" y="-706.47321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddImg" width="76" height="78"/>
+        <image name="DecreaseArrow" width="12" height="12"/>
+        <image name="Header" width="375" height="96"/>
+        <image name="IncreaseArrow" width="12" height="12"/>
+    </resources>
+</document>

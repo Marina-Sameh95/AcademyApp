@@ -1,19 +1,33 @@
 //
-//  CourseProfileViewController.swift
+//  FinalSignupViewController.swift
 //  KidzoonaAcademy
 //
-//  Created by Marina Sameh on 5/30/20.
+//  Created by Marwan Magdy on 5/28/20.
 //  Copyright © 2020 Marina Sameh. All rights reserved.
 //
 
 import UIKit
 
-class CourseProfileViewController: UIViewController {
+class FinalSignupViewController: UIViewController {
 
+    
+    @IBOutlet weak var txtname: UILabel!
+    @IBOutlet weak var txtemail: UILabel!
+    
+    @IBOutlet weak var txtpass: UITextField!
+    @IBOutlet weak var txtconfpass: UITextField!
+    
+    @IBOutlet weak var signup: UIView!
+    
+    @IBAction func Signup(_ sender: Any) {
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        signup.layer.cornerRadius = 20
     }
     
 

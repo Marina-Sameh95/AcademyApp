@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
 class SignInVC: UIViewController {
 
@@ -40,7 +38,6 @@ class SignInVC: UIViewController {
     
     @IBAction func signInBtn(_ sender: Any) {
         
-        userSignin()
     }
     
     @IBAction func forgetPassBtn(_ sender: Any) {
@@ -50,37 +47,6 @@ class SignInVC: UIViewController {
     
     @IBAction func registerBtn(_ sender: Any){
         
-        let signupcontroller = ViewController()
-        self.navigationController?.pushViewController(signupcontroller, animated: true)
-        
-    }
-    
-    func userSignin(){
-        
-        guard
-            let email = emailTxt.text, email != "",
-            
-            let password = passwordTxt.text, password != ""
-            
-            else{
-                AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out all fields.")
-                
-                return
-        }
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if(user != nil)
-            {
-                //                let homecontroller = HomeViewController()
-                //                self.navigationController?.pushViewController(homecontroller, animated: true)
-                
-            }
-            if(error != nil){
-                
-                AlertController.showAlert(inViewController: self, title: "Error",
-                                          message: error!.localizedDescription)
-            }
-        }
     }
 
 }

@@ -13,7 +13,7 @@
         <!--Edit Event-->
         <scene sceneID="Zyk-0e-kJa">
             <objects>
-                <viewController storyboardIdentifier="EditEvent" id="bev-l6-0Tp" customClass="EditEvent" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bev-l6-0Tp" customClass="EditEvent" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KaD-Mf-CtW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

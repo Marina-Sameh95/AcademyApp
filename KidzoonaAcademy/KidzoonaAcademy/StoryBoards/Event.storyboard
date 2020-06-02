@@ -10,14 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CreateEvent-->
-        <scene sceneID="gU2-cz-PNh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CreateEvent" referencedIdentifier="CreateEvent" id="mbY-2d-9eG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="34s-fi-62d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-409" y="255"/>
-        </scene>
         <!--Event List View Controller-->
         <scene sceneID="X2Z-ao-uWF">
             <objects>
@@ -40,9 +32,6 @@
                                     <constraint firstAttribute="width" constant="46" id="a5n-Ub-pw8"/>
                                 </constraints>
                                 <state key="normal" image="AddBtn"/>
-                                <connections>
-                                    <segue destination="mbY-2d-9eG" kind="show" id="mPe-KG-Rx3"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uc-8z-bAO">
                                 <rect key="frame" x="165" y="46" width="85" height="34"/>
@@ -58,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="794"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="r2a-Wz-csY" customClass="EventCellTableViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="r2a-Wz-csY">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2a-Wz-csY" id="LRe-Kk-azY">
@@ -116,12 +105,6 @@
                                                 <constraint firstItem="Kw8-yy-aIv" firstAttribute="top" secondItem="LRe-Kk-azY" secondAttribute="top" constant="11" id="tBR-cC-UL1"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="eventDate" destination="1kJ-dJ-UHw" id="xFp-eV-z5r"/>
-                                            <outlet property="eventImg" destination="kaY-HO-k1R" id="195-si-MFG"/>
-                                            <outlet property="eventName" destination="DnN-go-10W" id="mU2-aV-Px1"/>
-                                            <outlet property="eventRegister" destination="gsh-vi-ken" id="E0a-b2-fu3"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -156,7 +139,7 @@
         <!--Event Profile View Controller-->
         <scene sceneID="ngE-J2-i5d">
             <objects>
-                <viewController storyboardIdentifier="EventProfile" id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tqn-VL-ZFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,9 +158,6 @@
                                     <constraint firstAttribute="width" constant="44" id="zBd-ZC-epi"/>
                                 </constraints>
                                 <state key="normal" image="Back"/>
-                                <connections>
-                                    <segue destination="2aR-wm-8IS" kind="show" id="bFK-Z5-oW1"/>
-                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-dg-fhY">
                                 <rect key="frame" x="0.0" y="105" width="414" height="791"/>
@@ -199,7 +179,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hw2-Tt-Pnp" customClass="EventCollectionViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hw2-Tt-Pnp">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -219,9 +199,6 @@
                                                             <constraint firstItem="wpB-cc-o2K" firstAttribute="top" secondItem="hw2-Tt-Pnp" secondAttribute="top" id="G3A-TF-GFG"/>
                                                             <constraint firstItem="wpB-cc-o2K" firstAttribute="leading" secondItem="hw2-Tt-Pnp" secondAttribute="leading" id="ih1-aq-CBa"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <outlet property="eventImage" destination="wpB-cc-o2K" id="eMO-Dx-9Zm"/>
-                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -332,19 +309,16 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-ql-zh1" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                <rect key="frame" x="49" y="690" width="301" height="43"/>
+                                                <rect key="frame" x="86" y="690" width="242" height="43"/>
                                                 <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="301" id="OoR-aS-wkS"/>
+                                                    <constraint firstAttribute="width" constant="242" id="OoR-aS-wkS"/>
                                                     <constraint firstAttribute="height" constant="43" id="jM9-Kk-Bbb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="cCI-QX-VqI" kind="show" id="UtX-bM-gGQ"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -366,7 +340,7 @@
                                             <constraint firstItem="mEz-Ls-zo2" firstAttribute="top" secondItem="iZL-50-OCR" secondAttribute="bottom" constant="8" id="NS3-a9-Wew"/>
                                             <constraint firstItem="5cF-d4-UCo" firstAttribute="leading" secondItem="Tff-Vo-8cy" secondAttribute="trailing" constant="-151" id="Olh-C6-g6o"/>
                                             <constraint firstItem="6Gv-sS-tZd" firstAttribute="top" secondItem="0xW-dZ-H8R" secondAttribute="bottom" constant="8" id="Qfc-bB-qOk"/>
-                                            <constraint firstItem="3gr-ql-zh1" firstAttribute="leading" secondItem="34I-3W-1Ff" secondAttribute="trailing" constant="-330" id="T3Y-x2-zqQ"/>
+                                            <constraint firstItem="3gr-ql-zh1" firstAttribute="leading" secondItem="34I-3W-1Ff" secondAttribute="trailing" constant="-293" id="T3Y-x2-zqQ"/>
                                             <constraint firstItem="mEz-Ls-zo2" firstAttribute="leading" secondItem="iZL-50-OCR" secondAttribute="trailing" constant="-47" id="Uc1-eo-GPx"/>
                                             <constraint firstItem="5cF-d4-UCo" firstAttribute="leading" secondItem="dGf-Zq-h9p" secondAttribute="trailing" constant="-49" id="bey-7K-Zee"/>
                                             <constraint firstItem="LWk-TP-mwp" firstAttribute="leading" secondItem="iZL-50-OCR" secondAttribute="trailing" constant="7" id="ccF-H6-9a3"/>
@@ -424,21 +398,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BsC-QW-joF" id="nkj-68-MMZ"/>
-                        <outlet property="eventName" destination="SZV-x4-anT" id="gWc-iv-6Ut"/>
                         <outlet property="sliderPage" destination="KEe-iH-7H1" id="pJt-kW-as3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOE-h9-dra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="927.536231884058" y="151.33928571428569"/>
-        </scene>
-        <!--EditEvent-->
-        <scene sceneID="8xY-C4-Iz4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EditEvent" referencedIdentifier="EditEvent" id="cCI-QX-VqI" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fr3-OW-jjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1558" y="151"/>
         </scene>
     </scenes>
     <resources>

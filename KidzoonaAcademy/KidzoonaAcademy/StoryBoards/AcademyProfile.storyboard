@@ -10,18 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SettingsView-->
-        <scene sceneID="5WL-zs-sG8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsView" id="mMV-7e-uWV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wv8-RB-Rx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1145" y="22"/>
-        </scene>
         <!--Academy Profile View Controller-->
         <scene sceneID="Sdx-pQ-vsi">
             <objects>
-                <viewController storyboardIdentifier="AcademyProfile" id="vUl-XL-Iym" customClass="AcademyProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vUl-XL-Iym" customClass="AcademyProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="im8-xb-IXC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,9 +74,6 @@
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="3vC-eF-YCl" kind="show" id="puo-rd-CxO"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,9 +145,6 @@
                                             <constraint firstAttribute="width" constant="41" id="bLg-m4-i14"/>
                                         </constraints>
                                         <state key="normal" image="Back"/>
-                                        <connections>
-                                            <segue destination="mMV-7e-uWV" kind="show" id="B8v-Vw-e8k"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -209,14 +195,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dc6-d3-05P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1627.536231884058" y="-95.089285714285708"/>
-        </scene>
-        <!--EditAcademy-->
-        <scene sceneID="to2-a6-9dV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EditAcademy" referencedIdentifier="EditAcademy" id="3vC-eF-YCl" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N4r-DZ-rRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2230" y="-95"/>
         </scene>
     </scenes>
     <resources>

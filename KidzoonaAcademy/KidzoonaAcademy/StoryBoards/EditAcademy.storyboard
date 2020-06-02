@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Academy-->
+        <scene sceneID="kbB-x9-RaL">
+            <objects>
+                <viewController storyboardIdentifier="EditAcademy" id="haI-tG-2D5" customClass="EditAcademy" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ad-hk-JaG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j18-Ts-CGc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-lz-JsB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="818"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-Hh-q0r" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="675" width="315" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fc9-ca-zdJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kfX-Hh-q0r" secondAttribute="bottom" constant="93" id="TzD-dK-daQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="kfX-Hh-q0r" secondAttribute="trailing" constant="30" id="Xgo-0V-vRM"/>
+                                            <constraint firstItem="kfX-Hh-q0r" firstAttribute="leading" secondItem="vYw-lz-JsB" secondAttribute="leading" constant="30" id="ZEU-AY-dlI"/>
+                                            <constraint firstItem="kfX-Hh-q0r" firstAttribute="centerX" secondItem="vYw-lz-JsB" secondAttribute="centerX" id="kMZ-eH-x6b"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-3M-a5O" customClass="UndeLinedTextfield" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="536" width="235" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="9hB-72-baF"/>
+                                            <constraint firstAttribute="height" constant="21" id="DMg-Vw-P3z"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOc-5M-wRf">
+                                        <rect key="frame" x="16" y="300" width="115" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="hew-yX-eAL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Alexandria,egypt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yrf-BY-5FG" customClass="UndeLinedTextfield" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="396" width="235" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="Wss-pl-bth"/>
+                                            <constraint firstAttribute="height" constant="21" id="bc2-I8-13Z"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIu-0q-XVL">
+                                        <rect key="frame" x="58.666666666666657" y="614" width="27" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="SL6-pB-QAX"/>
+                                            <constraint firstAttribute="width" constant="27" id="zBc-It-ugq"/>
+                                        </constraints>
+                                        <state key="normal" image="File"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-op-kgk">
+                                        <rect key="frame" x="16" y="510" width="33" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="3Up-Q5-tvz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWx-4l-dmY">
+                                        <rect key="frame" x="16" y="440" width="36" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ca2-4n-Nak"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register paper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSG-nY-bv6">
+                                        <rect key="frame" x="16" y="580" width="112" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Kmp-nr-zwB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="01#########" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xzx-b5-p3C" customClass="UndeLinedTextfield" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="326" width="235" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="a1J-9N-2vW"/>
+                                            <constraint firstAttribute="height" constant="21" id="o5c-9t-3aX"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="##/##/##" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-hz-rB2" customClass="UndeLinedTextfield" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="466" width="235" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="Gn6-VB-Gac"/>
+                                            <constraint firstAttribute="height" constant="21" id="jhj-3p-SYO"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-4I-67N">
+                                        <rect key="frame" x="16" y="370" width="66" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="D8E-97-lhL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="g9U-ar-Nw0">
+                                        <rect key="frame" x="144.66666666666666" y="146" width="86" height="86"/>
+                                        <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="86" id="Rxj-c8-r5K"/>
+                                            <constraint firstAttribute="height" constant="86" id="bjZ-RF-g5B"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academy Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBM-SX-xPG">
+                                        <rect key="frame" x="68.666666666666686" y="247" width="238" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="238" id="8gp-0B-XhX"/>
+                                            <constraint firstAttribute="height" constant="28" id="Ul4-jg-Wyq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-ZK-5R4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="uKj-BM-a7b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-9L-nez">
+                                        <rect key="frame" x="142.66666666666666" y="52" width="90" height="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vkp-hz-rB2" firstAttribute="top" secondItem="lWx-4l-dmY" secondAttribute="bottom" constant="5" id="1CU-f9-Iwu"/>
+                                    <constraint firstItem="4T8-ZK-5R4" firstAttribute="leading" secondItem="j18-Ts-CGc" secondAttribute="leading" id="3CO-h5-W42"/>
+                                    <constraint firstItem="Xzx-b5-p3C" firstAttribute="top" secondItem="aOc-5M-wRf" secondAttribute="bottom" constant="5" id="4RC-fX-aAY"/>
+                                    <constraint firstItem="vkp-hz-rB2" firstAttribute="leading" secondItem="lWx-4l-dmY" secondAttribute="leading" id="Ba5-vN-vbq"/>
+                                    <constraint firstItem="lWx-4l-dmY" firstAttribute="leading" secondItem="IuK-4I-67N" secondAttribute="leading" id="DTm-te-fGu"/>
+                                    <constraint firstItem="IuK-4I-67N" firstAttribute="top" secondItem="Xzx-b5-p3C" secondAttribute="bottom" constant="23" id="FXh-Pc-ZDN"/>
+                                    <constraint firstItem="4T8-ZK-5R4" firstAttribute="top" secondItem="j18-Ts-CGc" secondAttribute="top" id="GVy-F4-i3L"/>
+                                    <constraint firstItem="mjR-3M-a5O" firstAttribute="leading" secondItem="fD7-op-kgk" secondAttribute="leading" id="HaK-fL-xeZ"/>
+                                    <constraint firstItem="AGz-9L-nez" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="IMm-g5-Icc"/>
+                                    <constraint firstItem="kIu-0q-XVL" firstAttribute="top" secondItem="pSG-nY-bv6" secondAttribute="bottom" constant="13" id="J0K-Ib-Q8N"/>
+                                    <constraint firstAttribute="trailing" secondItem="4T8-ZK-5R4" secondAttribute="trailing" id="JRL-Wu-l7T"/>
+                                    <constraint firstItem="fD7-op-kgk" firstAttribute="top" secondItem="vkp-hz-rB2" secondAttribute="bottom" constant="23" id="KX6-bS-KbI"/>
+                                    <constraint firstItem="pSG-nY-bv6" firstAttribute="top" secondItem="mjR-3M-a5O" secondAttribute="bottom" constant="23" id="L9i-0D-g4h"/>
+                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="top" secondItem="j18-Ts-CGc" secondAttribute="top" id="LtQ-tJ-SAU"/>
+                                    <constraint firstItem="g9U-ar-Nw0" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="Pmz-TZ-13T"/>
+                                    <constraint firstItem="aBM-SX-xPG" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="RJL-am-gJq"/>
+                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="centerY" secondItem="j18-Ts-CGc" secondAttribute="centerY" priority="250" constant="3" id="TDD-mL-zF9"/>
+                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="centerX" secondItem="j18-Ts-CGc" secondAttribute="centerX" id="Uj0-UX-8hk"/>
+                                    <constraint firstAttribute="trailing" secondItem="vYw-lz-JsB" secondAttribute="trailing" id="V2m-UJ-kZC"/>
+                                    <constraint firstItem="aOc-5M-wRf" firstAttribute="top" secondItem="aBM-SX-xPG" secondAttribute="bottom" constant="25" id="WLf-QU-3Xh"/>
+                                    <constraint firstItem="Yrf-BY-5FG" firstAttribute="leading" secondItem="IuK-4I-67N" secondAttribute="leading" id="Yxe-h2-pW6"/>
+                                    <constraint firstItem="vYw-lz-JsB" firstAttribute="leading" secondItem="j18-Ts-CGc" secondAttribute="leading" id="Z2B-Y4-LLg"/>
+                                    <constraint firstItem="kIu-0q-XVL" firstAttribute="centerX" secondItem="pSG-nY-bv6" secondAttribute="centerX" id="dCH-5Y-TKR"/>
+                                    <constraint firstItem="Xzx-b5-p3C" firstAttribute="leading" secondItem="aOc-5M-wRf" secondAttribute="leading" id="fUJ-rx-TR1"/>
+                                    <constraint firstAttribute="bottom" secondItem="vYw-lz-JsB" secondAttribute="bottom" priority="250" constant="-6" id="jhU-u3-Dnc"/>
+                                    <constraint firstItem="kfX-Hh-q0r" firstAttribute="top" secondItem="kIu-0q-XVL" secondAttribute="bottom" constant="25" id="kQg-lc-3aj"/>
+                                    <constraint firstItem="AGz-9L-nez" firstAttribute="centerY" secondItem="4T8-ZK-5R4" secondAttribute="centerY" constant="14" id="kc6-Td-Ifz"/>
+                                    <constraint firstItem="lWx-4l-dmY" firstAttribute="top" secondItem="Yrf-BY-5FG" secondAttribute="bottom" constant="23" id="l0X-Sd-cyD"/>
+                                    <constraint firstItem="Yrf-BY-5FG" firstAttribute="top" secondItem="IuK-4I-67N" secondAttribute="bottom" constant="5" id="lN0-pQ-OeT"/>
+                                    <constraint firstItem="IuK-4I-67N" firstAttribute="leading" secondItem="aOc-5M-wRf" secondAttribute="leading" id="npB-i2-QKs"/>
+                                    <constraint firstItem="aBM-SX-xPG" firstAttribute="top" secondItem="g9U-ar-Nw0" secondAttribute="bottom" constant="15" id="nqv-j3-lbV"/>
+                                    <constraint firstItem="aOc-5M-wRf" firstAttribute="leading" secondItem="vYw-lz-JsB" secondAttribute="leading" constant="16" id="o5I-Ns-o7F"/>
+                                    <constraint firstItem="g9U-ar-Nw0" firstAttribute="top" secondItem="4T8-ZK-5R4" secondAttribute="bottom" constant="50" id="rdM-IB-laN"/>
+                                    <constraint firstItem="fD7-op-kgk" firstAttribute="leading" secondItem="lWx-4l-dmY" secondAttribute="leading" id="voB-fj-lti"/>
+                                    <constraint firstItem="pSG-nY-bv6" firstAttribute="leading" secondItem="fD7-op-kgk" secondAttribute="leading" id="xGi-u0-zBW"/>
+                                    <constraint firstItem="mjR-3M-a5O" firstAttribute="top" secondItem="fD7-op-kgk" secondAttribute="bottom" constant="5" id="zzH-Am-LEt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j18-Ts-CGc" firstAttribute="top" secondItem="ZAs-mr-QAC" secondAttribute="top" constant="-44" id="3dB-8C-Ljc"/>
+                            <constraint firstItem="ZAs-mr-QAC" firstAttribute="bottom" secondItem="j18-Ts-CGc" secondAttribute="bottom" constant="-34" id="IDN-Jw-8yG"/>
+                            <constraint firstItem="j18-Ts-CGc" firstAttribute="leading" secondItem="ZAs-mr-QAC" secondAttribute="leading" id="Y5S-kc-8om"/>
+                            <constraint firstItem="ZAs-mr-QAC" firstAttribute="trailing" secondItem="j18-Ts-CGc" secondAttribute="trailing" id="oVj-Ik-LkX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZAs-mr-QAC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whq-1j-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-94.581280788177338"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Avatar" width="86" height="86"/>
+        <image name="File" width="27" height="36"/>
+        <image name="Header" width="375" height="96"/>
+    </resources>
+</document>

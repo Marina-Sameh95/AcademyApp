@@ -10,10 +10,18 @@ import UIKit
 
 class CourseProfileViewController: UIViewController {
 
+    @IBOutlet weak var courseName: UILabel!
+    @IBOutlet weak var courseImg: UIImageView!
+    
+    var getCourseName = String()
+    var getCourseImg = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        courseName.text! = getCourseName
+        courseImg.image = getCourseImg
     }
     
 

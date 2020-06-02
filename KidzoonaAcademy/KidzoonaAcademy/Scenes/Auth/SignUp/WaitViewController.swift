@@ -1,33 +1,19 @@
 //
-//  FinalSignupViewController.swift
+//  WaitViewController.swift
 //  KidzoonaAcademy
 //
-//  Created by Marwan Magdy on 5/28/20.
+//  Created by Marwan Magdy on 6/1/20.
 //  Copyright © 2020 Marina Sameh. All rights reserved.
 //
 
 import UIKit
 
-class FinalSignupViewController: UIViewController {
+class WaitViewController: UIViewController {
 
-    
-    @IBOutlet weak var txtname: UILabel!
-    @IBOutlet weak var txtemail: UILabel!
-    
-    @IBOutlet weak var txtpass: UITextField!
-    @IBOutlet weak var txtconfpass: UITextField!
-    
-    @IBOutlet weak var signup: UIView!
-    
-    @IBAction func Signup(_ sender: Any) {
-        
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        signup.layer.cornerRadius = 20
+        // Do any additional setup after loading the view.
     }
     
 

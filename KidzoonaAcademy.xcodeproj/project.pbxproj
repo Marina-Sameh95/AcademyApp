@@ -14,6 +14,8 @@
 		179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */; };
 		179F324A2483313F000A9D82 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179F32492483313F000A9D82 /* SignIn.storyboard */; };
 		179F324E24833182000A9D82 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F324D24833182000A9D82 /* SignInVC.swift */; };
+		5B315B1C2484571C00218851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B315B1B2484571C00218851 /* ViewController.swift */; };
+		5B315B1E2484595E00218851 /* Academy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B315B1D2484595E00218851 /* Academy.swift */; };
 		5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631102248164A20073D4C7 /* EditCourse.storyboard */; };
 		5B631110248164A30073D4C7 /* EditEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B631103248164A30073D4C7 /* EditEvent.storyboard */; };
 		5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B631105248164A30073D4C7 /* CreateEventVC.swift */; };
@@ -40,7 +42,6 @@
 		88408A8F2481923A007A5578 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A8E2481923A007A5578 /* Course.storyboard */; };
 		88408A912481936B007A5578 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A902481936B007A5578 /* Event.storyboard */; };
 		8890B82A247857050072C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B829247857050072C872 /* AppDelegate.swift */; };
-		8890B82C247857050072C872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B82B247857050072C872 /* ViewController.swift */; };
 		8890B831247857060072C872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8890B830247857060072C872 /* Assets.xcassets */; };
 		8890B83F247857060072C872 /* KidzoonaAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B83E247857060072C872 /* KidzoonaAcademyTests.swift */; };
 		8890B84A247857060072C872 /* KidzoonaAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B849247857060072C872 /* KidzoonaAcademyUITests.swift */; };
@@ -85,6 +86,8 @@
 		179F32492483313F000A9D82 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		179F324D24833182000A9D82 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		1F916A3D89D04BD37D1B6D11 /* Pods_KidzoonaAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidzoonaAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B315B1B2484571C00218851 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Auth/Home/ViewController.swift; sourceTree = "<group>"; };
+		5B315B1D2484595E00218851 /* Academy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Academy.swift; sourceTree = "<group>"; };
 		5B631102248164A20073D4C7 /* EditCourse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditCourse.storyboard; path = KidzoonaAcademy/StoryBoards/EditCourse.storyboard; sourceTree = SOURCE_ROOT; };
 		5B631103248164A30073D4C7 /* EditEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditEvent.storyboard; path = KidzoonaAcademy/StoryBoards/EditEvent.storyboard; sourceTree = SOURCE_ROOT; };
 		5B631105248164A30073D4C7 /* CreateEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
@@ -113,7 +116,6 @@
 		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B829247857050072C872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8890B82B247857050072C872 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8890B830247857060072C872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8890B835247857060072C872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8890B83A247857060072C872 /* KidzoonaAcademyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidzoonaAcademyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +259,7 @@
 				8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */,
 				88BE0FB1248288680064C979 /* SettigsViewController.swift */,
 				88BE0FB5248289CF0064C979 /* AcademyProfileViewController.swift */,
+				5B315B1B2484571C00218851 /* ViewController.swift */,
 				88BE0FB924828CC40064C979 /* CreateCourseViewController.swift */,
 				880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */,
 				880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */,
@@ -313,6 +316,7 @@
 				5B631104248164A30073D4C7 /* Designs */,
 				88408A8C248190CE007A5578 /* Resources */,
 				8890B835247857060072C872 /* Info.plist */,
+				5B315B1D2484595E00218851 /* Academy.swift */,
 				5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */,
 			);
 			path = KidzoonaAcademy;
@@ -532,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B315B1C2484571C00218851 /* ViewController.swift in Sources */,
 				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
 				880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
@@ -551,6 +556,7 @@
 				179F3244248329A1000A9D82 /* FirstCollectionViewCell.swift in Sources */,
 				8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */,
 				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
+				5B315B1E2484595E00218851 /* Academy.swift in Sources */,
 				179F324224832608000A9D82 /* HomeVC.swift in Sources */,
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
 				179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */,
@@ -718,7 +724,9 @@
 			baseConfigurationReference = 7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KidzoonaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -726,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Marina.KidzoonaAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -736,7 +745,9 @@
 			baseConfigurationReference = 14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KidzoonaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -744,6 +755,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Marina.KidzoonaAcademy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

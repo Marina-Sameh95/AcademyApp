@@ -10,8 +10,14 @@ import UIKit
 
 class WaitViewController: UIViewController {
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.indicator.stopAnimating()
+            self.performSegue(withIdentifier: "toFinalSignup", sender: nil)
+        }
 
         // Do any additional setup after loading the view.
     }

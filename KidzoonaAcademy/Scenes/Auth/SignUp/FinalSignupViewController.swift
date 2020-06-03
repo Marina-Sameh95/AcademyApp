@@ -33,11 +33,6 @@ class FinalSignupViewController: UIViewController {
     }
     
     
-    @IBAction func Backbtn(_ sender: Any) {
-        
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     
     fileprivate func setupView(){
         txtEmail.layer.cornerRadius = 15
@@ -83,14 +78,34 @@ class FinalSignupViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if(user != nil)
             {
-                let waitcontroller = WaitViewController()
-                self.navigationController?.pushViewController(waitcontroller, animated: true)
+                let academy = Academy.decodeAcademy()
+                academy.email = email
+                academy.password = password
+                academy.aID = (user?.user.uid)!
+                print("user ID = \(academy.aID)")
+                print("user created")
+                academy.encode()
+                self.uploadAcademy()
+                //self.performSegue(withIdentifier: "toHome", sender: nil)
+                
+                
             }
             if(error != nil)
             {
                 AlertController.showAlert(inViewController: self, title: "Error", message: error!.localizedDescription)
             }
         }
+    }
+    
+    
+    func uploadAcademy(){
+        let academy = Academy.decodeAcademy()
+        print("IN upload \(academy.email)")
+        let databaseRoot = Database.database().reference()
+        let databaseCourses = databaseRoot.child("Academies")
+        let ref = databaseCourses.child(academy.aID)
+        let academyToUpload = ["name":academy.name,"phone":academy.phone,"location":academy.location,"image":academy.img,"papers":academy.papersURL,"email":academy.email,"password":academy.password] as [String : Any]
+        ref.setValue(academyToUpload)
     }
 
 }

@@ -80,7 +80,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-0k-Wr2">
-                                                <rect key="frame" x="30" y="555" width="117" height="28.5"/>
+                                                <rect key="frame" x="30" y="555" width="117" height="24"/>
                                                 <state key="normal" title="upload files" image="upload">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
@@ -99,23 +99,12 @@
                                                     <action selector="uploadImg:" destination="rzZ-To-zc1" eventType="touchUpInside" id="a01-MT-Str"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qu-YX-Fdw">
-                                                <rect key="frame" x="265" y="514" width="80" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="39Y-fR-5rg"/>
-                                                    <constraint firstAttribute="width" constant="80" id="Gky-BS-bha"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="paperImg:" destination="rzZ-To-zc1" eventType="touchUpInside" id="1Cp-u1-UxF"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="bwn-td-xTD" firstAttribute="top" secondItem="tAV-Aq-VC9" secondAttribute="bottom" constant="18" id="0M1-ni-IL8"/>
                                             <constraint firstItem="YpM-7a-dpW" firstAttribute="top" secondItem="b1o-rC-ldE" secondAttribute="top" constant="150" id="15s-Kr-YeB"/>
                                             <constraint firstAttribute="trailing" secondItem="dKI-Yj-sAT" secondAttribute="trailing" constant="30" id="26c-hM-QhR"/>
-                                            <constraint firstItem="5Qu-YX-Fdw" firstAttribute="trailing" secondItem="tAV-Aq-VC9" secondAttribute="trailing" id="6h1-jG-tdb"/>
                                             <constraint firstItem="63R-0x-TJC" firstAttribute="top" secondItem="U22-2B-NBt" secondAttribute="bottom" constant="24.5" id="DWS-S8-K1v"/>
                                             <constraint firstItem="eGf-LK-ANU" firstAttribute="top" secondItem="b1o-rC-ldE" secondAttribute="top" id="HKg-U9-bMa"/>
                                             <constraint firstItem="dKI-Yj-sAT" firstAttribute="top" secondItem="63R-0x-TJC" secondAttribute="bottom" constant="19.5" id="I5V-kt-Zkz"/>
@@ -124,7 +113,6 @@
                                             <constraint firstItem="63R-0x-TJC" firstAttribute="centerX" secondItem="b1o-rC-ldE" secondAttribute="centerX" id="Nfh-Mk-3rm"/>
                                             <constraint firstAttribute="trailing" secondItem="eGf-LK-ANU" secondAttribute="trailing" id="PVG-WN-m07"/>
                                             <constraint firstItem="Oey-0k-Wr2" firstAttribute="top" secondItem="bwn-td-xTD" secondAttribute="bottom" constant="10" id="Rbc-3j-stk"/>
-                                            <constraint firstItem="5Qu-YX-Fdw" firstAttribute="top" secondItem="tAV-Aq-VC9" secondAttribute="bottom" constant="7.5" id="YZi-qk-lx7"/>
                                             <constraint firstItem="Drz-tU-XLD" firstAttribute="top" secondItem="YpM-7a-dpW" secondAttribute="bottom" constant="20" id="aMU-fj-oL9"/>
                                             <constraint firstAttribute="trailing" secondItem="YpM-7a-dpW" secondAttribute="trailing" constant="153.5" id="aTN-Gk-NNw"/>
                                             <constraint firstItem="dKI-Yj-sAT" firstAttribute="centerX" secondItem="b1o-rC-ldE" secondAttribute="centerX" id="amu-ft-ljD"/>
@@ -138,14 +126,14 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRu-Wf-abd" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="609" width="335" height="40"/>
+                                        <rect key="frame" x="20" y="604.5" width="335" height="40"/>
                                         <color key="backgroundColor" red="0.95004051919999999" green="0.69085246320000004" blue="0.2013075054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ioN-OK-qY7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Next">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="NextBtnPressed:" destination="rzZ-To-zc1" eventType="touchUpInside" id="nan-nR-kty"/>
@@ -156,7 +144,6 @@
                                     <constraint firstAttribute="trailing" secondItem="b1o-rC-ldE" secondAttribute="trailing" id="1QC-If-beU"/>
                                     <constraint firstItem="RRu-Wf-abd" firstAttribute="top" secondItem="Oey-0k-Wr2" secondAttribute="bottom" constant="25.5" id="5YF-Y1-QfW"/>
                                     <constraint firstItem="b1o-rC-ldE" firstAttribute="centerY" secondItem="cO7-ya-Qla" secondAttribute="centerY" id="5aY-6U-E22"/>
-                                    <constraint firstItem="RRu-Wf-abd" firstAttribute="top" secondItem="5Qu-YX-Fdw" secondAttribute="bottom" constant="5" id="PD3-ZW-GuG"/>
                                     <constraint firstItem="b1o-rC-ldE" firstAttribute="centerX" secondItem="cO7-ya-Qla" secondAttribute="centerX" id="cRV-km-R4t"/>
                                     <constraint firstAttribute="trailing" secondItem="RRu-Wf-abd" secondAttribute="trailing" constant="20" id="dBB-Y8-rHE"/>
                                     <constraint firstAttribute="bottom" secondItem="b1o-rC-ldE" secondAttribute="bottom" id="eG2-uG-H4i"/>
@@ -180,7 +167,6 @@
                         <outlet property="academyLocation" destination="tAV-Aq-VC9" id="dgU-Fz-xZA"/>
                         <outlet property="academyName" destination="VUC-eF-cah" id="OI5-nX-hU6"/>
                         <outlet property="academyPhone" destination="Han-69-Mpb" id="tUQ-In-nzX"/>
-                        <outlet property="paperImg" destination="5Qu-YX-Fdw" id="nTV-J0-UXI"/>
                         <outlet property="uploadFileBtn" destination="Oey-0k-Wr2" id="3mc-Ua-uCz"/>
                         <segue destination="nZc-Xo-ror" kind="show" identifier="Next" id="yfC-tz-Qzd"/>
                     </connections>

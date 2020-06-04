@@ -100,6 +100,7 @@ class FinalSignupViewController: UIViewController {
     
     func uploadAcademy(){
         let academy = Academy.decodeAcademy()
+        print("in final img url = \(academy.img)")
         print("IN upload \(academy.email)")
         let databaseRoot = Database.database().reference()
         let databaseCourses = databaseRoot.child("Academies")

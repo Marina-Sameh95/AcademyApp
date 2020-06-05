@@ -48,12 +48,18 @@ class SignInVC: UIViewController {
         
     }
     
-    @IBAction func registerBtn(_ sender: Any){
+
         
-        let signupcontroller = ViewController()
-        self.navigationController?.pushViewController(signupcontroller, animated: true)
+    @IBAction func registerBtn(_ sender: Any) {
         
+        
+                let signupcontroller = ViewController()
+                self.navigationController?.pushViewController(signupcontroller, animated: true)
     }
+        
+ 
+    
+   
     
     func userSignin(){
         

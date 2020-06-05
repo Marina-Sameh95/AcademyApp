@@ -186,9 +186,9 @@
 		179F324B24833149000A9D82 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				179F323E24832599000A9D82 /* Home */,
 				5C8745E72485CA3E00F7C39A /* SignUp */,
 				179F324C24833160000A9D82 /* SignIn */,
-				179F323E24832599000A9D82 /* Home */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -218,7 +218,6 @@
 			children = (
 				5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */,
 				5C8745E52485C70400F7C39A /* WaitViewController.swift */,
-				8890B82B247857050072C872 /* ViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -541,7 +540,6 @@
 				880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
 				880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */,
-				8890B82C247857050072C872 /* ViewController.swift in Sources */,
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
 				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,

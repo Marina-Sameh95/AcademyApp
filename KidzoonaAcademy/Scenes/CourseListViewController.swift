@@ -29,16 +29,11 @@ class CourseListViewController: UIViewController {
         tableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        
     }
-    */
+
 
 }
 
@@ -56,7 +51,7 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CourseCellTableViewCell
         cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
-        cell.courseImg.image = imageArr[indexPath.row] as! UIImage
+      //  cell.courseImg.image = imageArr[indexPath.row] as! UIImage
         cell.courseName.text! = names[indexPath.row] as! String
         return cell
     }

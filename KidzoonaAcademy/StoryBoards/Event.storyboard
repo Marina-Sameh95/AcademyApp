@@ -18,10 +18,10 @@
             </objects>
             <point key="canvasLocation" x="-409" y="255"/>
         </scene>
-        <!--Event List View Controller-->
+        <!--Events-->
         <scene sceneID="X2Z-ao-uWF">
             <objects>
-                <viewController id="2aR-wm-8IS" customClass="EventListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventListViewController" id="2aR-wm-8IS" customClass="EventListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4t-T9-dcl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hey-dx-kMJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="eventsTabBar" id="TAZ-AQ-vZf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="F8w-OI-cWt" id="CWW-94-uTZ"/>
                     </connections>
@@ -446,6 +448,7 @@
         <image name="Back" width="12" height="21"/>
         <image name="Direction" width="26" height="26"/>
         <image name="Header" width="375" height="96"/>
+        <image name="eventsTabBar" width="24" height="24"/>
         <image name="icon - location" width="26" height="26"/>
         <image name="icon -time" width="26" height="26"/>
         <image name="icon-money" width="26" height="26"/>

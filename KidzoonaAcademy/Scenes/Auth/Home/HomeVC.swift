@@ -17,7 +17,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var thirdCollectionView: UICollectionView!
     
-    let arrayTest = ["Offers", "Events", "Music", "Robotics", "Swimming", "Chess"]
+    let arrayTest = ["Offers", "Music", "Robotics", "Swimming", "Chess"]
     
     var arrayOfNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
@@ -34,6 +34,11 @@ class HomeVC: UIViewController {
         thirdCollectionView.dataSource = self
         
          navigationController?.navigationBar.barTintColor = UIColor(red: 149/255 , green: 135/255 , blue: 202/255 , alpha: 1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = "Home"
+        
     }
     
 

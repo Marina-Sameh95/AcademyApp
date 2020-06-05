@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settigs View Controller-->
+        <!--Settings-->
         <scene sceneID="EbB-Yg-ldh">
             <objects>
                 <viewController storyboardIdentifier="SettingsView" id="ZSM-7O-clj" customClass="SettigsViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,6 +105,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPu-HV-Jt6"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsTabBar" id="COh-39-Nfa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HND-8h-gWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,5 +134,6 @@
         <image name="line sections" width="342" height="1"/>
         <image name="logout" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
+        <image name="settingsTabBar" width="24" height="24"/>
     </resources>
 </document>

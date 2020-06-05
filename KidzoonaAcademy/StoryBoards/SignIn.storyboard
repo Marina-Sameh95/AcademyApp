@@ -84,7 +84,7 @@
                                             <color key="titleColor" red="0.49803921568627452" green="0.4392156862745098" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="registerBtn:" destination="CDB-ZL-BTM" eventType="touchUpInside" id="ZHx-DO-7jX"/>
+                                            <action selector="registerBtn:" destination="CDB-ZL-BTM" eventType="touchUpInside" id="hXu-OC-sbb"/>
                                         </connections>
                                     </button>
                                 </subviews>

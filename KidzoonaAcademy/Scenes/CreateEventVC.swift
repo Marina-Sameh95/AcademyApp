@@ -86,6 +86,9 @@ class CreateEvent: UIViewController {
         setView()
         DiscountTxt.text = "5%"
         DiscountTxt.isEnabled = false
+        
+        self.navigationController?.isNavigationBarHidden = true
+
 
         // Do any additional setup after loading the view.
     }

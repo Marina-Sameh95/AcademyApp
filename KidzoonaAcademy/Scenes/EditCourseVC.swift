@@ -85,6 +85,9 @@ class EditCourse: UIViewController {
         super.viewDidLoad()
         discountTxt.text = "5%"
         discountTxt.isEnabled = false
+        
+        self.navigationController?.isNavigationBarHidden = true
+
 
         // Do any additional setup after loading the view.
     }

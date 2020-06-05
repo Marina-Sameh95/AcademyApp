@@ -30,7 +30,8 @@ class EventListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
-        
+        self.navigationController?.isNavigationBarHidden = true
+
     }
 
 }

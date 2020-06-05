@@ -22,6 +22,8 @@ class CourseProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         courseName.text! = getCourseName
         courseImg.image = getCourseImg
+        self.navigationController?.isNavigationBarHidden = true
+
     }
     
 

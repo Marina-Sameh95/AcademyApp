@@ -26,7 +26,6 @@ class EditAcademy: UIViewController ,UIImagePickerControllerDelegate ,UINavigati
         imagePicker.delegate = self
 //        AvatarImg = UIImageView(frame: CGRect(x: 0, y: 0, width: 86, height: 86))
 
-
         // Do any additional setup after loading the view.
     }
     

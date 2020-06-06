@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Course List View Controller-->
+        <!--Courses-->
         <scene sceneID="ax0-dx-ffI">
             <objects>
                 <viewController storyboardIdentifier="CourseList" id="Ybb-er-5hz" customClass="CourseListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +136,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xZK-ZZ-ZHx"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Courses" image="coursesTabBar" id="GVs-WH-l1J"/>
                     <navigationItem key="navigationItem" id="pdC-ai-Wpk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="p11-Wp-MKh" id="2HI-rb-ayq"/>
                     </connections>
@@ -416,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRi-ul-E00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931.8840579710147" y="152.67857142857142"/>
+            <point key="canvasLocation" x="1932" y="142"/>
         </scene>
         <!--EditCourse-->
         <scene sceneID="pRm-EB-xQK">
@@ -431,6 +433,7 @@
         <image name="AddBtn" width="22" height="22"/>
         <image name="Back" width="12" height="21"/>
         <image name="Header" width="375" height="96"/>
+        <image name="coursesTabBar" width="24" height="24"/>
         <image name="icon -time" width="26" height="26"/>
         <image name="icon-money" width="26" height="26"/>
         <image name="line sections" width="342" height="1"/>

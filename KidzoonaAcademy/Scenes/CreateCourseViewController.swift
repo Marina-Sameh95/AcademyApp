@@ -84,6 +84,8 @@ class CreateCourseViewController: UIViewController {
         super.viewDidLoad()
         discountTxt.text = "5%"
         discountTxt.isEnabled = false
+        self.navigationController?.isNavigationBarHidden = true
+
     }
     
 

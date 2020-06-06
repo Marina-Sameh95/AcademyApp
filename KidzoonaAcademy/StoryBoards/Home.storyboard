@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z10-zo-37U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z10-zo-37U">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -266,30 +266,30 @@
             </objects>
             <point key="canvasLocation" x="2658.4000000000001" y="130.88455772113943"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--CourseList-->
         <scene sceneID="VUw-Yj-LjW">
             <objects>
-                <viewControllerPlaceholder id="oQY-ND-EOT" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Course" referencedIdentifier="CourseList" id="oQY-ND-EOT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Courses" image="coursesTabBar" id="kKR-5B-c5o"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6D-v5-wT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2354" y="576"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--EventListViewController-->
         <scene sceneID="MIX-yH-MEm">
             <objects>
-                <viewControllerPlaceholder id="aTc-yc-xPH" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Event" referencedIdentifier="EventListViewController" id="aTc-yc-xPH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="eventsTabBar" id="Otb-TF-Yxj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxm-QC-5o2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2721" y="575"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--SettingsView-->
         <scene sceneID="eL6-zT-F3v">
             <objects>
-                <viewControllerPlaceholder id="sNe-cD-gMU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsView" id="sNe-cD-gMU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsTabBar" id="cqn-9d-eSw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hO-Sf-gOq" userLabel="First Responder" sceneMemberID="firstResponder"/>

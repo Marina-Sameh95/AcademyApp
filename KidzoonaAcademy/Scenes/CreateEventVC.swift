@@ -9,10 +9,12 @@
 import UIKit
 import Firebase
 
-class CreateEvent: UIViewController {
+class CreateEvent: UIViewController,UIImagePickerControllerDelegate ,UINavigationControllerDelegate {
     
     private var datePicker: UIDatePicker?
     var eventImgString = ""
+    var eventUIImg :UIImage = UIImage()
+    let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var DiscountTxt: RoundedTextField!
     @IBOutlet weak var seatTxt: RoundedTextField!
@@ -32,7 +34,9 @@ class CreateEvent: UIViewController {
     
     @IBAction func createAction(_ sender: Any) {
         
-        uploadEvent()
+        self.uploadImageToFirebase(completion:uploadEvent, SelectedImg:eventUIImg)
+        print("Event img=\(eventImgString)")
+        
     }
     
     
@@ -103,6 +107,9 @@ class CreateEvent: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self 
+        
         DiscountTxt.text = "5%"
         DiscountTxt.isEnabled = false
         
@@ -155,6 +162,38 @@ class CreateEvent: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()!})
+    }
+    
+    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+        var ref = StorageReference()
+        let randomInt = Int.random(in: 10..<25)
+        let randomImgName = randomString(length: randomInt)
+        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
+        
+        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    return
+                }
+                ref.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                  self.eventImgString = downloadURL.absoluteString
+                    print("URL=\(downloadURL.absoluteString)")
+                    completion?()
+                    
+                }}
+        
+        }
+        
+        
+    }
+    
     //upload Event Details To DataBase
     func uploadEvent(){
         
@@ -172,7 +211,8 @@ class CreateEvent: UIViewController {
         let eventId = eventsRoot.childByAutoId()
         let eventToUpload = ["name":eventName.text!,"date":date.text!,"time":time.text!,"coach":coach.text!,
                              "description":txtDescription.text!,"price":price.text!,"availableSeats":seatTxt.text!,
-                             "discount":DiscountTxt.text!] as [String : Any]
+                             "discount":DiscountTxt.text!, "image":eventImgString] as [String : Any]
+            
         eventId.setValue(eventToUpload)
     }
     

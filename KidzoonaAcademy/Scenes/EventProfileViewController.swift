@@ -22,9 +22,12 @@ class EventProfileViewController: UIViewController  {
         UIImage(named: "event3")
     ]
     
+    var eventObj : EventModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        print("event obj name =" + eventObj!.name ?? "" )
 
         // Do any additional setup after loading the view.
         

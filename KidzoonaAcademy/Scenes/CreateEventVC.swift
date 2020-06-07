@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class CreateEvent: UIViewController {
     
@@ -31,8 +32,10 @@ class CreateEvent: UIViewController {
     
     
     @IBAction func createAction(_ sender: Any) {
-        
+       // self.uploadImageToFirebase(completion:nil, SelectedImg:eventUIImg)
+//        print("Event img=\(eventImgString)")
         uploadEvent()
+        
     }
     
     
@@ -99,6 +102,11 @@ class CreateEvent: UIViewController {
             seatTxt.text =  "0"
         }
     }
+    @IBAction func backBtnPressed(_ sender: Any) {
+        print("pressed")
+       // dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -107,6 +115,7 @@ class CreateEvent: UIViewController {
         DiscountTxt.isEnabled = false
         
         self.navigationController?.isNavigationBarHidden = true
+        
         // Do any additional setup after loading the view.
         
         datePicker = UIDatePicker()
@@ -136,18 +145,58 @@ class CreateEvent: UIViewController {
     }
     
     func presentImgPicker() {
-        let imagePicker = UIImagePickerController()
+        //let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
                 eventImg.setImage(pickedImage, for: .normal)
                 eventImg.contentMode = .scaleAspectFit
+            print("in picker event ui uiimage = \(eventUIImg.size)")
+
+                eventUIImg = pickedImage
+            print("in picker event ui uiimage = \(eventUIImg.size)")
+
             }
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+  
+    
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()!})
+    }
+    
+    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+        print("in upload uiimage = \(SelectedImg.size)")
+        var ref = StorageReference()
+        let randomInt = Int.random(in: 10..<25)
+        let randomImgName = randomString(length: randomInt)
+        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
+        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    return
+                }
+                ref.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                  self.eventImgString = downloadURL.absoluteString
+                    print("URL=\(downloadURL.absoluteString)")
+                    completion?()
+                    
+                }}
+        
+        }
+        
+        
     }
     
     

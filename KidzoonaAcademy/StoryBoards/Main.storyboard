@@ -80,7 +80,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-0k-Wr2">
-                                                <rect key="frame" x="30" y="555" width="109" height="22"/>
+                                                <rect key="frame" x="30" y="555" width="109" height="28.5"/>
                                                 <state key="normal" title="upload files" image="upload">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
@@ -138,7 +138,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRu-Wf-abd" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="602.5" width="335" height="40"/>
+                                        <rect key="frame" x="20" y="609" width="335" height="40"/>
                                         <color key="backgroundColor" red="0.95004051919999999" green="0.69085246320000004" blue="0.2013075054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ioN-OK-qY7"/>

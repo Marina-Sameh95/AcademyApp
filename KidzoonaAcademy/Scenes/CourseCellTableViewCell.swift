@@ -14,6 +14,15 @@ class CourseCellTableViewCell: UITableViewCell {
     @IBOutlet weak var courseRegested: UILabel!
     @IBOutlet weak var coursePrice: UILabel!
     @IBOutlet weak var courseName: UILabel!
+    
+    var courseModel : Course? {
+        didSet{
+            courseName.text = courseModel?.courseName
+            coursePrice.text = courseModel?.coursePrice
+    
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

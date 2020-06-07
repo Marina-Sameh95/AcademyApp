@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class CreateEvent: UIViewController {
+class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
     private var datePicker: UIDatePicker?
     var eventImgString = ""
@@ -24,6 +24,13 @@ class CreateEvent: UIViewController {
     @IBOutlet weak var time: RoundedTextField!
     @IBOutlet weak var txtDescription: RoundedTextField!
     @IBOutlet weak var eventImg: UIButton!
+    let imagePicker = UIImagePickerController()
+    var eventUIImg = UIImage()
+
+
+    
+    
+    
     
     @IBAction func addImg(_ sender: Any) {
         
@@ -111,6 +118,7 @@ class CreateEvent: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
         DiscountTxt.text = "5%"
         DiscountTxt.isEnabled = false
         
@@ -221,7 +229,7 @@ class CreateEvent: UIViewController {
         let eventId = eventsRoot.childByAutoId()
         let eventToUpload = ["name":eventName.text!,"date":date.text!,"time":time.text!,"coach":coach.text!,
                              "description":txtDescription.text!,"price":price.text!,"availableSeats":seatTxt.text!,
-                             "discount":DiscountTxt.text!] as [String : Any]
+                             "discount":DiscountTxt.text!,"image":eventImgString] as [String : Any]
         eventId.setValue(eventToUpload)
     }
     

@@ -28,6 +28,7 @@
 		5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110C248164A30073D4C7 /* EditAcademyVC.swift */; };
 		5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110D248164A30073D4C7 /* CreateEvent.storyboard */; };
 		5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110E248164A30073D4C7 /* EditAcademy.storyboard */; };
+		5B803E2E248D2AA600DF5E8C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B803E2D248D2AA600DF5E8C /* EventModel.swift */; };
 		5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDB2481C7BB008BCA49 /* Main.storyboard */; };
 		5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */; };
 		5C8745DE2485BFAF00F7C39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */; };
@@ -100,6 +101,7 @@
 		5B63110C248164A30073D4C7 /* EditAcademyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAcademyVC.swift; sourceTree = "<group>"; };
 		5B63110D248164A30073D4C7 /* CreateEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateEvent.storyboard; path = KidzoonaAcademy/StoryBoards/CreateEvent.storyboard; sourceTree = SOURCE_ROOT; };
 		5B63110E248164A30073D4C7 /* EditAcademy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditAcademy.storyboard; path = KidzoonaAcademy/StoryBoards/EditAcademy.storyboard; sourceTree = SOURCE_ROOT; };
+		5B803E2D248D2AA600DF5E8C /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		5C01DEDB2481C7BB008BCA49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */,
 				880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */,
 				5C8745DF2485C24B00F7C39A /* AlertController.swift */,
+				5B803E2D248D2AA600DF5E8C /* EventModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
 				179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */,
+				5B803E2E248D2AA600DF5E8C /* EventModel.swift in Sources */,
 				179F324E24833182000A9D82 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

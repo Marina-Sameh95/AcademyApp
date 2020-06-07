@@ -19,24 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-//        let authListener = Auth.auth().addStateDidChangeListener{ auth, user in
-//
-//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//
-//            if user != nil {
-//
-//                let controller = storyBoard.instantiateViewController(
-//                    withIdentifier: " ") as! UITabBarController
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//            } else {
-//
-//                let controller = storyBoard.instantiateViewController(
-//                    withIdentifier: " ") as! UITabBarController
-//                self.window?.rootViewController = controller
-//                self.window?.makeKeyAndVisible()
-//            }
-//        }
+        let authListener = Auth.auth().addStateDidChangeListener{ auth, user in
+            if user != nil {
+                let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                let controller = storyBoard.instantiateViewController(
+                    withIdentifier: "Home") as! UINavigationController
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            } else {
+                let storyBoard = UIStoryboard(name: "SignIn", bundle: nil)
+                let controller = storyBoard.instantiateViewController(
+                    withIdentifier: "SignInVC") as! SignInVC
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }
         return true
     }
 

@@ -184,6 +184,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H0i-C1-EgO"/>
                     </view>
+                    <connections>
+                        <outlet property="LocationLbl" destination="Fo6-8t-xx2" id="lfG-9Q-Hj7"/>
+                        <outlet property="PhoneLbl" destination="Aa5-2B-ANQ" id="ge4-l0-934"/>
+                        <outlet property="academyImg" destination="kMb-DX-yNr" id="41I-Rq-KzH"/>
+                        <outlet property="academyName" destination="dc3-wM-rNj" id="STR-cl-Iic"/>
+                        <outlet property="paperBtn" destination="NnQ-bQ-NeA" id="jEE-Kc-IG7"/>
+                        <outlet property="websiteLbl" destination="6eo-4T-oow" id="ura-Mp-ea4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dc6-d3-05P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

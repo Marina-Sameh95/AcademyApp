@@ -39,7 +39,6 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInBtn(_ sender: Any) {
-        
         userSignin()
     }
     
@@ -50,13 +49,13 @@ class SignInVC: UIViewController {
     
 
         
-    @IBAction func registerBtn(_ sender: Any) {
-        
-        
-                let signupcontroller = ViewController()
-                self.navigationController?.pushViewController(signupcontroller, animated: true)
-    }
-        
+//    @IBAction func registerBtn(_ sender: Any) {
+//
+//
+//                let signupcontroller = ViewController()
+//                self.navigationController?.pushViewController(signupcontroller, animated: true)
+//    }
+    
  
     
    
@@ -77,8 +76,8 @@ class SignInVC: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if(user != nil)
             {
-                //                let homecontroller = HomeViewController()
-                //                self.navigationController?.pushViewController(homecontroller, animated: true)
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                self.performSegue(withIdentifier: "toHome", sender:nil)
                 
             }
             if(error != nil){

@@ -90,6 +90,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
            
 //            }
     }
+        else {
+        
+                    AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out all fields.")
+        }
     }
 
     func presentImgPicker() {
@@ -121,7 +125,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
         dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func randomString(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,38 +61,50 @@
                                                     <constraint firstAttribute="width" constant="120" id="dzM-0M-cNK"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wDc-5S-gZf">
-                                                <rect key="frame" x="20" y="288" width="335" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wDc-5S-gZf" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="288" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="n3y-Vf-HZ3"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-xC-hf4">
-                                                <rect key="frame" x="20" y="348" width="335" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-xC-hf4" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="363" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="kvg-Ps-HcZ"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-Ua-vuL">
-                                                <rect key="frame" x="20" y="408" width="335" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-Ua-vuL" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="438" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="GF0-G8-rbL"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GA-jQ-IdV">
-                                                <rect key="frame" x="20" y="478" width="335" height="32"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GA-jQ-IdV" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="523" width="335" height="45"/>
                                                 <color key="backgroundColor" red="0.95004051919999999" green="0.69085246320000004" blue="0.2013075054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="ocR-pg-aln"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <state key="normal" title="Signup">
-                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="Signup:" destination="eAz-XG-x0b" eventType="touchUpInside" id="hPe-71-nT0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hie-Wd-Cxd">
-                                                <rect key="frame" x="10" y="50" width="66" height="22"/>
-                                                <state key="normal" title="   Back" image="Arrow"/>
+                                                <rect key="frame" x="10" y="70" width="55" height="22"/>
+                                                <state key="normal" title=" " image="Arrow"/>
                                                 <connections>
                                                     <segue destination="aCm-4p-lWY" kind="show" id="Ilz-UY-Pib"/>
                                                 </connections>
@@ -100,7 +112,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hie-Wd-Cxd" firstAttribute="top" secondItem="z7o-Be-tau" secondAttribute="top" constant="50" id="3zV-lQ-LVc"/>
+                                            <constraint firstItem="hie-Wd-Cxd" firstAttribute="top" secondItem="z7o-Be-tau" secondAttribute="top" constant="70" id="3zV-lQ-LVc"/>
                                             <constraint firstItem="wDc-5S-gZf" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="20" id="JnQ-5Y-fn0"/>
                                             <constraint firstAttribute="trailing" secondItem="sV0-5Q-JXR" secondAttribute="trailing" constant="40" id="NdM-64-yPM"/>
                                             <constraint firstAttribute="trailing" secondItem="TQF-Ua-vuL" secondAttribute="trailing" constant="20" id="NlQ-xo-A0z"/>
@@ -117,7 +129,7 @@
                                             <constraint firstItem="Tf3-xC-hf4" firstAttribute="top" secondItem="wDc-5S-gZf" secondAttribute="bottom" constant="30" id="fPB-M8-0vT"/>
                                             <constraint firstItem="b5n-1u-GVz" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="40" id="g5K-kG-yFT"/>
                                             <constraint firstItem="3GA-jQ-IdV" firstAttribute="top" secondItem="TQF-Ua-vuL" secondAttribute="bottom" constant="40" id="jFZ-hc-KAB"/>
-                                            <constraint firstAttribute="trailing" secondItem="hie-Wd-Cxd" secondAttribute="trailing" constant="299" id="lKl-7c-ru3"/>
+                                            <constraint firstAttribute="trailing" secondItem="hie-Wd-Cxd" secondAttribute="trailing" constant="310" id="lKl-7c-ru3"/>
                                             <constraint firstAttribute="trailing" secondItem="hqV-QQ-2Fq" secondAttribute="trailing" id="mVj-bo-VTz"/>
                                             <constraint firstAttribute="trailing" secondItem="3GA-jQ-IdV" secondAttribute="trailing" constant="20" id="q9G-oy-Ow5"/>
                                             <constraint firstAttribute="trailing" secondItem="wDc-5S-gZf" secondAttribute="trailing" constant="20" id="r8t-jm-AFM"/>
@@ -154,11 +166,20 @@
                         <outlet property="txtConfpass" destination="TQF-Ua-vuL" id="ENe-4X-Lio"/>
                         <outlet property="txtEmail" destination="wDc-5S-gZf" id="zjw-nw-xUW"/>
                         <outlet property="txtPass" destination="Tf3-xC-hf4" id="5tn-kz-JET"/>
+                        <segue destination="1Ie-Wo-11z" kind="show" identifier="toHome" id="fvQ-Ib-N6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="du5-Lx-dhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2033" y="156"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="NdA-Bj-Xay">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="Home" id="1Ie-Wo-11z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hP2-uq-FuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="70"/>
         </scene>
         <!--Wait View Controller-->
         <scene sceneID="72j-8t-Hi0">
@@ -202,8 +223,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow" width="12" height="20.5"/>
-        <image name="AuthHeader" width="397" height="518.5"/>
+        <image name="Arrow" width="12" height="20"/>
+        <image name="AuthHeader" width="397" height="518"/>
         <image name="Line-1" width="98" height="5"/>
     </resources>
 </document>

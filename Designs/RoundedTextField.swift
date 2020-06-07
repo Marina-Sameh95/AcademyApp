@@ -26,7 +26,7 @@ class RoundedTextField: UITextField {
         layer.cornerRadius = frame.height/2
         textAlignment = .center
         clipsToBounds = true
-        layer.borderWidth = 1.0
+        layer.borderWidth = 0.5
    
     
 

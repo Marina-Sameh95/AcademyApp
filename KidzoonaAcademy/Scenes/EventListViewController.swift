@@ -116,7 +116,6 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
         //cell.eventImg.image = imageArray[indexPath.row] as! UIImage
        // cell.eventName.text! = name[indexPath.row] as! String
-        
         cell.eventName.text! = events[indexPath.row].name as? String ?? ""
         cell.eventRegister.text! = events[indexPath.row].price as? String ?? ""
         cell.eventDate.text! = events[indexPath.row].date + "    " + events[indexPath.row].time as? String ?? ""

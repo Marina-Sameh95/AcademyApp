@@ -26,8 +26,7 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     @IBOutlet weak var time: RoundedTextField!
     @IBOutlet weak var txtDescription: RoundedTextField!
     @IBOutlet weak var eventImg: UIButton!
-    let imagePicker = UIImagePickerController()
-    var eventUIImg = UIImage()
+
 
 
     
@@ -215,36 +214,36 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     }
     
     
-    func randomString(length: Int) -> String {
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return String((0...length-1).map{ _ in letters.randomElement()!})
-    }
-    
-    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
-        var ref = StorageReference()
-        let randomInt = Int.random(in: 10..<25)
-        let randomImgName = randomString(length: randomInt)
-        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
-        
-        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
-            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
-                guard metadata != nil else {
-                    return
-                }
-                ref.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
-                        return
-                    }
-                  self.eventImgString = downloadURL.absoluteString
-                    print("URL=\(downloadURL.absoluteString)")
-                    completion?()
-                    
-                }}
-        
-        }
-        
-        
-    }
+//    func randomString(length: Int) -> String {
+//        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+//        return String((0...length-1).map{ _ in letters.randomElement()!})
+//    }
+//    
+//    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+//        var ref = StorageReference()
+//        let randomInt = Int.random(in: 10..<25)
+//        let randomImgName = randomString(length: randomInt)
+//        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
+//        
+//        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+//            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+//                guard metadata != nil else {
+//                    return
+//                }
+//                ref.downloadURL { (url, error) in
+//                    guard let downloadURL = url else {
+//                        return
+//                    }
+//                  self.eventImgString = downloadURL.absoluteString
+//                    print("URL=\(downloadURL.absoluteString)")
+//                    completion?()
+//                    
+//                }}
+//        
+//        }
+//        
+//        
+//    }
     
     //upload Event Details To DataBase
     func uploadEvent(){

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettigsViewController: UIViewController {
 
@@ -21,5 +22,16 @@ class SettigsViewController: UIViewController {
         self.parent?.title = ""
         
     }
-
+    @IBAction func SignOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+            print("signedout")
+            performSegue(withIdentifier: "toSignIn", sender:nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
 }

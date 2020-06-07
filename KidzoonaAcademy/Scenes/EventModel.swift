@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class EventModel {
     
     var name: String

@@ -37,6 +37,7 @@
 		5C8745E42485C5D700F7C39A /* FinalSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */; };
 		5C8745E62485C70500F7C39A /* WaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8745E52485C70400F7C39A /* WaitViewController.swift */; };
 		5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */; };
+		5CF5294B248C484D00FF1711 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5294A248C484C00FF1711 /* EventModel.swift */; };
 		880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */; };
 		880C50D32485248F00CAA906 /* EventCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */; };
 		880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */; };
@@ -51,6 +52,7 @@
 		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
 		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
 		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
+		88B48F4F248CDBC2009F3366 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B48F4E248CDBC2009F3366 /* CourseModel.swift */; };
 		88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FAF24827F3E0064C979 /* Settings.storyboard */; };
 		88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB1248288680064C979 /* SettigsViewController.swift */; };
 		88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */; };
@@ -110,6 +112,7 @@
 		5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSignupViewController.swift; sourceTree = "<group>"; };
 		5C8745E52485C70400F7C39A /* WaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitViewController.swift; sourceTree = "<group>"; };
 		5CACB290247CDD030026ED02 /* SecondSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignupViewController.swift; sourceTree = "<group>"; };
+		5CF5294A248C484C00FF1711 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		7A32CEC735917ED46814EB30 /* Pods-KidzoonaAcademy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.debug.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.debug.xcconfig"; sourceTree = "<group>"; };
 		880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellTableViewCell.swift; sourceTree = "<group>"; };
 		880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
 		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
+		88B48F4E248CDBC2009F3366 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 		88BE0FAF24827F3E0064C979 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		88BE0FB1248288680064C979 /* SettigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsViewController.swift; sourceTree = "<group>"; };
 		88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcademyProfile.storyboard; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		88408A8A2481901E007A5578 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				88B48F4D248CDBA1009F3366 /* Pojo */,
 				179F324B24833149000A9D82 /* Auth */,
 				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
 				5B631107248164A30073D4C7 /* EditCourseVC.swift */,
@@ -340,6 +345,14 @@
 				8890B84B247857060072C872 /* Info.plist */,
 			);
 			path = KidzoonaAcademyUITests;
+			sourceTree = "<group>";
+		};
+		88B48F4D248CDBA1009F3366 /* Pojo */ = {
+			isa = PBXGroup;
+			children = (
+				88B48F4E248CDBC2009F3366 /* CourseModel.swift */,
+			);
+			path = Pojo;
 			sourceTree = "<group>";
 		};
 		F82C4AB67AF5132706D184BF /* Frameworks */ = {
@@ -538,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B48F4F248CDBC2009F3366 /* CourseModel.swift in Sources */,
 				5B315B1C2484571C00218851 /* ViewController.swift in Sources */,
 				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
 				880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */,

@@ -14,6 +14,8 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     private var datePicker: UIDatePicker?
     var eventImgString = ""
+    var eventUIImg :UIImage = UIImage()
+    let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var DiscountTxt: RoundedTextField!
     @IBOutlet weak var seatTxt: RoundedTextField!
@@ -210,6 +212,38 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()!})
+    }
+    
+    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+        var ref = StorageReference()
+        let randomInt = Int.random(in: 10..<25)
+        let randomImgName = randomString(length: randomInt)
+        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
+        
+        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    return
+                }
+                ref.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                  self.eventImgString = downloadURL.absoluteString
+                    print("URL=\(downloadURL.absoluteString)")
+                    completion?()
+                    
+                }}
+        
+        }
+        
+        
     }
     
     //upload Event Details To DataBase

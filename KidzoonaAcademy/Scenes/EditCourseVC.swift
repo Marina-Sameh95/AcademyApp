@@ -86,21 +86,14 @@ class EditCourse: UIViewController {
         discountTxt.text = "5%"
         discountTxt.isEnabled = false
         
-        self.navigationController?.isNavigationBarHidden = true
+    //    self.navigationController?.isNavigationBarHidden = true
 
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = "Edit Course"
+    
     }
-    */
-
 }

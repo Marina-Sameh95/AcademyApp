@@ -27,8 +27,8 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     
     @IBAction func backBtn(_ sender: Any) {
         print("pressed")
-        dismiss(animated: true, completion: nil)
-     //   self.presentingViewController?.dismiss(animated: true, completion: nil)
+       // dismiss(animated: true, completion: nil)
+       self.presentingViewController?.dismiss(animated: true, completion: nil)
 //        let courseList = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseList")
 //
 //        self.navigationController?.pushViewController(courseList, animated: true)

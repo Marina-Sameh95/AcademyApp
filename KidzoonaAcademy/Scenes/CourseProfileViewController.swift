@@ -24,7 +24,13 @@ class CourseProfileViewController: UIViewController {
     
     @IBAction func backBtn(_ sender: Any) {
         
-        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func editCourse(_ sender: Any) {
+        let courseList = UIStoryboard(name: "EditCourse", bundle: nil).instantiateViewController(withIdentifier: "EditCourse")
+        self.navigationController?.pushViewController(courseList, animated: true)
     }
     
    var myCourse : Course?

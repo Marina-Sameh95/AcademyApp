@@ -17,8 +17,13 @@ class CourseListViewController: UIViewController {
   
     var ref: DatabaseReference?
     var courseArr :[Course] = []
-    var selectName: String!
+
     
+    @IBAction func addCourse(_ sender: Any) {
+        let courseList = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
+              self.navigationController?.pushViewController(courseList, animated: true)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

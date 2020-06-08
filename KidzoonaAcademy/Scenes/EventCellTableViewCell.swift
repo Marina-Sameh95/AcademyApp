@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventCellTableViewCell: UITableViewCell {
     
@@ -15,6 +16,23 @@ class EventCellTableViewCell: UITableViewCell {
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventRegister: UILabel!
+    
+    var eventImgCell : EventModel? {
+        didSet{
+            eventName.text = eventImgCell?.name
+            eventRegister.text = eventImgCell?.price
+            eventDate.text = (eventImgCell?.date)! + "    " + (eventImgCell?.time)! as? String ?? ""
+            
+            let url = URL(string: (eventImgCell?.image)!)
+            if let url = url as? URL{
+                KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+                    self.eventImg.image = image
+                    self.eventImg.kf.indicatorType = .activity
+                }
+            }
+            
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

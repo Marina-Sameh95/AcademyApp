@@ -114,27 +114,28 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EventCellTableViewCell
         cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
-        //cell.eventImg.image = imageArray[indexPath.row] as! UIImage
-       // cell.eventName.text! = name[indexPath.row] as! String
-         cell.eventName.text! = events[indexPath.row].name as? String ?? ""
-        cell.eventRegister.text! = events[indexPath.row].price as? String ?? ""
-        cell.eventDate.text! = events[indexPath.row].date + "    " + events[indexPath.row].time as? String ?? ""
-        if ( self.events[indexPath.row].image != ""){
-            let httpsReference = FirebaseStorage.Storage.storage().reference(forURL:self.events[indexPath.row].image)
-        httpsReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-            } else {
-                // Data for "images/island.jpg" is returned
-                cell.eventImg.image = UIImage(data: data!)
-                }
-            }
-            
-        }
-        else {
-            cell.eventImg.image = UIImage(named: "noimage")
-        }
-            
+        cell.eventImgCell = events[indexPath.row]
+
+        
+//         cell.eventName.text! = events[indexPath.row].name as? String ?? ""
+//        cell.eventRegister.text! = events[indexPath.row].price as? String ?? ""
+//        cell.eventDate.text! = events[indexPath.row].date + "    " + events[indexPath.row].time as? String ?? ""
+//        if ( self.events[indexPath.row].image != ""){
+//            let httpsReference = FirebaseStorage.Storage.storage().reference(forURL:self.events[indexPath.row].image)
+//        httpsReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
+//            if let error = error {
+//                // Uh-oh, an error occurred!
+//            } else {
+//                // Data for "images/island.jpg" is returned
+//                cell.eventImg.image = UIImage(data: data!)
+//                }
+//            }
+        
+        //}
+//        else {
+//            cell.eventImg.image = UIImage(named: "noimage")
+//        }
+    
         
        
         // Do any additional setup after loading the view, typically from a nib.

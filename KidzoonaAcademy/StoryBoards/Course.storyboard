@@ -355,6 +355,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-Tf-Wqi">
+                                                <rect key="frame" x="133" y="478" width="35" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.10832243799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -368,6 +374,7 @@
                                             <constraint firstAttribute="bottom" secondItem="MFt-T0-DwF" secondAttribute="bottom" constant="53" id="DJY-ad-Oye"/>
                                             <constraint firstItem="aKY-b3-Lc2" firstAttribute="leading" secondItem="rK4-zK-yDO" secondAttribute="trailing" constant="-384" id="ECS-dC-CcA"/>
                                             <constraint firstItem="0Bj-mG-7a3" firstAttribute="top" secondItem="Ovx-S4-UJC" secondAttribute="top" constant="125" id="FAf-qA-51z"/>
+                                            <constraint firstItem="cd1-Tf-Wqi" firstAttribute="top" secondItem="jsb-c9-wb6" secondAttribute="bottom" constant="-22" id="GVc-oV-VPA"/>
                                             <constraint firstItem="hBC-kJ-N3s" firstAttribute="top" secondItem="WY7-Vh-WhA" secondAttribute="bottom" id="Hxs-un-ebf"/>
                                             <constraint firstItem="5FY-7S-l5B" firstAttribute="top" secondItem="6fx-lt-RnD" secondAttribute="bottom" constant="8" id="ItC-z5-IYs"/>
                                             <constraint firstItem="rrs-Im-lA9" firstAttribute="leading" secondItem="O0T-Q1-eOD" secondAttribute="trailing" constant="-48" id="KW8-ce-UhK"/>
@@ -391,6 +398,7 @@
                                             <constraint firstItem="rK4-zK-yDO" firstAttribute="top" secondItem="5FY-7S-l5B" secondAttribute="bottom" constant="8" id="gyz-72-QTk"/>
                                             <constraint firstItem="O0T-Q1-eOD" firstAttribute="top" secondItem="rrs-Im-lA9" secondAttribute="bottom" constant="8" id="ixH-2K-Cy1"/>
                                             <constraint firstItem="MFt-T0-DwF" firstAttribute="leading" secondItem="Ovx-S4-UJC" secondAttribute="leading" constant="43" id="jBO-rv-3Mj"/>
+                                            <constraint firstItem="cd1-Tf-Wqi" firstAttribute="leading" secondItem="jsb-c9-wb6" secondAttribute="trailing" constant="15" id="jyT-Qi-eoh"/>
                                             <constraint firstItem="DPV-jv-isd" firstAttribute="top" secondItem="EFM-vY-neV" secondAttribute="bottom" constant="-31" id="kAr-JU-hdw"/>
                                             <constraint firstItem="qp4-pn-2xT" firstAttribute="top" secondItem="ST8-Jz-HVW" secondAttribute="bottom" constant="8" id="kBI-z4-4UU"/>
                                             <constraint firstItem="OTM-Fe-wzK" firstAttribute="top" secondItem="jhe-Yz-bOP" secondAttribute="bottom" constant="-61" id="rSO-RJ-7ks"/>
@@ -429,6 +437,7 @@
                         <outlet property="courseDescription" destination="rK4-zK-yDO" id="QMQ-u1-uBe"/>
                         <outlet property="courseImg" destination="0Bj-mG-7a3" id="IIR-nU-fZf"/>
                         <outlet property="courseName" destination="rrs-Im-lA9" id="Sc2-98-QZI"/>
+                        <outlet property="courseOffer" destination="cd1-Tf-Wqi" id="q61-b8-I0D"/>
                         <outlet property="coursePlace" destination="URR-NS-Aqs" id="Gh8-m0-8Ae"/>
                         <outlet property="coursePrice" destination="jsb-c9-wb6" id="6ue-sA-0sx"/>
                         <outlet property="courseTime" destination="9Zl-Gm-NFW" id="zPl-ZZ-QYo"/>
@@ -453,6 +462,6 @@
         <image name="line sections" width="342" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rdw-bb-YaG"/>
+        <segue reference="ixj-Ib-aNH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CourseProfileViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class CourseProfileViewController: UIViewController {
     @IBOutlet weak var coursePrice: UILabel!
     @IBOutlet weak var coursePlace: UILabel!
     @IBOutlet weak var courseDescription: UITextView!
+    @IBOutlet weak var courseOffer: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -37,8 +39,21 @@ class CourseProfileViewController: UIViewController {
        self.navigationController?.isNavigationBarHidden = true
         
         print("courseName=" + myCourse!.courseName ?? "")
-        name = courseName.text!
-        name =   myCourse!.courseName
+        courseName.text =   myCourse!.courseName
+        courseDate.text = myCourse!.courseDate
+        courseTime.text = myCourse!.courseTime
+        coursePlace.text = myCourse!.coursePlace
+        courseDescription.text = myCourse!.courseDescription
+        courseOffer.text = myCourse!.courseOffer
+        coursePrice.text = myCourse!.coursePlace
+        
+        let url = URL(string: (myCourse!.courseImage)!)
+        if let url = url as? URL{
+            KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+                self.courseImg.image = image
+                self.courseImg.kf.indicatorType = .activity
+            }
+        }
     }
     
     

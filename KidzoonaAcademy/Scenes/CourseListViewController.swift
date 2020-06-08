@@ -17,7 +17,7 @@ class CourseListViewController: UIViewController {
   
     var ref: DatabaseReference?
     var courseArr :[Course] = []
-    
+    var selectName: String!
     
     
     override func viewDidLoad() {
@@ -132,10 +132,23 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
+      //  let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
         
-        self.navigationController?.pushViewController(courseDetails, animated: true)
+        let courseDetails = UIStoryboard(name: "Course", bundle: nil)
+        var selectCourse = courseArr[indexPath.row]
+       performSegue(withIdentifier: "toSingleCourse", sender: selectCourse)
+     //  self.navigationController?.pushViewController(courseDetails, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toSingleCourse"){
+            let sigleCourseVC = segue.destination as! CourseProfileViewController
+            sigleCourseVC.myCourse = sender as! Course
+            
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144

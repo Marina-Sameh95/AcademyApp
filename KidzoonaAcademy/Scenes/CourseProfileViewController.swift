@@ -10,19 +10,38 @@ import UIKit
 
 class CourseProfileViewController: UIViewController {
 
+    @IBOutlet weak var courseImg: UIImageView!
+    @IBOutlet weak var courseName: UILabel!
+    @IBOutlet weak var courseTime: UILabel!
+    @IBOutlet weak var courseDate: UILabel!
+    @IBOutlet weak var coursePrice: UILabel!
+    @IBOutlet weak var coursePlace: UILabel!
+    @IBOutlet weak var courseDescription: UITextView!
     
-//    var getCourseName = String()
-//    var getCourseImg = UIImage()
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func backBtn(_ sender: Any) {
+        
+        
+    }
+    
+   var myCourse : Course?
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
 //        courseName.text! = getCourseName
 //        courseImg.image = getCourseImg
        self.navigationController?.isNavigationBarHidden = true
-
+        
+        print("courseName=" + myCourse!.courseName ?? "")
+        name = courseName.text!
+        name =   myCourse!.courseName
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""

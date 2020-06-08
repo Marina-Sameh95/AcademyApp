@@ -12,10 +12,12 @@ import FirebaseStorage
 
 class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
-    private var datePicker: UIDatePicker?
     var eventImgString = ""
     var eventUIImg :UIImage = UIImage()
     let imagePicker = UIImagePickerController()
+    
+    let datePicker = UIDatePicker()
+    let timePicker = UIDatePicker()
     
     @IBOutlet weak var DiscountTxt: RoundedTextField!
     @IBOutlet weak var seatTxt: RoundedTextField!
@@ -28,7 +30,53 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     @IBOutlet weak var eventImg: UIButton!
 
 
-
+    func createDatePicker(){
+        date.textAlignment = .center
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        date.inputAccessoryView = toolbar
+        date.inputView = datePicker
+        datePicker.datePickerMode = .date
+        timePicker.datePickerMode = .time
+    }
+    
+    @objc func donePressed(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        date.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    
+    func createTimePicker(){
+        time.textAlignment = .center
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneClicked))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        time.inputAccessoryView = toolbar
+        time.inputView = timePicker
+        timePicker.datePickerMode = .time
+    }
+    
+    @objc func doneClicked(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .medium
+        
+        time.text = formatter.string(from: timePicker.date)
+        self.view.endEditing(true)
+    }
     
     
     
@@ -129,36 +177,14 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         DiscountTxt.text = "5%"
         DiscountTxt.isEnabled = false
         
+        createDatePicker()
+        createTimePicker()
+        
         self.navigationController?.isNavigationBarHidden = true
         
-        // Do any additional setup after loading the view.
-        
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(CreateEvent.dateChanged(datePicker:)),
-                              for: .valueChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action:
-            #selector(CreateEvent.viewTapped(gestureRecognizer:)))
-        
-        view.addGestureRecognizer(tapGesture)
-        
-         date.inputView = datePicker
+
     }
-    
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        
-        view.endEditing(true)
-    }
-    
-    @objc func dateChanged(datePicker: UIDatePicker) {
-        
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "MM/dd/yyyy"
-        date.text = dateformatter.string(from: datePicker.date)
-        view.endEditing(true)
-    }
-    
+
     //upload Event Details To DataBase
     func uploadEvent(){
         
@@ -179,15 +205,6 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
 }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

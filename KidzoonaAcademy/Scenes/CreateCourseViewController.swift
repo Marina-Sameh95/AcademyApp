@@ -25,12 +25,21 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     @IBOutlet weak var coursePlace: RoundedTextField!
     @IBOutlet weak var coursePrice: RoundedTextField!
     
+    @IBAction func backBtn(_ sender: Any) {
+        print("pressed")
+        dismiss(animated: true, completion: nil)
+     //   self.presentingViewController?.dismiss(animated: true, completion: nil)
+//        let courseList = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseList")
+//
+//        self.navigationController?.pushViewController(courseList, animated: true)
+        
+    }
     
     var courseArr = [Course]()
     
     var ref: DatabaseReference?
     let imagePicker = UIImagePickerController()
-    var urlImg: String!
+    var urlImg: String = ""
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     
@@ -101,16 +110,16 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     
     @IBAction func createCourse(_ sender: Any) {
         
-//        let academiesRoot = ref!.child("Academies")
-//        let userId = Auth.auth().currentUser?.uid
-//        let academyId = academiesRoot.child(userId!)
-//          let courseRoot =  academyId.child("courses")
-//          let courseId = courseRoot.childByAutoId()
+        let academiesRoot = ref!.child("Academies")
+        let userId = Auth.auth().currentUser?.uid
+        let academyId = academiesRoot.child(userId!)
+          let courseRoot =  academyId.child("courses")
+          let courseId = courseRoot.childByAutoId()
         
-        var academyId = ref?.child("Academies").child("NZaf6cB3j5eNeBQoQPcB0wbESZ12")
-        var courseId =  academyId!.child("courses").childByAutoId()
+//        var academyId = ref?.child("Academies").child("NZaf6cB3j5eNeBQoQPcB0wbESZ12")
+//        var courseId =  academyId!.child("courses").childByAutoId()
         
-        let courseData = ["courseName": courseName.text, "courseDescription": courseDescription.text, "courseInstructor": courseInstructor.text, "coursePlace": coursePlace.text, "coursePrice": coursePrice.text, "courseOffer": discountTxt.text, "courseDate": courseDate.text, "courseTime": courseTime.text, "courseAvailablePlace": seatsTxt.text, "courseImage": urlImg, "courseType": courseType.text]
+        let courseData = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text!, "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": urlImg, "courseType": courseType.text!]
         
          courseId.child("information").setValue(courseData)
        courseId.child("review").setValue(["userName":"mark", "rate": "8.5", "date":"30/6/2020"])
@@ -241,7 +250,8 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
         super.viewDidLoad()
         discountTxt.text = "5%"
         discountTxt.isEnabled = false
-     //   self.navigationController?.isNavigationBarHidden = true
+     
+        self.navigationController?.isNavigationBarHidden = true
         
         ref = Database.database().reference()
         
@@ -267,7 +277,7 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.parent?.title = "Create Course"
+        self.parent?.title = ""
     
     }
 

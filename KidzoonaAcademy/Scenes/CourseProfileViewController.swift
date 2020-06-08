@@ -20,22 +20,13 @@ class CourseProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        courseName.text! = getCourseName
 //        courseImg.image = getCourseImg
-     //   self.navigationController?.isNavigationBarHidden = true
+       self.navigationController?.isNavigationBarHidden = true
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.parent?.title = "Course Details"
+        self.parent?.title = ""
 
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

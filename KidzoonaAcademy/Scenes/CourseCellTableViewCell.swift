@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CourseCellTableViewCell: UITableViewCell {
 
@@ -19,6 +20,14 @@ class CourseCellTableViewCell: UITableViewCell {
         didSet{
             courseName.text = courseModel?.courseName
             coursePrice.text = courseModel?.coursePrice
+            
+            let url = URL(string: (courseModel?.courseImage)!)
+            if let url = url as? URL{
+                KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+                    self.courseImg.image = image
+                    self.courseImg.kf.indicatorType = .activity
+                }
+            }
     
         }
     }

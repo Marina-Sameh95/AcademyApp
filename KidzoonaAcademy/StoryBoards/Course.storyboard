@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p11-Wp-MKh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="daW-zn-ljN" customClass="CourseCellTableViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="144" id="daW-zn-ljN" customClass="CourseCellTableViewCell" customModule="KidzoonaAcademy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="daW-zn-ljN" id="7pr-1N-gJT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="daW-zn-ljN" id="7pr-1N-gJT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdY-rb-DUx" customClass="CardCell" customModule="KidzoonaAcademy" customModuleProvider="target">
@@ -92,33 +92,40 @@
                                     <outlet property="delegate" destination="Ybb-er-5hz" id="QwU-Q3-7bu"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuJ-hG-hOY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" red="0.58431372550000005" green="0.52941176469999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Courses" id="fww-dH-RzT">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uKk-gr-Uad">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <connections>
-                                                <segue destination="Nkh-kc-p2P" kind="show" id="ol0-fE-wZG"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="Hr3-3Y-WQX">
+                                <rect key="frame" x="0.0" y="-27" width="414" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-oA-Tok">
+                                <rect key="frame" x="360" y="48" width="22" height="22"/>
+                                <state key="normal" image="AddBtn"/>
+                                <connections>
+                                    <segue destination="Nkh-kc-p2P" kind="show" id="DUJ-iC-iq9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yN-KU-92r">
+                                <rect key="frame" x="169" y="48" width="77" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="p11-Wp-MKh" secondAttribute="trailing" id="0aP-t8-BMM"/>
+                            <constraint firstItem="Hr3-3Y-WQX" firstAttribute="leading" secondItem="p11-Wp-MKh" secondAttribute="leading" id="2Kg-xP-u05"/>
+                            <constraint firstItem="p11-Wp-MKh" firstAttribute="top" secondItem="xZK-ZZ-ZHx" secondAttribute="top" constant="65" id="CMM-6a-tHW"/>
+                            <constraint firstItem="p11-Wp-MKh" firstAttribute="top" secondItem="Hr3-3Y-WQX" secondAttribute="bottom" constant="8" symbolic="YES" id="E25-ff-Djg"/>
+                            <constraint firstItem="xZK-ZZ-ZHx" firstAttribute="top" secondItem="Hr3-3Y-WQX" secondAttribute="top" constant="71" id="Gts-Oy-oox"/>
+                            <constraint firstItem="Hr3-3Y-WQX" firstAttribute="trailing" secondItem="p11-Wp-MKh" secondAttribute="trailing" id="LTh-al-1Vf"/>
+                            <constraint firstItem="f8V-oA-Tok" firstAttribute="top" secondItem="Hr3-3Y-WQX" secondAttribute="bottom" constant="-53" id="NAV-oV-Rq5"/>
                             <constraint firstItem="p11-Wp-MKh" firstAttribute="leading" secondItem="O8a-YV-ITH" secondAttribute="leading" id="OTN-qv-ut0"/>
                             <constraint firstItem="p11-Wp-MKh" firstAttribute="leading" secondItem="O8a-YV-ITH" secondAttribute="leading" id="S1E-oH-N4c"/>
-                            <constraint firstItem="nuJ-hG-hOY" firstAttribute="top" secondItem="xZK-ZZ-ZHx" secondAttribute="top" id="XCX-11-OVJ"/>
                             <constraint firstAttribute="bottom" secondItem="p11-Wp-MKh" secondAttribute="bottom" id="XMB-9y-VEW"/>
                             <constraint firstAttribute="trailing" secondItem="p11-Wp-MKh" secondAttribute="trailing" id="ZKE-qr-s77"/>
-                            <constraint firstItem="p11-Wp-MKh" firstAttribute="top" secondItem="nuJ-hG-hOY" secondAttribute="bottom" id="cY4-Nw-8ZW"/>
-                            <constraint firstItem="nuJ-hG-hOY" firstAttribute="trailing" secondItem="p11-Wp-MKh" secondAttribute="trailing" id="hKz-jo-HIO"/>
-                            <constraint firstItem="nuJ-hG-hOY" firstAttribute="leading" secondItem="p11-Wp-MKh" secondAttribute="leading" id="o9B-YY-9c5"/>
+                            <constraint firstItem="9yN-KU-92r" firstAttribute="leading" secondItem="Hr3-3Y-WQX" secondAttribute="trailing" constant="-245" id="gSH-Ki-LLQ"/>
+                            <constraint firstItem="9yN-KU-92r" firstAttribute="top" secondItem="Hr3-3Y-WQX" secondAttribute="bottom" constant="-53" id="jIY-yZ-w0V"/>
                             <constraint firstAttribute="bottom" secondItem="p11-Wp-MKh" secondAttribute="bottom" id="pn5-yS-Biv"/>
+                            <constraint firstItem="f8V-oA-Tok" firstAttribute="leading" secondItem="Hr3-3Y-WQX" secondAttribute="trailing" constant="-54" id="tVE-OZ-tib"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xZK-ZZ-ZHx"/>
                     </view>
@@ -334,7 +341,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vnp-iT-AUE" kind="show" id="2Yz-X2-paY"/>
+                                            <segue destination="FTu-fe-2tL" kind="show" id="T6s-3e-fKb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -349,13 +356,25 @@
                                     <constraint firstItem="vpL-ul-EH0" firstAttribute="bottom" secondItem="pg9-Jg-29g" secondAttribute="bottomMargin" id="yIF-9c-fk4"/>
                                 </constraints>
                             </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="m2l-iM-P1H">
+                                <rect key="frame" x="0.0" y="-30" width="414" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI1-3L-trL">
+                                <rect key="frame" x="20" y="44" width="27" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Back"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4CL-9v-xuw" firstAttribute="bottom" secondItem="m2l-iM-P1H" secondAttribute="bottom" constant="764" id="5GB-97-5X5"/>
                             <constraint firstAttribute="trailing" secondItem="pg9-Jg-29g" secondAttribute="trailing" id="6PE-CA-OyW"/>
+                            <constraint firstItem="m2l-iM-P1H" firstAttribute="leading" secondItem="pg9-Jg-29g" secondAttribute="leading" id="E1z-Zs-sdQ"/>
                             <constraint firstAttribute="bottom" secondItem="pg9-Jg-29g" secondAttribute="bottom" id="HUQ-bS-9qP"/>
                             <constraint firstItem="pg9-Jg-29g" firstAttribute="leading" secondItem="GFL-hh-0x8" secondAttribute="leading" id="Iac-Ew-imK"/>
                             <constraint firstItem="pg9-Jg-29g" firstAttribute="top" secondItem="4CL-9v-xuw" secondAttribute="top" constant="44" id="gXz-jL-YrF"/>
+                            <constraint firstItem="m2l-iM-P1H" firstAttribute="trailing" secondItem="pg9-Jg-29g" secondAttribute="trailing" id="oTo-tK-4Ou"/>
+                            <constraint firstItem="4CL-9v-xuw" firstAttribute="top" secondItem="m2l-iM-P1H" secondAttribute="top" constant="74" id="xjK-uM-tSw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4CL-9v-xuw"/>
                     </view>
@@ -365,15 +384,18 @@
             <point key="canvasLocation" x="1960.8695652173915" y="141.96428571428569"/>
         </scene>
         <!--EditCourse-->
-        <scene sceneID="pRm-EB-xQK">
+        <scene sceneID="0X8-C7-RXz">
             <objects>
-                <viewControllerPlaceholder storyboardName="EditCourse" referencedIdentifier="EditCourse" id="vnp-iT-AUE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj0-5V-drS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="EditCourse" referencedIdentifier="EditCourse" id="FTu-fe-2tL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCy-me-TKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2589" y="142"/>
+            <point key="canvasLocation" x="2579" y="142"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AddBtn" width="22" height="22"/>
+        <image name="Back" width="12" height="21"/>
+        <image name="Header" width="375" height="96"/>
         <image name="coursesTabBar" width="24" height="24"/>
         <image name="date" width="26" height="26"/>
         <image name="icon -time" width="26" height="26"/>

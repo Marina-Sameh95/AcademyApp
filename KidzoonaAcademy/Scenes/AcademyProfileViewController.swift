@@ -16,14 +16,21 @@ class AcademyProfileViewController: UIViewController {
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var LocationLbl: UILabel!
     @IBOutlet weak var PhoneLbl: UILabel!
+    override func viewWillAppear(_ animated: Bool) {
+        displayAcademy()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        displayAcademy()
+        //displayAcademy()
         
         
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func backBtnPressed(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+
     }
     
     func displayAcademy(){
@@ -50,5 +57,5 @@ class AcademyProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

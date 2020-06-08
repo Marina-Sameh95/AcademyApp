@@ -22,6 +22,12 @@ class SettigsViewController: UIViewController {
         self.parent?.title = ""
         
     }
+    @IBAction func goToProfile(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AcademyProfile", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "AcademyProfile") as! AcademyProfileViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
     @IBAction func SignOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {

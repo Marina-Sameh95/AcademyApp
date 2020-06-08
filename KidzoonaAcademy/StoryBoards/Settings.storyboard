@@ -56,7 +56,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Hx-ZS-oaI" kind="show" id="xe3-8j-Rrb"/>
+                                    <action selector="goToProfile:" destination="ZSM-7O-clj" eventType="touchUpInside" id="iYu-9I-U1A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewy-n7-3BQ">
@@ -109,6 +109,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="wRn-Xe-DNZ" kind="show" identifier="toSignIn" id="2M0-3B-Zfg"/>
+                        <segue destination="3Hx-ZS-oaI" kind="show" identifier="toProfile" id="NgY-iK-imo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HND-8h-gWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -121,7 +122,7 @@
                 <viewControllerPlaceholder storyboardName="AcademyProfile" referencedIdentifier="AcademyProfile" id="3Hx-ZS-oaI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFN-zM-Fq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="-106"/>
+            <point key="canvasLocation" x="813" y="-265"/>
         </scene>
         <!--SignInVC-->
         <scene sceneID="ioV-ro-vnv">

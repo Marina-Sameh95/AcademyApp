@@ -34,16 +34,22 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     
     @IBAction func addImg(_ sender: Any) {
-        
         presentImgPicker()
+        
+        
     }
     
     
     @IBAction func createAction(_ sender: Any) {
-       // self.uploadImageToFirebase(completion:nil, SelectedImg:eventUIImg)
-//        print("Event img=\(eventImgString)")
-        uploadEvent()
+        if eventName.text! == "" || price.text! == "" || date.text! == "" || time.text! == "" || coach.text! == "" || seatTxt.text! == "" || txtDescription.text == ""
+        {
+            AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out all fields.")
+        }
+        else{
         
+        self.uploadImageToFirebase(completion:uploadEvent, SelectedImg:eventUIImg)
+        dismiss(animated: true, completion: nil)
+        }
     }
     
     
@@ -153,106 +159,11 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         view.endEditing(true)
     }
     
-    func presentImgPicker() {
-        //let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                eventImg.setImage(pickedImage, for: .normal)
-                eventImg.contentMode = .scaleAspectFit
-            print("in picker event ui uiimage = \(eventUIImg.size)")
-
-                eventUIImg = pickedImage
-            print("in picker event ui uiimage = \(eventUIImg.size)")
-
-            }
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-  
-    
-    
-    func randomString(length: Int) -> String {
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return String((0...length-1).map{ _ in letters.randomElement()!})
-    }
-    
-    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
-        print("in upload uiimage = \(SelectedImg.size)")
-        var ref = StorageReference()
-        let randomInt = Int.random(in: 10..<25)
-        let randomImgName = randomString(length: randomInt)
-        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
-        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
-            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
-                guard metadata != nil else {
-                    return
-                }
-                ref.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
-                        return
-                    }
-                  self.eventImgString = downloadURL.absoluteString
-                    print("URL=\(downloadURL.absoluteString)")
-                    completion?()
-                    
-                }}
-        
-        }
-        
-        
-    }
-    
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-//    func randomString(length: Int) -> String {
-//        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-//        return String((0...length-1).map{ _ in letters.randomElement()!})
-//    }
-//    
-//    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
-//        var ref = StorageReference()
-//        let randomInt = Int.random(in: 10..<25)
-//        let randomImgName = randomString(length: randomInt)
-//        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
-//        
-//        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
-//            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
-//                guard metadata != nil else {
-//                    return
-//                }
-//                ref.downloadURL { (url, error) in
-//                    guard let downloadURL = url else {
-//                        return
-//                    }
-//                  self.eventImgString = downloadURL.absoluteString
-//                    print("URL=\(downloadURL.absoluteString)")
-//                    completion?()
-//                    
-//                }}
-//        
-//        }
-//        
-//        
-//    }
-    
     //upload Event Details To DataBase
     func uploadEvent(){
         
-        if eventName.text! == "" && price.text! == "" && date.text! == "" && time.text! == ""
-        {
-            AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out requered fields.")
-        }
-        else {
+       
+       // else {
             
         let databaseRoot = Database.database().reference()
         let academiesRoot = databaseRoot.child("Academies")
@@ -264,7 +175,7 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
                              "description":txtDescription.text!,"price":price.text!,"availableSeats":seatTxt.text!,
                              "discount":DiscountTxt.text!,"image":eventImgString] as [String : Any]
         eventId.setValue(eventToUpload)
-    }
+   // }
     
 }
     
@@ -278,4 +189,56 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     }
     */
 
+}
+
+extension CreateEvent{
+    
+    func presentImgPicker() {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            print("choose img")
+            eventImg.setImage(pickedImage, for: .normal)
+                eventImg.contentMode = .scaleAspectFit
+                eventUIImg = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()!})
+    }
+    
+    
+    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+        var ref = StorageReference()
+        let randomInt = Int.random(in: 10..<25)
+        let randomImgName = randomString(length: randomInt)
+        ref = FirebaseStorage.Storage.storage().reference().child("\("EventImages")/\(randomImgName).jpeg")
+        
+        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    return
+                }
+                ref.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                    self.eventImgString = downloadURL.absoluteString
+                    print("URL=\(downloadURL.absoluteString)")
+                    completion?()
+                    
+                }}
+            
+        }
+    }
+    
 }

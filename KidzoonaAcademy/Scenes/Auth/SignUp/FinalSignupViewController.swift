@@ -106,6 +106,7 @@ class FinalSignupViewController: UIViewController {
         let ref = databaseCourses.child(academy.aID).child("Information")
         let academyToUpload = ["name":academy.name,"phone":academy.phone,"location":academy.location,"image":academy.img,"papers":academy.papersURL,"email":academy.email,"password":academy.password] as [String : Any]
         ref.setValue(academyToUpload)
+        //academy.encode()
     }
 
 }

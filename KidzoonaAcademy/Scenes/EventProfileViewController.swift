@@ -15,6 +15,12 @@ class EventProfileViewController: UIViewController  {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var sliderPage: UIPageControl!
+    @IBOutlet weak var dateTxt: UILabel!
+    @IBOutlet weak var timeTxt: UILabel!
+    @IBOutlet weak var locationTxt: UILabel!
+    @IBOutlet weak var pricetxt: UILabel!
+    @IBOutlet weak var seatsTxt: UILabel!
+    @IBOutlet weak var descTxt: UITextView!
     
     var imageArr = [
         UIImage(named: "event1"),
@@ -27,9 +33,21 @@ class EventProfileViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        displayEvent()
         print("event obj name =" + eventObj!.name ?? "" )
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    func displayEvent(){
+        eventName.text = eventObj?.name
+        descTxt.text = eventObj?.descrption
+        pricetxt.text = eventObj?.price
+        timeTxt.text = eventObj?.time
+        dateTxt.text  = eventObj?.date
+        seatsTxt.text = eventObj?.availableSeats
+//        locationTxt.text = eventObj.
         
     }
     

@@ -9,7 +9,6 @@
 import UIKit
 import FirebaseStorage
 
-
 class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINavigationControllerDelegate{
 
     
@@ -168,15 +167,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
                     completion?()
 
                 }}
-//                        uploadTask.observe(.progress) { (snapshot) in
-//                            if let completeUnitCount = snapshot.progress?.completedUnitCount{
-//                                print(completeUnitCount)
-//                                self.parent?.navigationItem.title = String(completeUnitCount)
-//                            }}
-//                        uploadTask.observe(.success) { (snapshot) in
-//                            self.parent?.navigationItem.title = ""
-//
-//                        }
+                        uploadTask.observe(.progress) { (snapshot) in
+                            if let completeUnitCount = snapshot.progress?.completedUnitCount{
+                                print(completeUnitCount)
+                                self.parent?.navigationItem.title = String(completeUnitCount)
+                            }}
+                        uploadTask.observe(.success) { (snapshot) in
+                            self.parent?.navigationItem.title = ""
+
+                        }
         }
         
         

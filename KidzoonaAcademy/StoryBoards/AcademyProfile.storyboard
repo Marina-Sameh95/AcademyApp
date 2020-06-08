@@ -149,7 +149,7 @@
                                         </constraints>
                                         <state key="normal" image="Back"/>
                                         <connections>
-                                            <segue destination="mMV-7e-uWV" kind="show" id="B8v-Vw-e8k"/>
+                                            <action selector="backBtnPressed:" destination="vUl-XL-Iym" eventType="touchUpInside" id="I9P-GW-6n4"/>
                                         </connections>
                                     </button>
                                 </subviews>

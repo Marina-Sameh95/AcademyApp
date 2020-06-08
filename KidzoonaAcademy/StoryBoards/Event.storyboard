@@ -419,8 +419,14 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BsC-QW-joF" id="nkj-68-MMZ"/>
+                        <outlet property="dateTxt" destination="UBf-LC-DF5" id="DcE-d4-3hP"/>
+                        <outlet property="descTxt" destination="34I-3W-1Ff" id="sZK-xT-2eA"/>
                         <outlet property="eventName" destination="SZV-x4-anT" id="gWc-iv-6Ut"/>
+                        <outlet property="locationTxt" destination="LWk-TP-mwp" id="Rba-fh-S6R"/>
+                        <outlet property="pricetxt" destination="aXA-Ba-cG3" id="nRm-Yg-vEt"/>
+                        <outlet property="seatsTxt" destination="Tff-Vo-8cy" id="Q1c-jd-Vnv"/>
                         <outlet property="sliderPage" destination="KEe-iH-7H1" id="pJt-kW-as3"/>
+                        <outlet property="timeTxt" destination="BQP-Lf-28x" id="9Jd-Wi-Bj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOE-h9-dra" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,11 +22,7 @@ class EventProfileViewController: UIViewController  {
     @IBOutlet weak var seatsTxt: UILabel!
     @IBOutlet weak var descTxt: UITextView!
     
-    var imageArr = [
-        UIImage(named: "event1"),
-        UIImage(named: "event2"),
-        UIImage(named: "event3")
-    ]
+  
     
     var eventObj : EventModel?
     
@@ -47,8 +43,18 @@ class EventProfileViewController: UIViewController  {
         timeTxt.text = eventObj?.time
         dateTxt.text  = eventObj?.date
         seatsTxt.text = eventObj?.availableSeats
+        
 //        locationTxt.text = eventObj.
         
+        
+//        let url = URL(string: (eventObj?.image)!)
+//        if let url = url as? URL{
+//            KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+//                self.eventImage.image = image
+//                self.eventImage.kf.indicatorType = .activity
+//            }
+//        }
+       
     }
     
     
@@ -70,16 +76,18 @@ class EventProfileViewController: UIViewController  {
 extension EventProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArr.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        if let vc = cell.viewWithTag(111) as? UIImageView {
-            vc.image = imageArr[indexPath.row]
-        } else if let ab = cell.viewWithTag(222) as? UIPageControl{
-            ab.currentPage = indexPath.row
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! EventCollectionViewCell
+//        if let vc = cell.viewWithTag(111) as? UIImageView {
+//            vc.image = imageArr[indexPath.row]
+//        } else if let ab = cell.viewWithTag(222) as? UIPageControl{
+//            ab.currentPage = indexPath.row
+//        }
+     //   cell.eventCell = eventObj?[indexPath.row]
+        
         return cell
     }
     

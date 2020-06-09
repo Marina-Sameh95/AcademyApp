@@ -39,21 +39,46 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInBtn(_ sender: Any) {
-        
         userSignin()
     }
     
     @IBAction func forgetPassBtn(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Email", message: "Please Enter Your Email Address", preferredStyle: .alert)
+        alert.addTextField { (tf: UITextField) in
+            tf.placeholder = "Enter Your Email Address"
+            tf.keyboardType = .emailAddress
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Reset Password", style: .default, handler: { (action : UIAlertAction) in
+            if let email = alert.textFields?.first?.text, !email.isEmpty{
+                Auth.auth().sendPasswordReset(withEmail: email, completion: { (error) in
+                    if let error = error{
+                        print("there is error in forget password reset", error.localizedDescription)
+                    }
+                    else{
+                        print("success to reset password and check your Email")
+                    }
+                })
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
         
     }
     
-    @IBAction func registerBtn(_ sender: Any){
+
         
-        let signupcontroller = ViewController()
-        self.navigationController?.pushViewController(signupcontroller, animated: true)
-        
-    }
+//    @IBAction func registerBtn(_ sender: Any) {
+//
+//
+//                let signupcontroller = ViewController()
+//                self.navigationController?.pushViewController(signupcontroller, animated: true)
+//    }
+    
+ 
+    
+   
     
     func userSignin(){
         
@@ -71,8 +96,8 @@ class SignInVC: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if(user != nil)
             {
-                //                let homecontroller = HomeViewController()
-                //                self.navigationController?.pushViewController(homecontroller, animated: true)
+                let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                self.performSegue(withIdentifier: "toHome", sender:nil)
                 
             }
             if(error != nil){

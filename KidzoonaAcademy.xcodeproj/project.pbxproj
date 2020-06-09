@@ -28,6 +28,7 @@
 		5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B63110C248164A30073D4C7 /* EditAcademyVC.swift */; };
 		5B631119248164A30073D4C7 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110D248164A30073D4C7 /* CreateEvent.storyboard */; };
 		5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B63110E248164A30073D4C7 /* EditAcademy.storyboard */; };
+		5B803E2E248D2AA600DF5E8C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B803E2D248D2AA600DF5E8C /* EventModel.swift */; };
 		5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDB2481C7BB008BCA49 /* Main.storyboard */; };
 		5C01DEDE2481CC60008BCA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */; };
 		5C8745DE2485BFAF00F7C39A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */; };
@@ -50,6 +51,7 @@
 		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
 		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
 		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
+		88B48F4F248CDBC2009F3366 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B48F4E248CDBC2009F3366 /* CourseModel.swift */; };
 		88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FAF24827F3E0064C979 /* Settings.storyboard */; };
 		88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB1248288680064C979 /* SettigsViewController.swift */; };
 		88BE0FB4248288EF0064C979 /* AcademyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */; };
@@ -100,6 +102,7 @@
 		5B63110C248164A30073D4C7 /* EditAcademyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAcademyVC.swift; sourceTree = "<group>"; };
 		5B63110D248164A30073D4C7 /* CreateEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateEvent.storyboard; path = KidzoonaAcademy/StoryBoards/CreateEvent.storyboard; sourceTree = SOURCE_ROOT; };
 		5B63110E248164A30073D4C7 /* EditAcademy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditAcademy.storyboard; path = KidzoonaAcademy/StoryBoards/EditAcademy.storyboard; sourceTree = SOURCE_ROOT; };
+		5B803E2D248D2AA600DF5E8C /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		5C01DEDB2481C7BB008BCA49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C01DEDD2481CC5F008BCA49 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
 		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
+		88B48F4E248CDBC2009F3366 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 		88BE0FAF24827F3E0064C979 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		88BE0FB1248288680064C979 /* SettigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsViewController.swift; sourceTree = "<group>"; };
 		88BE0FB3248288EF0064C979 /* AcademyProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcademyProfile.storyboard; sourceTree = "<group>"; };
@@ -186,9 +190,9 @@
 		179F324B24833149000A9D82 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				179F323E24832599000A9D82 /* Home */,
 				5C8745E72485CA3E00F7C39A /* SignUp */,
 				179F324C24833160000A9D82 /* SignIn */,
-				179F323E24832599000A9D82 /* Home */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 		5B631104248164A30073D4C7 /* Designs */ = {
 			isa = PBXGroup;
 			children = (
+				5C8745DF2485C24B00F7C39A /* AlertController.swift */,
 				5B631106248164A30073D4C7 /* UndeLinedTextfield.swift */,
 				5B631108248164A30073D4C7 /* RoundedView.swift */,
 				5B63110A248164A30073D4C7 /* RoundedTextField.swift */,
@@ -218,7 +223,6 @@
 			children = (
 				5C8745E32485C5D600F7C39A /* FinalSignupViewController.swift */,
 				5C8745E52485C70400F7C39A /* WaitViewController.swift */,
-				8890B82B247857050072C872 /* ViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -247,6 +251,7 @@
 		88408A8A2481901E007A5578 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				88B48F4D248CDBA1009F3366 /* Pojo */,
 				179F324B24833149000A9D82 /* Auth */,
 				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
 				5B631107248164A30073D4C7 /* EditCourseVC.swift */,
@@ -264,7 +269,6 @@
 				880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */,
 				880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */,
 				880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */,
-				5C8745DF2485C24B00F7C39A /* AlertController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -316,7 +320,6 @@
 				5B631104248164A30073D4C7 /* Designs */,
 				88408A8C248190CE007A5578 /* Resources */,
 				8890B835247857060072C872 /* Info.plist */,
-				5B315B1D2484595E00218851 /* Academy.swift */,
 				5C8745DD2485BFAE00F7C39A /* GoogleService-Info.plist */,
 			);
 			path = KidzoonaAcademy;
@@ -338,6 +341,16 @@
 				8890B84B247857060072C872 /* Info.plist */,
 			);
 			path = KidzoonaAcademyUITests;
+			sourceTree = "<group>";
+		};
+		88B48F4D248CDBA1009F3366 /* Pojo */ = {
+			isa = PBXGroup;
+			children = (
+				5B315B1D2484595E00218851 /* Academy.swift */,
+				5B803E2D248D2AA600DF5E8C /* EventModel.swift */,
+				88B48F4E248CDBC2009F3366 /* CourseModel.swift */,
+			);
+			path = Pojo;
 			sourceTree = "<group>";
 		};
 		F82C4AB67AF5132706D184BF /* Frameworks */ = {
@@ -536,12 +549,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B48F4F248CDBC2009F3366 /* CourseModel.swift in Sources */,
 				5B315B1C2484571C00218851 /* ViewController.swift in Sources */,
 				88BE0FB6248289CF0064C979 /* AcademyProfileViewController.swift in Sources */,
 				880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */,
 				5B631114248164A30073D4C7 /* RoundedView.swift in Sources */,
 				880C50D12484B56800CAA906 /* CourseCellTableViewCell.swift in Sources */,
-				8890B82C247857050072C872 /* ViewController.swift in Sources */,
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
 				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
@@ -567,6 +580,7 @@
 				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
 				179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */,
+				5B803E2E248D2AA600DF5E8C /* EventModel.swift in Sources */,
 				179F324E24833182000A9D82 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,8 +739,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q79RAUUY3Q;
 				INFOPLIST_FILE = KidzoonaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -746,8 +760,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q79RAUUY3Q;
 				INFOPLIST_FILE = KidzoonaAcademy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

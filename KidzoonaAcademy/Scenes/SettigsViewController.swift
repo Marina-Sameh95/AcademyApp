@@ -7,24 +7,37 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettigsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        
     }
-    */
-
+    @IBAction func goToProfile(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AcademyProfile", bundle: nil)
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "AcademyProfile") as! AcademyProfileViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
+    @IBAction func SignOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+            print("signedout")
+            performSegue(withIdentifier: "toSignIn", sender:nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
 }

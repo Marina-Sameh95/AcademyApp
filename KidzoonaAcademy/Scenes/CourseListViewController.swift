@@ -7,45 +7,119 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
+
 
 class CourseListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
   
-    var names: NSArray = []
-    var imageArr: NSArray = []
+    var ref: DatabaseReference?
+    var courseArr :[Course] = []
+
     
-    
+    @IBAction func addCourse(_ sender: Any) {
+        let courseList = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
+              self.navigationController?.pushViewController(courseList, animated: true)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        names = ["Wedo","EV3","Art","Drawing","Music","Music","chess"]
-        imageArr = [UIImage(named: "course1"),UIImage(named: "course2"),UIImage(named: "course3"),UIImage(named: "course4"),UIImage(named: "course5"),UIImage(named: "course6"),UIImage(named: "course7")!]
-        
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+
         tableView.separatorColor = UIColor(white: 0.95, alpha: 1)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        
+      self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: nil, action: #selector(addCourse))
+      
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        courseArr = []
+        getFIRDbase()
+     
     }
-    */
+    
+//     @objc func addCourse(){
+//
+//        let createCourse = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
+//
+//        self.navigationController?.pushViewController(createCourse, animated: true)
+//
+//    }
+    
+    
+    func getFIRDbase(){
+        
+        let aID = Auth.auth().currentUser?.uid
+        let query = Database.database().reference().child("Academies").child(aID!).child("courses").queryLimited(toLast: 10)
+        _ = query.observe(.value, with: {[weak self] snapshot in
+
+            if let courseList = snapshot.value as? [String: Any]{
+                print(courseList)
+                let courseIds = courseList.keys
+                print("id=\(courseIds)")
+                for id in courseIds {
+                    print(id as? String)
+                    print(courseList[id])
+                    let course = courseList[id] as? [String: Any]
+                    let info = course?["information"] as? [String: Any]
+                    let name = info?["courseName"] as? String
+                    print(name)
+                    let description = info?["courseDescription"] as? String
+                    print(description)
+                    let instructor = info?["courseInstructor"] as? String
+                    print(instructor)
+                    let place = info?["coursePlace"] as? String
+                    print(place)
+                    let price = info?["coursePrice"] as? String
+                    print(price)
+                    let offer = info?["courseOffer"] as? String
+                    print(offer)
+                    let date = info?["courseDate"] as? String
+                    print(date)
+                    let time = info?["courseTime"] as? String
+                    print(time)
+                    let availablePlace = info?["courseAvailablePlace"] as? String
+                    print(availablePlace)
+                    let image = info?["courseImage"] as? String
+                    print(image)
+                    let type = info?["courseType"] as? String
+                    print(type)
+
+
+                    let courseData = Course(courseName: name!, courseType: type!, courseDate: date!, courseDescription: description!, courseImage: image!, courseInstructor: instructor!, courseOffer: offer!, coursePlace: place!, coursePrice: price!, courseTime: time!, courseAvailablePlace: availablePlace!)
+
+                    self?.courseArr.append(courseData)
+
+                }
+                self?.tableView.reloadData()
+
+            }
+        })
+
+
+}
+    
+    
+    
+    
 
 }
 
 extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return courseArr.count
     }
     
     
@@ -56,19 +130,32 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CourseCellTableViewCell
         cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
-        cell.courseImg.image = imageArr[indexPath.row] as! UIImage
-        cell.courseName.text! = names[indexPath.row] as! String
+        
+        cell.courseModel = courseArr [indexPath.row]
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let Storyboard = UIStoryboard(name: "Course", bundle: nil)
-        let courseProfile = Storyboard.instantiateViewController(withIdentifier:"courserProfile") as! CourseProfileViewController
+      //  let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
         
-        courseProfile.getCourseImg = imageArr [indexPath.row] as! UIImage
-        courseProfile.getCourseName = names[indexPath.row] as! String
-        self.navigationController?.pushViewController(courseProfile, animated: true)
-        
+        let courseDetails = UIStoryboard(name: "Course", bundle: nil)
+        var selectCourse = courseArr[indexPath.row]
+       performSegue(withIdentifier: "toSingleCourse", sender: selectCourse)
+     //  self.navigationController?.pushViewController(courseDetails, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "toSingleCourse"){
+            let sigleCourseVC = segue.destination as! CourseProfileViewController
+            sigleCourseVC.myCourse = sender as! Course
+            
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 144
+    }
 }

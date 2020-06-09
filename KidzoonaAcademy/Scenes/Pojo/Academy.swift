@@ -17,6 +17,7 @@ class Academy : Codable {
             var img: String
             var password : String
             var aID :String
+            var URL : String
     
     
     init(name:String,phone:String,location:String,img:String,papers:String) {
@@ -28,6 +29,7 @@ class Academy : Codable {
         self.email = ""
         self.password = ""
         self.aID = ""
+        self.URL = ""
         
     }
     
@@ -40,6 +42,7 @@ class Academy : Codable {
         self.email = ""
         self.password = ""
         self.aID = ""
+        self.URL = ""
     }
     
     func encode() {
@@ -59,19 +62,24 @@ class Academy : Codable {
     
     
     static func decodeAcademy ()-> Academy {
-
+        print("in decode")
     if let data = UserDefaults.standard.data(forKey: "academy") {
         do {
             // Create JSON Decoder
+            print("DECODING")
             let decoder = JSONDecoder()
             let academy = try decoder.decode(Academy.self, from: data)
             return academy
             
         } catch {
-            print("Unable to Decode Note (\(error))")
+            print("Unable to Decode Academy (\(error))")
         }
         }
-        return Academy()
+    else{
+        print("not found")
+       
+        }
+         return Academy()
     }
     
 }

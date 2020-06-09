@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tpV-VT-EZY">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="rzZ-To-zc1" customClass="ViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ViewController" storyboardIdentifier="ViewController" id="rzZ-To-zc1" customClass="ViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ocw-jr-phw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,23 +50,26 @@
                                                     <constraint firstAttribute="width" constant="120" id="zQC-D5-mbe"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-Yj-sAT">
-                                                <rect key="frame" x="30" y="346.5" width="315" height="160"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-Yj-sAT">
+                                                <rect key="frame" x="30" y="346.5" width="315" height="170"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Academy Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUC-eF-cah" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="fb4-ZL-uFF"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Han-69-Mpb" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="65" width="315" height="30"/>
+                                                        <rect key="frame" x="0.0" y="65" width="315" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAV-Aq-VC9" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="130" width="315" height="30"/>
+                                                        <rect key="frame" x="0.0" y="130" width="315" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -74,13 +77,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Register Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwn-td-xTD">
-                                                <rect key="frame" x="30" y="524.5" width="197.5" height="20.5"/>
+                                                <rect key="frame" x="30" y="534.5" width="197.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-0k-Wr2">
-                                                <rect key="frame" x="30" y="555" width="117" height="24"/>
+                                                <rect key="frame" x="30" y="565" width="117" height="28.5"/>
                                                 <state key="normal" title="upload files" image="upload">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
@@ -99,41 +102,64 @@
                                                     <action selector="uploadImg:" destination="rzZ-To-zc1" eventType="touchUpInside" id="a01-MT-Str"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qu-YX-Fdw">
+                                                <rect key="frame" x="265" y="524" width="80" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="39Y-fR-5rg"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Gky-BS-bha"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="paperImg:" destination="rzZ-To-zc1" eventType="touchUpInside" id="1Cp-u1-UxF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly0-m9-ooL">
+                                                <rect key="frame" x="1" y="65" width="44" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="hLR-vw-TL1"/>
+                                                    <constraint firstAttribute="width" constant="44" id="scc-ss-UV5"/>
+                                                </constraints>
+                                                <state key="normal" image="Back"/>
+                                                <connections>
+                                                    <action selector="backBtnPressed:" destination="rzZ-To-zc1" eventType="touchUpInside" id="1z3-7L-V2f"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="bwn-td-xTD" firstAttribute="top" secondItem="tAV-Aq-VC9" secondAttribute="bottom" constant="18" id="0M1-ni-IL8"/>
                                             <constraint firstItem="YpM-7a-dpW" firstAttribute="top" secondItem="b1o-rC-ldE" secondAttribute="top" constant="150" id="15s-Kr-YeB"/>
                                             <constraint firstAttribute="trailing" secondItem="dKI-Yj-sAT" secondAttribute="trailing" constant="30" id="26c-hM-QhR"/>
+                                            <constraint firstItem="5Qu-YX-Fdw" firstAttribute="trailing" secondItem="tAV-Aq-VC9" secondAttribute="trailing" id="6h1-jG-tdb"/>
                                             <constraint firstItem="63R-0x-TJC" firstAttribute="top" secondItem="U22-2B-NBt" secondAttribute="bottom" constant="24.5" id="DWS-S8-K1v"/>
                                             <constraint firstItem="eGf-LK-ANU" firstAttribute="top" secondItem="b1o-rC-ldE" secondAttribute="top" id="HKg-U9-bMa"/>
                                             <constraint firstItem="dKI-Yj-sAT" firstAttribute="top" secondItem="63R-0x-TJC" secondAttribute="bottom" constant="19.5" id="I5V-kt-Zkz"/>
                                             <constraint firstItem="eGf-LK-ANU" firstAttribute="leading" secondItem="b1o-rC-ldE" secondAttribute="leading" id="ICK-ZV-Nqq"/>
                                             <constraint firstAttribute="trailing" secondItem="Drz-tU-XLD" secondAttribute="trailing" constant="40" id="IlI-Yl-Keg"/>
+                                            <constraint firstItem="eGf-LK-ANU" firstAttribute="top" secondItem="ly0-m9-ooL" secondAttribute="bottom" constant="-100" id="MSJ-vC-1Jb"/>
                                             <constraint firstItem="63R-0x-TJC" firstAttribute="centerX" secondItem="b1o-rC-ldE" secondAttribute="centerX" id="Nfh-Mk-3rm"/>
                                             <constraint firstAttribute="trailing" secondItem="eGf-LK-ANU" secondAttribute="trailing" id="PVG-WN-m07"/>
                                             <constraint firstItem="Oey-0k-Wr2" firstAttribute="top" secondItem="bwn-td-xTD" secondAttribute="bottom" constant="10" id="Rbc-3j-stk"/>
+                                            <constraint firstItem="5Qu-YX-Fdw" firstAttribute="top" secondItem="tAV-Aq-VC9" secondAttribute="bottom" constant="7.5" id="YZi-qk-lx7"/>
                                             <constraint firstItem="Drz-tU-XLD" firstAttribute="top" secondItem="YpM-7a-dpW" secondAttribute="bottom" constant="20" id="aMU-fj-oL9"/>
-                                            <constraint firstAttribute="trailing" secondItem="YpM-7a-dpW" secondAttribute="trailing" constant="153.5" id="aTN-Gk-NNw"/>
                                             <constraint firstItem="dKI-Yj-sAT" firstAttribute="centerX" secondItem="b1o-rC-ldE" secondAttribute="centerX" id="amu-ft-ljD"/>
+                                            <constraint firstItem="eGf-LK-ANU" firstAttribute="leading" secondItem="ly0-m9-ooL" secondAttribute="trailing" constant="-45" id="bWv-DN-T8i"/>
                                             <constraint firstItem="Oey-0k-Wr2" firstAttribute="leading" secondItem="bwn-td-xTD" secondAttribute="leading" id="dQD-TG-Y5p"/>
                                             <constraint firstItem="bwn-td-xTD" firstAttribute="leading" secondItem="tAV-Aq-VC9" secondAttribute="leading" id="eS8-Ci-Dgh"/>
                                             <constraint firstItem="dKI-Yj-sAT" firstAttribute="leading" secondItem="b1o-rC-ldE" secondAttribute="leading" constant="30" id="fTU-eU-FpP"/>
                                             <constraint firstItem="YpM-7a-dpW" firstAttribute="centerX" secondItem="b1o-rC-ldE" secondAttribute="centerX" id="jhe-D2-44O"/>
                                             <constraint firstItem="U22-2B-NBt" firstAttribute="leading" secondItem="b1o-rC-ldE" secondAttribute="leading" constant="40" id="nI0-wj-fcf"/>
                                             <constraint firstItem="U22-2B-NBt" firstAttribute="top" secondItem="YpM-7a-dpW" secondAttribute="bottom" constant="20" id="rYi-VR-eAx"/>
-                                            <constraint firstItem="YpM-7a-dpW" firstAttribute="leading" secondItem="b1o-rC-ldE" secondAttribute="leading" constant="153.5" id="vYg-hK-Ujx"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRu-Wf-abd" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="604.5" width="335" height="40"/>
+                                        <rect key="frame" x="20" y="619" width="335" height="40"/>
                                         <color key="backgroundColor" red="0.95004051919999999" green="0.69085246320000004" blue="0.2013075054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ioN-OK-qY7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Next">
-                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="NextBtnPressed:" destination="rzZ-To-zc1" eventType="touchUpInside" id="nan-nR-kty"/>
@@ -144,6 +170,7 @@
                                     <constraint firstAttribute="trailing" secondItem="b1o-rC-ldE" secondAttribute="trailing" id="1QC-If-beU"/>
                                     <constraint firstItem="RRu-Wf-abd" firstAttribute="top" secondItem="Oey-0k-Wr2" secondAttribute="bottom" constant="25.5" id="5YF-Y1-QfW"/>
                                     <constraint firstItem="b1o-rC-ldE" firstAttribute="centerY" secondItem="cO7-ya-Qla" secondAttribute="centerY" id="5aY-6U-E22"/>
+                                    <constraint firstItem="RRu-Wf-abd" firstAttribute="top" secondItem="5Qu-YX-Fdw" secondAttribute="bottom" constant="5" id="PD3-ZW-GuG"/>
                                     <constraint firstItem="b1o-rC-ldE" firstAttribute="centerX" secondItem="cO7-ya-Qla" secondAttribute="centerX" id="cRV-km-R4t"/>
                                     <constraint firstAttribute="trailing" secondItem="RRu-Wf-abd" secondAttribute="trailing" constant="20" id="dBB-Y8-rHE"/>
                                     <constraint firstAttribute="bottom" secondItem="b1o-rC-ldE" secondAttribute="bottom" id="eG2-uG-H4i"/>
@@ -167,6 +194,7 @@
                         <outlet property="academyLocation" destination="tAV-Aq-VC9" id="dgU-Fz-xZA"/>
                         <outlet property="academyName" destination="VUC-eF-cah" id="OI5-nX-hU6"/>
                         <outlet property="academyPhone" destination="Han-69-Mpb" id="tUQ-In-nzX"/>
+                        <outlet property="paperImg" destination="5Qu-YX-Fdw" id="nTV-J0-UXI"/>
                         <outlet property="uploadFileBtn" destination="Oey-0k-Wr2" id="3mc-Ua-uCz"/>
                         <segue destination="nZc-Xo-ror" kind="show" identifier="Next" id="yfC-tz-Qzd"/>
                     </connections>
@@ -181,12 +209,13 @@
                 <viewControllerPlaceholder storyboardName="FinalSignupStoryboard" referencedIdentifier="WaitViewController" id="nZc-Xo-ror" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6w3-5n-KSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1269" y="42"/>
+            <point key="canvasLocation" x="1284" y="26"/>
         </scene>
     </scenes>
     <resources>
         <image name="AddImg" width="76" height="78"/>
         <image name="AuthHeader" width="397" height="518"/>
+        <image name="Back" width="12" height="21"/>
         <image name="Line" width="98" height="5"/>
         <image name="Line-1" width="98" height="5"/>
         <image name="upload" width="24" height="24"/>

@@ -24,33 +24,32 @@ class FinalSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
+//        setupView()
     }
     
     @IBAction func Signup(_ sender: Any) {
-        
         setupNewUser()
     }
     
     
     
-    fileprivate func setupView(){
-        txtEmail.layer.cornerRadius = 15
-        txtEmail.layer.borderWidth = 1
-        txtEmail.layer.borderColor = UIColor.lightGray.cgColor
-        
-        txtPass.layer.cornerRadius = 15
-        txtPass.layer.borderWidth = 1
-        txtPass.layer.borderColor = UIColor.lightGray.cgColor
-        
-        txtConfpass.layer.cornerRadius = 15
-        txtConfpass.layer.borderWidth = 1
-        txtConfpass.layer.borderColor = UIColor.lightGray.cgColor
-        
-        signup.layer.cornerRadius = 15
-        
-        
-    }
+//    fileprivate func setupView(){
+//        txtEmail.layer.cornerRadius = 15
+//        txtEmail.layer.borderWidth = 1
+//        txtEmail.layer.borderColor = UIColor.lightGray.cgColor
+//
+//        txtPass.layer.cornerRadius = 15
+//        txtPass.layer.borderWidth = 1
+//        txtPass.layer.borderColor = UIColor.lightGray.cgColor
+//
+//        txtConfpass.layer.cornerRadius = 15
+//        txtConfpass.layer.borderWidth = 1
+//        txtConfpass.layer.borderColor = UIColor.lightGray.cgColor
+//
+//        signup.layer.cornerRadius = 15
+//
+//
+//    }
 
     /*
     // MARK: - Navigation
@@ -86,7 +85,7 @@ class FinalSignupViewController: UIViewController {
                 print("user created")
                 academy.encode()
                 self.uploadAcademy()
-                //self.performSegue(withIdentifier: "toHome", sender: nil)
+                self.performSegue(withIdentifier: "toHome", sender: nil)
                 
                 
             }
@@ -100,12 +99,14 @@ class FinalSignupViewController: UIViewController {
     
     func uploadAcademy(){
         let academy = Academy.decodeAcademy()
+        print("in final img url = \(academy.img)")
         print("IN upload \(academy.email)")
         let databaseRoot = Database.database().reference()
         let databaseCourses = databaseRoot.child("Academies")
-        let ref = databaseCourses.child(academy.aID)
+        let ref = databaseCourses.child(academy.aID).child("Information")
         let academyToUpload = ["name":academy.name,"phone":academy.phone,"location":academy.location,"image":academy.img,"papers":academy.papersURL,"email":academy.email,"password":academy.password] as [String : Any]
         ref.setValue(academyToUpload)
+        //academy.encode()
     }
 
 }

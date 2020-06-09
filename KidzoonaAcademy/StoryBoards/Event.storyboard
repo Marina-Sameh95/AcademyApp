@@ -10,18 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CreateEvent-->
-        <scene sceneID="gU2-cz-PNh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CreateEvent" referencedIdentifier="CreateEvent" id="mbY-2d-9eG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="34s-fi-62d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-409" y="255"/>
-        </scene>
-        <!--Event List View Controller-->
+        <!--Events-->
         <scene sceneID="X2Z-ao-uWF">
             <objects>
-                <viewController id="2aR-wm-8IS" customClass="EventListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventListViewController" id="2aR-wm-8IS" customClass="EventListViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z4t-T9-dcl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +33,7 @@
                                 </constraints>
                                 <state key="normal" image="AddBtn"/>
                                 <connections>
-                                    <segue destination="mbY-2d-9eG" kind="show" id="mPe-KG-Rx3"/>
+                                    <action selector="addBtnPressed:" destination="2aR-wm-8IS" eventType="touchUpInside" id="s06-CL-Eu8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uc-8z-bAO">
@@ -97,7 +89,6 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="374" id="4zw-u4-fky"/>
-                                                        <constraint firstItem="gsh-vi-ken" firstAttribute="leading" secondItem="DnN-go-10W" secondAttribute="trailing" constant="-93" id="8GC-R4-zam"/>
                                                         <constraint firstItem="DnN-go-10W" firstAttribute="top" secondItem="1kJ-dJ-UHw" secondAttribute="bottom" constant="9" id="929-1i-T4b"/>
                                                         <constraint firstItem="kaY-HO-k1R" firstAttribute="top" secondItem="1kJ-dJ-UHw" secondAttribute="bottom" constant="-33" id="Aek-uW-eyu"/>
                                                         <constraint firstItem="kaY-HO-k1R" firstAttribute="top" secondItem="Kw8-yy-aIv" secondAttribute="top" constant="8" id="Frf-3u-lPE"/>
@@ -106,7 +97,8 @@
                                                         <constraint firstAttribute="height" constant="120" id="d6d-In-K0U"/>
                                                         <constraint firstItem="kaY-HO-k1R" firstAttribute="leading" secondItem="Kw8-yy-aIv" secondAttribute="leading" constant="8" id="gxg-f8-dcD"/>
                                                         <constraint firstItem="gsh-vi-ken" firstAttribute="top" secondItem="DnN-go-10W" secondAttribute="bottom" constant="8" id="jif-Dg-Tu3"/>
-                                                        <constraint firstItem="1kJ-dJ-UHw" firstAttribute="leading" secondItem="DnN-go-10W" secondAttribute="trailing" constant="-93" id="vXv-Xq-rdN"/>
+                                                        <constraint firstItem="gsh-vi-ken" firstAttribute="leading" secondItem="DnN-go-10W" secondAttribute="leading" id="thm-J3-9Vl"/>
+                                                        <constraint firstItem="DnN-go-10W" firstAttribute="leading" secondItem="1kJ-dJ-UHw" secondAttribute="leading" id="xL4-wz-DPH"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -145,8 +137,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hey-dx-kMJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="eventsTabBar" id="TAZ-AQ-vZf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="F8w-OI-cWt" id="CWW-94-uTZ"/>
+                        <segue destination="rNm-KY-m1h" kind="show" identifier="toSingleEvent" id="4Xa-sT-Ufc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ju0-e6-iO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,7 +171,7 @@
                                 </constraints>
                                 <state key="normal" image="Back"/>
                                 <connections>
-                                    <segue destination="2aR-wm-8IS" kind="show" id="bFK-Z5-oW1"/>
+                                    <segue destination="2aR-wm-8IS" kind="show" identifier="" id="bFK-Z5-oW1"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-dg-fhY">
@@ -424,8 +419,14 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BsC-QW-joF" id="nkj-68-MMZ"/>
+                        <outlet property="dateTxt" destination="UBf-LC-DF5" id="DcE-d4-3hP"/>
+                        <outlet property="descTxt" destination="34I-3W-1Ff" id="sZK-xT-2eA"/>
                         <outlet property="eventName" destination="SZV-x4-anT" id="gWc-iv-6Ut"/>
+                        <outlet property="locationTxt" destination="LWk-TP-mwp" id="Rba-fh-S6R"/>
+                        <outlet property="pricetxt" destination="aXA-Ba-cG3" id="nRm-Yg-vEt"/>
+                        <outlet property="seatsTxt" destination="Tff-Vo-8cy" id="Q1c-jd-Vnv"/>
                         <outlet property="sliderPage" destination="KEe-iH-7H1" id="pJt-kW-as3"/>
+                        <outlet property="timeTxt" destination="BQP-Lf-28x" id="9Jd-Wi-Bj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOE-h9-dra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,9 +447,13 @@
         <image name="Back" width="12" height="21"/>
         <image name="Direction" width="26" height="26"/>
         <image name="Header" width="375" height="96"/>
+        <image name="eventsTabBar" width="24" height="24"/>
         <image name="icon - location" width="26" height="26"/>
         <image name="icon -time" width="26" height="26"/>
         <image name="icon-money" width="26" height="26"/>
         <image name="line sections" width="342" height="1"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bFK-Z5-oW1"/>
+    </inferredMetricsTieBreakers>
 </document>

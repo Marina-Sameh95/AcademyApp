@@ -114,24 +114,33 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     
     @IBAction func createCourse(_ sender: Any) {
         
-        let academiesRoot = ref!.child("Academies")
-        let userId = Auth.auth().currentUser?.uid
-        let academyId = academiesRoot.child(userId!)
-          let courseRoot =  academyId.child("courses")
-          let courseId = courseRoot.childByAutoId()
-        
-//        var academyId = ref?.child("Academies").child("NZaf6cB3j5eNeBQoQPcB0wbESZ12")
-//        var courseId =  academyId!.child("courses").childByAutoId()
-        
-        let courseData = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text!, "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": urlImg, "courseType": courseType.text!]
-        
-         courseId.child("information").setValue(courseData)
-       courseId.child("review").setValue(["userName":"mark", "rate": "8.5", "date":"30/6/2020"])
-        
-        
+        if courseName.text! == "" || coursePrice.text! == "" || courseDate.text! == "" || courseTime.text! == "" || courseInstructor.text! == "" || seatsTxt.text! == "" || courseType.text == ""
+        {
+            AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out all fields.")
+        }
+        else{
+            
+           uploadCourse()
+        }
     }
     
     
+    func uploadCourse(){
+        
+        let academiesRoot = ref!.child("Academies")
+        let userId = Auth.auth().currentUser?.uid
+        let academyId = academiesRoot.child(userId!)
+        let courseRoot =  academyId.child("courses")
+        let courseId = courseRoot.childByAutoId()
+        
+        //        var academyId = ref?.child("Academies").child("NZaf6cB3j5eNeBQoQPcB0wbESZ12")
+        //        var courseId =  academyId!.child("courses").childByAutoId()
+        
+        let courseData = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text!, "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": urlImg, "courseType": courseType.text!]
+        
+        courseId.child("information").setValue(courseData)
+        courseId.child("review").setValue(["userName":"mark", "rate": "8.5", "date":"30/6/2020"])
+    }
     
     
     

@@ -220,8 +220,8 @@ extension CreateEvent{
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             print("choose img")
             eventImg.setImage(pickedImage, for: .normal)
-                eventImg.contentMode = .scaleAspectFit
-                eventUIImg = pickedImage
+            eventImg.contentMode = .scaleAspectFit
+            eventUIImg = pickedImage
         }
         
         dismiss(animated: true, completion: nil)

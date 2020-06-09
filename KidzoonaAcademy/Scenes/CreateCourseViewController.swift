@@ -13,6 +13,7 @@ import FirebaseStorage
 
 class CreateCourseViewController: UIViewController ,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
+    @IBOutlet weak var ImgBtn: UIButton!
     @IBOutlet weak var seatsTxt: RoundedTextField!
     @IBOutlet weak var discountTxt: RoundedTextField!
     @IBOutlet weak var courseImg: UIImageView!
@@ -57,8 +58,11 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            courseImg.contentMode = .scaleAspectFit
-            courseImg.image = pickedImage
+            ImgBtn.contentMode = .scaleAspectFit
+            ImgBtn.setImage(pickedImage, for: .normal)
+            
+//            courseImg.contentMode = .scaleAspectFit
+//            courseImg.image = pickedImage
             self.UploadImageToFirebase(SelectedImg: pickedImage)
             
         }
@@ -260,13 +264,16 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
         
         imagePicker.delegate = self
         let httpsReference = FirebaseStorage.Storage.storage().reference(forURL: "gs://kidzoona-57017.appspot.com/")
-        courseImg.contentMode = .scaleAspectFit
+        //courseImg.contentMode = .scaleAspectFit
+        ImgBtn.contentMode = .scaleAspectFit
+
         httpsReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                 // Uh-oh, an error occurred!
             } else {
                 // Data for "images/island.jpg" is returned
-                self.courseImg.image = UIImage(data: data!)
+//                self.courseImg.image = UIImage(data: data!)
+                self.ImgBtn.setImage(UIImage(data: data!), for: .normal)
                 
             }
             

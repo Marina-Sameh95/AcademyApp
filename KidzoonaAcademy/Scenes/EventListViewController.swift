@@ -143,6 +143,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Event", bundle: nil)
         var selectedEvent = events[indexPath.row]
@@ -160,5 +161,9 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       return 144
     }
-
+  
+    @IBAction func unwind(for unwindSegue:UIStoryboardUnwindSegueSource, towards subsequentVC: UIViewController) {
+        
+    }
+    
 }

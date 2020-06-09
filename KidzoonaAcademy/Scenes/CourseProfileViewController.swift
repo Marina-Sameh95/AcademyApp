@@ -24,7 +24,7 @@ class CourseProfileViewController: UIViewController {
     
     @IBAction func backBtn(_ sender: Any) {
         
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     
@@ -44,7 +44,7 @@ class CourseProfileViewController: UIViewController {
 //        courseImg.image = getCourseImg
        self.navigationController?.isNavigationBarHidden = true
         
-        print("courseName=" + myCourse!.courseName ?? "")
+       // print("courseName=" + myCourse!.courseName ?? "")
         courseName.text =   myCourse!.courseName
         courseDate.text = myCourse!.courseDate
         courseTime.text = myCourse!.courseTime

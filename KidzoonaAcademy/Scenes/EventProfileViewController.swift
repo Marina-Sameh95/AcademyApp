@@ -11,13 +11,12 @@ import UIKit
 class EventProfileViewController: UIViewController  {
     
 
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    @IBOutlet weak var sliderPage: UIPageControl!
-    @IBOutlet weak var dateTxt: UILabel!
-    @IBOutlet weak var timeTxt: UILabel!
+
+
     @IBOutlet weak var locationTxt: UILabel!
+    @IBOutlet weak var datetxt: UILabel!
+    @IBOutlet weak var nameTxt: UILabel!
+    @IBOutlet weak var timeTxt: UILabel!
     @IBOutlet weak var pricetxt: UILabel!
     @IBOutlet weak var seatsTxt: UILabel!
     @IBOutlet weak var descTxt: UITextView!
@@ -37,12 +36,13 @@ class EventProfileViewController: UIViewController  {
     }
     
     func displayEvent(){
-        eventName.text = eventObj?.name
         descTxt.text = eventObj?.descrption
         pricetxt.text = eventObj?.price
         timeTxt.text = eventObj?.time
-        dateTxt.text  = eventObj?.date
-        seatsTxt.text = eventObj?.availableSeats
+        nameTxt.text  = eventObj?.name
+        seatsTxt.text = "Available places:  \(eventObj?.availableSeats ?? "")"
+        datetxt.text = eventObj?.date
+//        locationTxt.text = eventObj?.l
         
 //        locationTxt.text = eventObj.
         
@@ -57,6 +57,9 @@ class EventProfileViewController: UIViewController  {
        
     }
     
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
     
   
     

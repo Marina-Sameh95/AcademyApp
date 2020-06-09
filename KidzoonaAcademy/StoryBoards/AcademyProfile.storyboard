@@ -10,14 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SettingsView-->
-        <scene sceneID="5WL-zs-sG8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsView" id="mMV-7e-uWV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wv8-RB-Rx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1145" y="22"/>
-        </scene>
         <!--Academy Profile View Controller-->
         <scene sceneID="Sdx-pQ-vsi">
             <objects>
@@ -33,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-k3-R04">
-                                                <rect key="frame" x="125.5" y="324" width="163" height="233.5"/>
+                                                <rect key="frame" x="125.5" y="304" width="163" height="233.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6by-Bh-NCx">
                                                         <rect key="frame" x="11.5" y="0.0" width="140" height="24"/>
@@ -54,10 +46,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexandria,egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo6-8t-xx2">
-                                                        <rect key="frame" x="8.5" y="128.5" width="146" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="146" id="7oc-sf-Fi4"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="17.5" y="128.5" width="128.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -76,18 +65,14 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnQ-bQ-NeA">
-                                                <rect key="frame" x="193.5" y="625.5" width="27" height="36"/>
-                                                <state key="normal" image="File"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register paper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWd-33-NV5">
-                                                <rect key="frame" x="148.5" y="592" width="117.5" height="20.5"/>
+                                                <rect key="frame" x="148.5" y="572" width="117.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-Be-mEX" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="721.5" width="350" height="50"/>
+                                                <rect key="frame" x="32" y="701.5" width="350" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="350" id="a5c-uu-ilX"/>
@@ -101,27 +86,34 @@
                                                     <segue destination="3vC-eF-YCl" kind="show" id="puo-rd-CxO"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s5v-59-1CF">
+                                                <rect key="frame" x="164.5" y="600" width="85" height="93"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="Kts-Z3-lH1"/>
+                                                    <constraint firstAttribute="height" constant="93" id="TaE-A2-5RZ"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="NnQ-bQ-NeA" firstAttribute="centerX" secondItem="zG1-7X-Huo" secondAttribute="centerX" id="5xu-Qr-jwe"/>
                                             <constraint firstItem="qWd-33-NV5" firstAttribute="top" secondItem="6eo-4T-oow" secondAttribute="bottom" constant="34.5" id="6Iz-tv-I0x"/>
                                             <constraint firstItem="qWd-33-NV5" firstAttribute="centerX" secondItem="zG1-7X-Huo" secondAttribute="centerX" id="ILX-04-X5d"/>
+                                            <constraint firstItem="s5v-59-1CF" firstAttribute="centerX" secondItem="zG1-7X-Huo" secondAttribute="centerX" id="IU2-Wg-r3w"/>
+                                            <constraint firstItem="PWw-Be-mEX" firstAttribute="top" secondItem="s5v-59-1CF" secondAttribute="bottom" constant="8.5" id="Wgf-pR-DZq"/>
                                             <constraint firstItem="0jG-k3-R04" firstAttribute="centerX" secondItem="zG1-7X-Huo" secondAttribute="centerX" id="X7b-UG-464"/>
                                             <constraint firstItem="PWw-Be-mEX" firstAttribute="centerX" secondItem="zG1-7X-Huo" secondAttribute="centerX" id="aR3-d0-loV"/>
-                                            <constraint firstItem="PWw-Be-mEX" firstAttribute="top" secondItem="NnQ-bQ-NeA" secondAttribute="bottom" constant="60" id="ji8-bi-XyK"/>
-                                            <constraint firstItem="NnQ-bQ-NeA" firstAttribute="top" secondItem="qWd-33-NV5" secondAttribute="bottom" constant="13" id="q40-7s-AGW"/>
+                                            <constraint firstItem="s5v-59-1CF" firstAttribute="top" secondItem="qWd-33-NV5" secondAttribute="bottom" constant="7.5" id="j9L-JR-nSw"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-DX-yNr">
-                                        <rect key="frame" x="112.5" y="136" width="189" height="116"/>
+                                        <rect key="frame" x="82" y="116" width="250" height="116"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="189" id="irh-hh-iNW"/>
+                                            <constraint firstAttribute="width" constant="250" id="irh-hh-iNW"/>
                                             <constraint firstAttribute="height" constant="116" id="lsm-fZ-Q7U"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academy Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-wM-rNj">
-                                        <rect key="frame" x="88" y="267" width="238" height="28"/>
+                                        <rect key="frame" x="88" y="247" width="238" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="7Bd-Vj-UPf"/>
                                             <constraint firstAttribute="width" constant="238" id="B7W-FL-tNi"/>
@@ -159,7 +151,7 @@
                                     <constraint firstAttribute="bottom" secondItem="zG1-7X-Huo" secondAttribute="bottom" priority="250" id="F42-L8-VEI"/>
                                     <constraint firstItem="G4b-p3-CNd" firstAttribute="centerY" secondItem="JP6-LL-bro" secondAttribute="centerY" constant="14" id="Map-CO-xmG"/>
                                     <constraint firstItem="zG1-7X-Huo" firstAttribute="centerY" secondItem="JsV-iM-Ns8" secondAttribute="centerY" priority="250" id="OoR-NM-VgA"/>
-                                    <constraint firstItem="kMb-DX-yNr" firstAttribute="top" secondItem="JP6-LL-bro" secondAttribute="bottom" constant="40" id="PWf-eK-YkC"/>
+                                    <constraint firstItem="kMb-DX-yNr" firstAttribute="top" secondItem="JP6-LL-bro" secondAttribute="bottom" constant="20" id="PWf-eK-YkC"/>
                                     <constraint firstItem="JP6-LL-bro" firstAttribute="leading" secondItem="JsV-iM-Ns8" secondAttribute="leading" id="Vtc-5f-EUG"/>
                                     <constraint firstItem="G4b-p3-CNd" firstAttribute="centerX" secondItem="JsV-iM-Ns8" secondAttribute="centerX" id="Yye-yC-JJk"/>
                                     <constraint firstItem="zG1-7X-Huo" firstAttribute="top" secondItem="JsV-iM-Ns8" secondAttribute="top" id="ZUw-d1-IP3"/>
@@ -189,7 +181,7 @@
                         <outlet property="PhoneLbl" destination="Aa5-2B-ANQ" id="ge4-l0-934"/>
                         <outlet property="academyImg" destination="kMb-DX-yNr" id="41I-Rq-KzH"/>
                         <outlet property="academyName" destination="dc3-wM-rNj" id="STR-cl-Iic"/>
-                        <outlet property="paperBtn" destination="NnQ-bQ-NeA" id="jEE-Kc-IG7"/>
+                        <outlet property="paperImg" destination="s5v-59-1CF" id="Hqu-4G-K7P"/>
                         <outlet property="websiteLbl" destination="6eo-4T-oow" id="ura-Mp-ea4"/>
                     </connections>
                 </viewController>
@@ -208,7 +200,6 @@
     </scenes>
     <resources>
         <image name="Back" width="12" height="21"/>
-        <image name="File" width="27" height="36"/>
         <image name="Header" width="375" height="96"/>
     </resources>
 </document>

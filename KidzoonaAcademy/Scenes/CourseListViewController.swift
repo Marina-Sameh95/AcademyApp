@@ -20,8 +20,11 @@ class CourseListViewController: UIViewController {
 
     
     @IBAction func addCourse(_ sender: Any) {
-        let courseList = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
-              self.navigationController?.pushViewController(courseList, animated: true)
+        let courseList = UIStoryboard(name: "CreateCourse",bundle:nil)
+//              self.navigationController?.pushViewController(courseList, animated: true)
+        
+        let nextViewController = courseList.instantiateViewController(withIdentifier: "CreateCourse") as! CreateCourseViewController
+        self.present(nextViewController, animated:true, completion:nil)
         
     }
     
@@ -137,12 +140,14 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      //  let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
+//        let storyboard = UIStoryboard(name: "Course", bundle: nil)
+//        let nextViewController = storyboard.instantiateViewController(withIdentifier: "CourseDetails") as! CourseProfileViewController
+//        self.present(nextViewController, animated:true, completion:nil)
+//        let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
         
         let courseDetails = UIStoryboard(name: "Course", bundle: nil)
         var selectCourse = courseArr[indexPath.row]
        performSegue(withIdentifier: "toSingleCourse", sender: selectCourse)
-     //  self.navigationController?.pushViewController(courseDetails, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -157,5 +162,8 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
+    }
+    @IBAction func unwind(_sender:UIStoryboardSegue) {
+        
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -170,12 +170,15 @@
                                                     <action selector="createCourse:" destination="jh3-5o-gQU" eventType="touchUpInside" id="PFM-uA-1Z5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-Pm-vCZ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-Pm-vCZ">
                                                 <rect key="frame" x="87" y="126.5" width="240" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="3gS-77-wLN"/>
                                                     <constraint firstAttribute="height" constant="128" id="p3N-zg-aHB"/>
                                                 </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="imgPicker:" destination="jh3-5o-gQU" eventType="touchUpInside" id="jUV-E3-BAT"/>
                                                 </connections>
@@ -382,6 +385,7 @@
                         <viewLayoutGuide key="safeArea" id="965-wF-Bb1"/>
                     </view>
                     <connections>
+                        <outlet property="ImgBtn" destination="FNw-Pm-vCZ" id="vYv-lD-3Ii"/>
                         <outlet property="courseDate" destination="0yM-p5-8Hp" id="cUk-w7-WLy"/>
                         <outlet property="courseDescription" destination="rE5-Fh-Ngq" id="MYq-pH-4ek"/>
                         <outlet property="courseImg" destination="rAo-PM-LL6" id="7JP-E2-lb2"/>

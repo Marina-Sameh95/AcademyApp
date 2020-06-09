@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AcademyProfileViewController: UIViewController {
 
+    @IBOutlet weak var paperImg: UIImageView!
     @IBOutlet weak var academyName: UILabel!
-    @IBOutlet weak var paperBtn: UIButton!
     @IBOutlet weak var academyImg: UIImageView!
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var LocationLbl: UILabel!
@@ -22,7 +23,6 @@ class AcademyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        //displayAcademy()
         
         
 
@@ -43,6 +43,20 @@ class AcademyProfileViewController: UIViewController {
         LocationLbl.text = academy.location
         academyName.text = academy.name
         websiteLbl.text = academy.email
+        let url = URL(string: (academy.img))
+        if let url = url as? URL{
+            KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+                self.academyImg.image = image
+                self.academyImg.kf.indicatorType = .activity
+            }
+        }
+        let urlPaper = URL(string: (academy.papersURL))
+        if let url = urlPaper as? URL{
+            KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
+                self.paperImg.image = image
+                self.paperImg.kf.indicatorType = .activity
+            }
+        }
         
 
     }

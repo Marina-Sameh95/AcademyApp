@@ -64,8 +64,8 @@ func getAcademyEvents(){
                 let seats = event?["availableSeats"] as! String
                 let coach = event?["coach"] as! String
                 let img = event?["image"] as! String
-                let discount = event?["discount"] as! String
-                let eventModel = EventModel(name: name , date: date, time: time, price: price, descrption: desc, image: img, coach: coach, discount: discount, availableSeats: seats)
+                let location = event?["location"] as! String
+                let eventModel = EventModel(name: name , date: date, time: time, price: price, descrption: desc, image: img, coach: coach, location:location, availableSeats: seats,id: id)
                 print(eventModel.price)
                 self?.events.append(eventModel)
                 self?.tableView.reloadData()
@@ -165,5 +165,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     @IBAction func unwind(for unwindSegue:UIStoryboardUnwindSegueSource, towards subsequentVC: UIViewController) {
         
     }
+    
+    @IBAction func toEventsList(_ unwindSegue: UIStoryboardSegue){}
     
 }

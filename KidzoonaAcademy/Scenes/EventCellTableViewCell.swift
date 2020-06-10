@@ -30,6 +30,10 @@ class EventCellTableViewCell: UITableViewCell {
                     self.eventImg.kf.indicatorType = .activity
                 }
             }
+            else{
+                eventImg.image = UIImage(named: "noimage")
+                
+            }
             
         }
     }

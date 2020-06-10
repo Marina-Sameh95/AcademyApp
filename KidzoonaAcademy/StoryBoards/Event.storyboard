@@ -151,7 +151,7 @@
         <!--Event Profile View Controller-->
         <scene sceneID="ngE-J2-i5d">
             <objects>
-                <viewController storyboardIdentifier="EventProfile" id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toEdit" id="rNm-KY-m1h" customClass="EventProfileViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tqn-VL-ZFb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,8 +171,7 @@
                                 </constraints>
                                 <state key="normal" image="Back"/>
                                 <connections>
-                                    <action selector="backBtnPressed:" destination="rNm-KY-m1h" eventType="touchUpInside" id="kE2-3o-Sfz"/>
-                                    <segue destination="12q-au-RQW" kind="unwind" unwindAction="unwindFor:towards:" id="TN5-4d-n8R"/>
+                                    <segue destination="12q-au-RQW" kind="unwind" unwindAction="toEventsList:" id="H0P-9S-9Ha"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iq7-dg-fhY">
@@ -288,7 +287,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="cCI-QX-VqI" kind="show" id="UtX-bM-gGQ"/>
+                                                    <action selector="editPressed:" destination="rNm-KY-m1h" eventType="touchUpInside" id="LJV-Aj-QIg"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course2" translatesAutoresizingMaskIntoConstraints="NO" id="71p-AE-hiH">
@@ -378,11 +377,13 @@
                     <connections>
                         <outlet property="datetxt" destination="LWk-TP-mwp" id="w3N-0y-whf"/>
                         <outlet property="descTxt" destination="34I-3W-1Ff" id="sZK-xT-2eA"/>
+                        <outlet property="eventImg" destination="71p-AE-hiH" id="B96-oT-tzx"/>
                         <outlet property="locationTxt" destination="Hm8-Tz-752" id="xUR-ea-0AP"/>
                         <outlet property="nameTxt" destination="UBf-LC-DF5" id="1Hr-tZ-8UQ"/>
                         <outlet property="pricetxt" destination="aXA-Ba-cG3" id="nRm-Yg-vEt"/>
                         <outlet property="seatsTxt" destination="Tff-Vo-8cy" id="Q1c-jd-Vnv"/>
                         <outlet property="timeTxt" destination="BQP-Lf-28x" id="9Jd-Wi-Bj5"/>
+                        <segue destination="cCI-QX-VqI" kind="show" identifier="toEdit" id="bVj-1x-GNj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOE-h9-dra" userLabel="First Responder" sceneMemberID="firstResponder"/>

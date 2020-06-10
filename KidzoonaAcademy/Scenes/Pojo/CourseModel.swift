@@ -9,19 +9,20 @@
 import Foundation
 class Course {
     
-    var courseName :String!
-    var courseType :String!
-    var courseDate :String!
-    var courseDescription :String!
-    var courseImage :String!
-    var courseInstructor :String!
-    var courseOffer :String!
-    var coursePlace :String!
-    var coursePrice :String!
-    var courseTime :String!
-    var courseAvailablePlace :String!
+    var courseName :String
+    var courseType :String
+    var courseDate :String
+    var courseDescription :String
+    var courseImage :String
+    var courseInstructor :String
+    var courseOffer :String
+    var coursePlace :String
+    var coursePrice :String
+    var courseTime :String
+    var courseAvailablePlace :String
+    var courseID : String
     
-    init(courseName:String ,courseType:String ,courseDate:String ,courseDescription:String ,courseImage:String ,courseInstructor:String ,courseOffer:String ,coursePlace:String ,coursePrice:String ,courseTime:String ,courseAvailablePlace:String) {
+    init(courseName:String ,courseType:String ,courseDate:String ,courseDescription:String ,courseImage:String ,courseInstructor:String ,courseOffer:String ,coursePlace:String ,coursePrice:String ,courseTime:String ,courseAvailablePlace:String,id: String) {
         
         
         self.courseName = courseName
@@ -35,6 +36,7 @@ class Course {
         self.coursePrice = coursePrice
         self.courseTime = courseTime
         self.courseAvailablePlace = courseAvailablePlace
+        self.courseID = id
         
     }
     

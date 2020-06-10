@@ -172,11 +172,10 @@
                                                 </constraints>
                                                 <state key="normal" image="Back"/>
                                                 <connections>
-                                                    <action selector="backBtn:" destination="qTo-qz-OGp" eventType="touchUpInside" id="vvJ-sC-IZR"/>
-                                                    <segue destination="ClZ-eR-9XT" kind="unwind" unwindAction="unwindWith_sender:" id="qpD-R5-YNl"/>
+                                                    <segue destination="ClZ-eR-9XT" kind="unwind" unwindAction="toCoursesList:" id="lpF-zj-MSM"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course4" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-mG-7a3">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-mG-7a3">
                                                 <rect key="frame" x="0.0" y="125" width="414" height="162"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="162" id="OaR-5A-US8"/>
@@ -440,6 +439,7 @@
                         <outlet property="coursePrice" destination="jsb-c9-wb6" id="6ue-sA-0sx"/>
                         <outlet property="courseTime" destination="9Zl-Gm-NFW" id="zPl-ZZ-QYo"/>
                         <outlet property="tableView" destination="qp4-pn-2xT" id="PAg-E0-6Th"/>
+                        <segue destination="sbx-ZA-sza" kind="show" identifier="toEditCourse" id="uNd-v3-xzn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-9f-HS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -447,17 +447,25 @@
             </objects>
             <point key="canvasLocation" x="1943" y="142"/>
         </scene>
+        <!--EditCourse-->
+        <scene sceneID="fdQ-ux-6Dq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditCourse" referencedIdentifier="EditCourse" id="sbx-ZA-sza" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-uO-0FS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2678" y="106"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AddBtn" width="22" height="22"/>
         <image name="Back" width="12" height="21"/>
         <image name="Header" width="375" height="96"/>
-        <image name="course4" width="750" height="422"/>
         <image name="coursesTabBar" width="24" height="24"/>
         <image name="date" width="26" height="26"/>
         <image name="icon - location" width="26" height="26"/>
         <image name="icon -time" width="26" height="26"/>
         <image name="icon-money" width="26" height="26"/>
         <image name="line sections" width="342" height="1"/>
+        <image name="noimage" width="100" height="100"/>
     </resources>
 </document>

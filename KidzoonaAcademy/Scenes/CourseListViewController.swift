@@ -30,6 +30,8 @@ class CourseListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        courseArr = []
+        getFIRDbase()
 
         ref = Database.database().reference()
 
@@ -47,8 +49,7 @@ class CourseListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
-        courseArr = []
-        getFIRDbase()
+      
      
     }
     
@@ -65,7 +66,9 @@ class CourseListViewController: UIViewController {
         
         let aID = Auth.auth().currentUser?.uid
         let query = Database.database().reference().child("Academies").child(aID!).child("courses").queryLimited(toLast: 10)
+
         _ = query.observe(.value, with: {[weak self] snapshot in
+            self?.courseArr = []
 
             if let courseList = snapshot.value as? [String: Any]{
                 print(courseList)
@@ -98,9 +101,7 @@ class CourseListViewController: UIViewController {
                     print(image)
                     let type = info?["courseType"] as? String
                     print(type)
-
-
-                    let courseData = Course(courseName: name!, courseType: type!, courseDate: date!, courseDescription: description!, courseImage: image!, courseInstructor: instructor!, courseOffer: offer!, coursePlace: place!, coursePrice: price!, courseTime: time!, courseAvailablePlace: availablePlace!)
+                    let courseData = Course(courseName:name!, courseType: type!, courseDate: date!, courseDescription: description!, courseImage: image ?? "", courseInstructor: instructor!, courseOffer: offer!, coursePlace: place!, coursePrice: price!, courseTime: time!, courseAvailablePlace: availablePlace!,id:id)
 
                     self?.courseArr.append(courseData)
 
@@ -163,7 +164,6 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
     }
-    @IBAction func unwind(_sender:UIStoryboardSegue) {
-        
-    }
+    @IBAction func toCoursesList(_ unwindSegue: UIStoryboardSegue) {}
+    
 }

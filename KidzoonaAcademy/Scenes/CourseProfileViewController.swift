@@ -29,8 +29,17 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
     
     
     @IBAction func editCourse(_ sender: Any) {
-        let courseList = UIStoryboard(name: "EditCourse", bundle: nil).instantiateViewController(withIdentifier: "EditCourse")
-        self.navigationController?.pushViewController(courseList, animated: true)
+        let storyboard = UIStoryboard(name: "EditCourse", bundle: nil)
+        performSegue(withIdentifier: "toEditCourse", sender:myCourse)
+//        let courseList = UIStoryboard(name: "EditCourse", bundle: nil).instantiateViewController(withIdentifier: "EditCourse")
+//        self.navigationController?.pushViewController(courseList, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toEditCourse"){
+            let editCourseVC = segue.destination as! EditCourse
+            editCourseVC.myCourse = sender as? Course
+        }
     }
     
    var myCourse : Course?
@@ -51,9 +60,9 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
         coursePlace.text = myCourse!.coursePlace
         courseDescription.text = myCourse!.courseDescription
         courseOffer.text = myCourse!.courseOffer
-        coursePrice.text = myCourse!.coursePlace
+        coursePrice.text = myCourse!.coursePrice
         
-        let url = URL(string: (myCourse!.courseImage)!)
+        let url = URL(string: (myCourse!.courseImage))
         if let url = url as? URL{
             KingfisherManager.shared.retrieveImage(with: url as! Resource, options: nil, progressBlock: nil){ (image , error, cache, coursename) in
                 self.courseImg.image = image
@@ -61,7 +70,7 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
             }
         }
     }
-    
+    @IBAction func toCourseProfile(_ unwindSegue: UIStoryboardSegue){}
     
     
     override func viewWillAppear(_ animated: Bool) {

@@ -334,6 +334,7 @@
                         <outlet property="priceTxt" destination="bO1-je-rna" id="6Ws-MS-QWb"/>
                         <outlet property="seatsTxt" destination="TGF-vM-ktM" id="71W-Aj-gLR"/>
                         <outlet property="timeTxt" destination="70W-Oq-Rhf" id="d9z-ko-9y1"/>
+                        <segue destination="lCN-y2-saV" kind="unwind" identifier="toEventList" unwindAction="toEventsList:" id="PQt-Sw-6F1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQV-Pe-Rfa" userLabel="First Responder" sceneMemberID="firstResponder"/>

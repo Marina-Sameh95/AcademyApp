@@ -10,14 +10,12 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var firstCollectionView: UICollectionView!
     
     @IBOutlet weak var secondCollectionView: UICollectionView!
     
     
     @IBOutlet weak var thirdCollectionView: UICollectionView!
     
-    let arrayTest = ["Offers", "Music", "Robotics", "Swimming", "Chess"]
     
     var arrayOfNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
@@ -26,8 +24,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        firstCollectionView.delegate = self
-        firstCollectionView.dataSource = self
         secondCollectionView.delegate = self
         secondCollectionView.dataSource = self
         thirdCollectionView.delegate = self
@@ -46,9 +42,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == firstCollectionView {
-            return arrayTest.count
-        }else if collectionView == secondCollectionView {
+        if collectionView == secondCollectionView {
             return arrayOfNames.count
         }else{
             return arrayOfEventsNames.count
@@ -57,14 +51,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == firstCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCell", for: indexPath) as? FirstCollectionViewCell
-            
-            cell?.CatagoryLBLHome.text = arrayTest[indexPath.row]
-            
-            return cell!
-            
-        }else if collectionView == secondCollectionView {
+        if collectionView == secondCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCell", for: indexPath) as? SecondCollectionViewCell
             // IMAGE ... come from count of courses in courses list -> image child offer in it
             cell?.courseNameOfOffersColl.text = arrayOfNames[indexPath.row]

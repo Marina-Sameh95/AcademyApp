@@ -165,7 +165,7 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         let eventsRoot = academyId.child("Events")
         let eventId = eventsRoot.childByAutoId()
         let eventToUpload = ["name":eventName.text!,"date":date.text!,"time":time.text!,"coach":coach.text!,
-                             "description":txtDescription.text!,"price":price.text!,"availableSeats":seatTxt.text!,
+                             "description":txtDescription.text!,"price":price.text!+" LE","availableSeats":seatTxt.text!,
                              "location":locationTxt.text!,"image":eventImgString] as [String : Any]
         eventId.setValue(eventToUpload)
    // }

@@ -60,7 +60,7 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
         coursePlace.text = myCourse!.coursePlace
         courseDescription.text = myCourse!.courseDescription
         courseOffer.text = myCourse!.courseOffer
-        coursePrice.text = myCourse!.coursePrice
+        coursePrice.text = myCourse!.coursePrice + " LE"
         
         let url = URL(string: (myCourse!.courseImage))
         if let url = url as? URL{

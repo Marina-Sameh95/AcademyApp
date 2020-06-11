@@ -108,6 +108,7 @@ class EditEvent: UIViewController,UIImagePickerControllerDelegate ,UINavigationC
         let eventToUpload = ["name":nameTxt.text!,"date":dateTxt.text!,"time":timeTxt.text!,"coach":coachTxt.text!,"description":descTxt.text!,"price":priceTxt.text!,"availableSeats":seatsTxt.text!,
                              "location":locationTxt.text!,"image":eventImgString] as [String : Any]
         eventId.setValue(eventToUpload)
+performSegue(withIdentifier: "toEventList", sender: self)
         
     }
     

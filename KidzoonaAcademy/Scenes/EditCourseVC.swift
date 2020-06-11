@@ -163,6 +163,7 @@ class EditCourse: UIViewController ,UIImagePickerControllerDelegate ,UINavigatio
         let courseId = courseRoot.child((myCourse?.courseID)!).child("information")
         let courseToUpload = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text!, "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": courseImgString, "courseType": courseType.text!]
         courseId.setValue(courseToUpload)
+        performSegue(withIdentifier: "toCourseList", sender: self)
         
     }
     

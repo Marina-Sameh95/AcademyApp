@@ -121,6 +121,8 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
         else{
             
            uploadCourse()
+           dismiss(animated: true, completion: nil)
+
         }
     }
     
@@ -136,7 +138,7 @@ class CreateCourseViewController: UIViewController ,UIImagePickerControllerDeleg
         //        var academyId = ref?.child("Academies").child("NZaf6cB3j5eNeBQoQPcB0wbESZ12")
         //        var courseId =  academyId!.child("courses").childByAutoId()
         
-        let courseData = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text!, "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": urlImg, "courseType": courseType.text!]
+        let courseData = ["courseName": courseName.text!, "courseDescription": courseDescription.text!, "courseInstructor": courseInstructor.text!, "coursePlace": coursePlace.text!, "coursePrice": coursePrice.text! + " LE", "courseOffer": discountTxt.text!, "courseDate": courseDate.text!, "courseTime": courseTime.text!, "courseAvailablePlace": seatsTxt.text!, "courseImage": urlImg, "courseType": courseType.text!]
         
         courseId.child("information").setValue(courseData)
         courseId.child("review").setValue(["userName":"mark", "rate": "8.5", "date":"30/6/2020"])

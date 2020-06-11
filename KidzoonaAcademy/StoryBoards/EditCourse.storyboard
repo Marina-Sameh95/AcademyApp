@@ -393,6 +393,7 @@
                         <outlet property="courseType" destination="blU-qH-93v" id="eOL-Pu-iSA"/>
                         <outlet property="discountTxt" destination="Kgc-6c-SBf" id="3Gp-l6-Lue"/>
                         <outlet property="seatsTxt" destination="dUA-M2-Rj0" id="xWC-y6-bKn"/>
+                        <segue destination="uto-6K-gVM" kind="unwind" identifier="toCourseList" unwindAction="toCoursesList:" id="9gy-Bg-zVb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y42-do-8Cn" userLabel="First Responder" sceneMemberID="firstResponder"/>

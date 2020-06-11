@@ -38,7 +38,7 @@ class EventProfileViewController: UIViewController  {
     
     func displayEvent(){
         descTxt.text = eventObj?.descrption
-        pricetxt.text = eventObj?.price
+        pricetxt.text = eventObj?.price ?? "" + " LE"
         timeTxt.text = eventObj?.time
         nameTxt.text  = eventObj?.name
         seatsTxt.text = "Available places:  \(eventObj?.availableSeats ?? "")"

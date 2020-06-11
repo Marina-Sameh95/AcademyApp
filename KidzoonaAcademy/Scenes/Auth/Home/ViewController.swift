@@ -65,7 +65,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
         if (academyName.hasText && academyPhone.hasText && academyLocation.hasText && academyImgString != "" && fileString != "")
         {
 //            let verifyNav = {
-                let academy = Academy(name: self.self.academyName.text!, phone: self.self.academyPhone.text!, location: self.self.academyLocation.text!, img: self.self.academyImgString, papers: self.self.fileString)
+            let academy = Academy(name: academyName.text!, phone: self.self.academyPhone.text!, location: self.self.academyLocation.text!, img: self.self.academyImgString, papers: self.self.fileString,URL:"",email:"", password:"")
+            
 //                academy.papersURL = self.self.fileString
 //                academy.img = self.self.academyImgString
                 academy.encode()

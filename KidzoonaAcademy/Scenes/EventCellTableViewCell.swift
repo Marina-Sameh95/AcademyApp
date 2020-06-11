@@ -20,7 +20,7 @@ class EventCellTableViewCell: UITableViewCell {
     var eventImgCell : EventModel? {
         didSet{
             eventName.text = eventImgCell?.name
-            eventRegister.text = eventImgCell?.price
+            eventRegister.text = eventImgCell?.price 
             eventDate.text = (eventImgCell?.date)! + "    " + (eventImgCell?.time)! as? String ?? ""
             
             let url = URL(string: (eventImgCell?.image)!)

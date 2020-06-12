@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blog One View Controller-->
+        <scene sceneID="7YT-x6-wH9">
+            <objects>
+                <viewController storyboardIdentifier="BlogOne" id="qeD-v0-rT9" customClass="BlogOneViewController" customModule="KidzoonaAcademy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cG-gz-ALO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qST-Wf-Jvy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fI-1t-ZJW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="aAN-bP-OaA">
+                                                <rect key="frame" x="0.0" y="-13" width="414" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="2eH-h0-iVc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ws-K5-BrR">
+                                                <rect key="frame" x="8" y="52" width="51" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="51" id="0by-LZ-BJM"/>
+                                                    <constraint firstAttribute="height" constant="30" id="WAV-PL-LRZ"/>
+                                                </constraints>
+                                                <state key="normal" image="Back"/>
+                                                <connections>
+                                                    <action selector="backBtn:" destination="qeD-v0-rT9" eventType="touchUpInside" id="mxx-fL-b8h"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online-marketing" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Gy-ZPj">
+                                                <rect key="frame" x="0.0" y="103" width="414" height="235"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="235" id="2t6-PS-sqG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Tqg-oB-WPO">
+                                                <rect key="frame" x="22" y="394" width="370" height="452"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="452" id="4gN-xJ-Atz"/>
+                                                </constraints>
+                                                <string key="text">Business are often started as an attempt to do something better than the existing marketplace. The same mentality is true for promotion. They give you the chance to connect directly with your target audience. You can learn how they talk and the kinds of questions they regularly ask. You can turn that knowledge into a content strategy that ensures you’re creating content you know your audience needs. And then you can go back and share that content in the communities the next time someone needs it, driving people back to your academy. You're in the right place that our application helps you to market your academy.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Market Your Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5T-7g-Pdu">
+                                                <rect key="frame" x="40" y="346" width="334" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <color key="textColor" red="0.95213025809999996" green="0.70024906779999996" blue="0.2976252922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ybD-Gy-ZPj" firstAttribute="centerX" secondItem="O5T-7g-Pdu" secondAttribute="centerX" id="25K-Q5-8fZ"/>
+                                            <constraint firstItem="9ws-K5-BrR" firstAttribute="top" secondItem="aAN-bP-OaA" secondAttribute="bottom" constant="-63" id="Ahf-6i-J5c"/>
+                                            <constraint firstItem="O5T-7g-Pdu" firstAttribute="top" secondItem="ybD-Gy-ZPj" secondAttribute="bottom" constant="8" symbolic="YES" id="GJ3-6h-pnE"/>
+                                            <constraint firstItem="ybD-Gy-ZPj" firstAttribute="leading" secondItem="aAN-bP-OaA" secondAttribute="leading" id="Peg-nm-jgK"/>
+                                            <constraint firstItem="O5T-7g-Pdu" firstAttribute="leading" secondItem="ybD-Gy-ZPj" secondAttribute="trailing" constant="-374" id="WcY-IF-CKL"/>
+                                            <constraint firstItem="ybD-Gy-ZPj" firstAttribute="top" secondItem="9fI-1t-ZJW" secondAttribute="top" constant="103" id="Xvr-Th-XpS"/>
+                                            <constraint firstAttribute="trailing" secondItem="aAN-bP-OaA" secondAttribute="trailing" id="YdC-rF-ry0"/>
+                                            <constraint firstItem="ybD-Gy-ZPj" firstAttribute="centerX" secondItem="Tqg-oB-WPO" secondAttribute="centerX" id="Zdv-hd-Aah"/>
+                                            <constraint firstItem="Tqg-oB-WPO" firstAttribute="leading" secondItem="O5T-7g-Pdu" secondAttribute="trailing" constant="-352" id="ed0-Qj-k9r"/>
+                                            <constraint firstItem="aAN-bP-OaA" firstAttribute="leading" secondItem="9fI-1t-ZJW" secondAttribute="leading" id="hFq-UU-eqU"/>
+                                            <constraint firstItem="aAN-bP-OaA" firstAttribute="top" secondItem="9fI-1t-ZJW" secondAttribute="top" constant="-13" id="jyH-BM-MPz"/>
+                                            <constraint firstItem="Tqg-oB-WPO" firstAttribute="top" secondItem="O5T-7g-Pdu" secondAttribute="bottom" constant="17" id="nrK-VN-LPf"/>
+                                            <constraint firstItem="aAN-bP-OaA" firstAttribute="leading" secondItem="9ws-K5-BrR" secondAttribute="trailing" constant="-59" id="s3S-Wb-LT6"/>
+                                            <constraint firstItem="ybD-Gy-ZPj" firstAttribute="trailing" secondItem="aAN-bP-OaA" secondAttribute="trailing" id="tey-9k-Bex"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9fI-1t-ZJW" secondAttribute="bottom" id="Cbs-BU-hto"/>
+                                    <constraint firstAttribute="trailing" secondItem="9fI-1t-ZJW" secondAttribute="trailing" id="DN1-RC-2fs"/>
+                                    <constraint firstItem="9fI-1t-ZJW" firstAttribute="leading" secondItem="qST-Wf-Jvy" secondAttribute="leading" id="Y2o-TP-noh"/>
+                                    <constraint firstItem="9fI-1t-ZJW" firstAttribute="centerX" secondItem="qST-Wf-Jvy" secondAttribute="centerX" id="Yvi-lG-CJY"/>
+                                    <constraint firstItem="9fI-1t-ZJW" firstAttribute="top" secondItem="qST-Wf-Jvy" secondAttribute="top" id="c6U-dq-lcA"/>
+                                    <constraint firstItem="9fI-1t-ZJW" firstAttribute="centerY" secondItem="qST-Wf-Jvy" secondAttribute="centerY" id="ngQ-Xf-dXY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qST-Wf-Jvy" firstAttribute="top" secondItem="9cG-gz-ALO" secondAttribute="top" id="19C-Vi-5QX"/>
+                            <constraint firstAttribute="trailing" secondItem="qST-Wf-Jvy" secondAttribute="trailing" id="FjQ-sF-ta3"/>
+                            <constraint firstItem="aAN-bP-OaA" firstAttribute="leading" secondItem="lSc-bz-ECJ" secondAttribute="leading" id="GPs-7h-X1Y"/>
+                            <constraint firstItem="qST-Wf-Jvy" firstAttribute="leading" secondItem="9cG-gz-ALO" secondAttribute="leading" id="JVe-su-wW7"/>
+                            <constraint firstAttribute="bottom" secondItem="qST-Wf-Jvy" secondAttribute="bottom" id="MZc-R6-aOF"/>
+                            <constraint firstItem="lSc-bz-ECJ" firstAttribute="top" secondItem="aAN-bP-OaA" secondAttribute="top" constant="57" id="qS8-Jb-j4R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lSc-bz-ECJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWS-sr-F7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="12" height="21"/>
+        <image name="Header" width="375" height="96"/>
+        <image name="online-marketing" width="404" height="201"/>
+    </resources>
+</document>

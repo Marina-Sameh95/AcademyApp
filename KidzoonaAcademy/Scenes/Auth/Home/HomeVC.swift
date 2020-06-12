@@ -11,23 +11,24 @@ import UIKit
 class HomeVC: UIViewController {
 
     
-    @IBOutlet weak var secondCollectionView: UICollectionView!
+    @IBAction func blog1Btn(_ sender: Any) {
+        
+        let blogOne = UIStoryboard(name: "Blog1", bundle: nil).instantiateViewController(withIdentifier: "BlogOne")
+    
+              self.navigationController?.pushViewController(blogOne, animated: true)
+        
+    }
     
     
-    @IBOutlet weak var thirdCollectionView: UICollectionView!
-    
-    
-    var arrayOfNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
-    var arrayOfEventsNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
+    @IBAction func blog2Btn(_ sender: Any) {
+        
+        let blogOne = UIStoryboard(name: "BlogTwo", bundle: nil).instantiateViewController(withIdentifier: "BlogTwo")
+        
+        self.navigationController?.pushViewController(blogOne, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        secondCollectionView.delegate = self
-        secondCollectionView.dataSource = self
-        thirdCollectionView.delegate = self
-        thirdCollectionView.dataSource = self
         
          navigationController?.navigationBar.barTintColor = UIColor(red: 149/255 , green: 135/255 , blue: 202/255 , alpha: 1)
     }
@@ -40,35 +41,5 @@ class HomeVC: UIViewController {
 
 }
 
-extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == secondCollectionView {
-            return arrayOfNames.count
-        }else{
-            return arrayOfEventsNames.count
-        }
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if collectionView == secondCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCell", for: indexPath) as? SecondCollectionViewCell
-            // IMAGE ... come from count of courses in courses list -> image child offer in it
-            cell?.courseNameOfOffersColl.text = arrayOfNames[indexPath.row]
-            // DISCOUNT ... come from count of courses in courses list -> discount child offer in it
-            
-            return cell!
-            
-        }else{
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdCell", for: indexPath) as? ThirdCollectionViewCell
-            // IMAGE & eventName ... come from count of Events in events list -> image child offer in it
-            cell?.EventNameOfEventsColl.text = arrayOfEventsNames[indexPath.row]
-            return cell!
-        }
-        
-    }
 
-    
-    
-}

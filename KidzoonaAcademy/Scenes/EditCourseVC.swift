@@ -116,7 +116,8 @@ class EditCourse: UIViewController ,UIImagePickerControllerDelegate ,UINavigatio
         discountTxt.isEnabled = false
         
         self.navigationController?.isNavigationBarHidden = true
-
+        
+        
 
     }
     func displayCourseDetails(){

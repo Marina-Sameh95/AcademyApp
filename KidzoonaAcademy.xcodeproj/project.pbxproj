@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		179F323B24830C14000A9D82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179F323A24830C14000A9D82 /* Home.storyboard */; };
 		179F324224832608000A9D82 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F324124832608000A9D82 /* HomeVC.swift */; };
-		179F3244248329A1000A9D82 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */; };
-		179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */; };
-		179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */; };
 		179F324A2483313F000A9D82 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179F32492483313F000A9D82 /* SignIn.storyboard */; };
 		179F324E24833182000A9D82 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F324D24833182000A9D82 /* SignInVC.swift */; };
 		5B315B1C2484571C00218851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B315B1B2484571C00218851 /* ViewController.swift */; };
@@ -42,6 +39,10 @@
 		880C50D524852A2900CAA906 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */; };
 		88408A8F2481923A007A5578 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A8E2481923A007A5578 /* Course.storyboard */; };
 		88408A912481936B007A5578 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88408A902481936B007A5578 /* Event.storyboard */; };
+		886FC18D2493FA5D00BF9D11 /* BlogOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC18C2493FA5D00BF9D11 /* BlogOneViewController.swift */; };
+		886FC18F2493FF6400BF9D11 /* BlogTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886FC18E2493FF6400BF9D11 /* BlogTwo.storyboard */; };
+		886FC1912493FFA900BF9D11 /* BlogTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC1902493FFA900BF9D11 /* BlogTwoViewController.swift */; };
+		886FC1932494101200BF9D11 /* ReviewCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886FC1922494101200BF9D11 /* ReviewCourseTableViewCell.swift */; };
 		8890B82A247857050072C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B829247857050072C872 /* AppDelegate.swift */; };
 		8890B831247857060072C872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8890B830247857060072C872 /* Assets.xcassets */; };
 		8890B83F247857060072C872 /* KidzoonaAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B83E247857060072C872 /* KidzoonaAcademyTests.swift */; };
@@ -51,6 +52,7 @@
 		8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */; };
 		8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */; };
 		8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */; };
+		88AE19082493DEE200DC8C82 /* Blog1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE19072493DEE200DC8C82 /* Blog1.storyboard */; };
 		88B48F4F248CDBC2009F3366 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B48F4E248CDBC2009F3366 /* CourseModel.swift */; };
 		88BE0FB024827F3E0064C979 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BE0FAF24827F3E0064C979 /* Settings.storyboard */; };
 		88BE0FB2248288680064C979 /* SettigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE0FB1248288680064C979 /* SettigsViewController.swift */; };
@@ -82,9 +84,6 @@
 		14EE271F7989A994E9A0C28D /* Pods-KidzoonaAcademy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidzoonaAcademy.release.xcconfig"; path = "Target Support Files/Pods-KidzoonaAcademy/Pods-KidzoonaAcademy.release.xcconfig"; sourceTree = "<group>"; };
 		179F323A24830C14000A9D82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		179F324124832608000A9D82 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
-		179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
-		179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCollectionViewCell.swift; sourceTree = "<group>"; };
 		179F32492483313F000A9D82 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		179F324D24833182000A9D82 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		1F916A3D89D04BD37D1B6D11 /* Pods_KidzoonaAcademy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KidzoonaAcademy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +116,10 @@
 		880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		88408A8E2481923A007A5578 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		88408A902481936B007A5578 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		886FC18C2493FA5D00BF9D11 /* BlogOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogOneViewController.swift; sourceTree = "<group>"; };
+		886FC18E2493FF6400BF9D11 /* BlogTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlogTwo.storyboard; sourceTree = "<group>"; };
+		886FC1902493FFA900BF9D11 /* BlogTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTwoViewController.swift; sourceTree = "<group>"; };
+		886FC1922494101200BF9D11 /* ReviewCourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCourseTableViewCell.swift; sourceTree = "<group>"; };
 		8890B826247857050072C872 /* KidzoonaAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidzoonaAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8890B829247857050072C872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8890B830247857060072C872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		8893DD012481E9F200FDA6A8 /* EventProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventProfileViewController.swift; sourceTree = "<group>"; };
 		8893DD052481FAA800FDA6A8 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		8893DD07248206D500FDA6A8 /* CourseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProfileViewController.swift; sourceTree = "<group>"; };
+		88AE19072493DEE200DC8C82 /* Blog1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Blog1.storyboard; sourceTree = "<group>"; };
 		88B48F4E248CDBC2009F3366 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 		88BE0FAF24827F3E0064C979 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		88BE0FB1248288680064C979 /* SettigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsViewController.swift; sourceTree = "<group>"; };
@@ -180,9 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				179F324124832608000A9D82 /* HomeVC.swift */,
-				179F3243248329A1000A9D82 /* FirstCollectionViewCell.swift */,
-				179F3245248329B6000A9D82 /* SecondCollectionViewCell.swift */,
-				179F3247248329CB000A9D82 /* ThirdCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -244,6 +245,8 @@
 				179F323A24830C14000A9D82 /* Home.storyboard */,
 				179F32492483313F000A9D82 /* SignIn.storyboard */,
 				5C8745E12485C56300F7C39A /* FinalSignupStoryboard.storyboard */,
+				88AE19072493DEE200DC8C82 /* Blog1.storyboard */,
+				886FC18E2493FF6400BF9D11 /* BlogTwo.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 		88408A8A2481901E007A5578 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				886FC18B2493F9CD00BF9D11 /* Blog */,
 				88B48F4D248CDBA1009F3366 /* Pojo */,
 				179F324B24833149000A9D82 /* Auth */,
 				5B631105248164A30073D4C7 /* CreateEventVC.swift */,
@@ -269,6 +273,7 @@
 				880C50D02484B56800CAA906 /* CourseCellTableViewCell.swift */,
 				880C50D22485248F00CAA906 /* EventCellTableViewCell.swift */,
 				880C50D424852A2900CAA906 /* EventCollectionViewCell.swift */,
+				886FC1922494101200BF9D11 /* ReviewCourseTableViewCell.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -287,6 +292,15 @@
 				8890B829247857050072C872 /* AppDelegate.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		886FC18B2493F9CD00BF9D11 /* Blog */ = {
+			isa = PBXGroup;
+			children = (
+				886FC18C2493FA5D00BF9D11 /* BlogOneViewController.swift */,
+				886FC1902493FFA900BF9D11 /* BlogTwoViewController.swift */,
+			);
+			path = Blog;
 			sourceTree = "<group>";
 		};
 		8890B81D247857050072C872 = {
@@ -482,7 +496,9 @@
 				5B63110F248164A30073D4C7 /* EditCourse.storyboard in Resources */,
 				5C01DEDC2481C7BC008BCA49 /* Main.storyboard in Resources */,
 				5B63111A248164A30073D4C7 /* EditAcademy.storyboard in Resources */,
+				88AE19082493DEE200DC8C82 /* Blog1.storyboard in Resources */,
 				88408A8F2481923A007A5578 /* Course.storyboard in Resources */,
+				886FC18F2493FF6400BF9D11 /* BlogTwo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +574,7 @@
 				5B631111248164A30073D4C7 /* CreateEventVC.swift in Sources */,
 				5B631116248164A30073D4C7 /* RoundedTextField.swift in Sources */,
 				5B631112248164A30073D4C7 /* UndeLinedTextfield.swift in Sources */,
+				886FC18D2493FA5D00BF9D11 /* BlogOneViewController.swift in Sources */,
 				8893DD062481FAA800FDA6A8 /* CourseListViewController.swift in Sources */,
 				880C50D32485248F00CAA906 /* EventCellTableViewCell.swift in Sources */,
 				5B631118248164A30073D4C7 /* EditAcademyVC.swift in Sources */,
@@ -566,20 +583,19 @@
 				8893DD002481D54300FDA6A8 /* CardCell.swift in Sources */,
 				8893DD08248206D500FDA6A8 /* CourseProfileViewController.swift in Sources */,
 				5B631117248164A30073D4C7 /* RoundedButton.swift in Sources */,
-				179F3244248329A1000A9D82 /* FirstCollectionViewCell.swift in Sources */,
 				8893DD022481E9F200FDA6A8 /* EventProfileViewController.swift in Sources */,
+				886FC1912493FFA900BF9D11 /* BlogTwoViewController.swift in Sources */,
 				5B631115248164A30073D4C7 /* EditEventVC.swift in Sources */,
 				5B315B1E2484595E00218851 /* Academy.swift in Sources */,
 				179F324224832608000A9D82 /* HomeVC.swift in Sources */,
 				5B631113248164A30073D4C7 /* EditCourseVC.swift in Sources */,
-				179F3248248329CB000A9D82 /* ThirdCollectionViewCell.swift in Sources */,
 				5CACB291247CDD030026ED02 /* SecondSignupViewController.swift in Sources */,
 				5C8745E62485C70500F7C39A /* WaitViewController.swift in Sources */,
 				5C8745E42485C5D700F7C39A /* FinalSignupViewController.swift in Sources */,
 				8893DCFE2481D4BC00FDA6A8 /* EventListViewController.swift in Sources */,
+				886FC1932494101200BF9D11 /* ReviewCourseTableViewCell.swift in Sources */,
 				88BE0FBA24828CC40064C979 /* CreateCourseViewController.swift in Sources */,
 				8890B82A247857050072C872 /* AppDelegate.swift in Sources */,
-				179F3246248329B6000A9D82 /* SecondCollectionViewCell.swift in Sources */,
 				5B803E2E248D2AA600DF5E8C /* EventModel.swift in Sources */,
 				179F324E24833182000A9D82 /* SignInVC.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Cosmos
 
 class CourseProfileViewController: UIViewController {
 
@@ -21,6 +22,10 @@ class CourseProfileViewController: UIViewController {
     @IBOutlet weak var courseOffer: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var name: NSArray = []
+    var date: NSArray = []
+    var rateView: CosmosView!
     
     @IBAction func backBtn(_ sender: Any) {
         
@@ -43,15 +48,17 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
    var myCourse : Course?
-    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
-//        courseName.text! = getCourseName
-//        courseImg.image = getCourseImg
+
        self.navigationController?.isNavigationBarHidden = true
+        
+        name = ["Ali","Kero","Mark","Mahmoud","Marwan","Asmaa","Marwa","Hager"]
+        date = ["1/6/2020", "5/6/2020", "10/6/2020", "12/6/2020","3/6/2020","11/6/2020","14/6/2020","2/6/2020"]
+
         
        // print("courseName=" + myCourse!.courseName ?? "")
         courseName.text =   myCourse!.courseName
@@ -78,4 +85,28 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
 
     }
 
+}
+extension CourseProfileViewController : UITableViewDelegate , UITableViewDataSource{
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return name.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath) as! ReviewCourseTableViewCell
+        cell.contentView.backgroundColor = UIColor (white: 0.95, alpha: 1)
+        cell.rateView = [indexPath.row] as? CosmosView
+        cell.reviewDate.text = date[indexPath.row] as? String
+        cell.userName.text = name[indexPath.row] as? String
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

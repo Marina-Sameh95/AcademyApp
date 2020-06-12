@@ -17,7 +17,8 @@ class BlogOneViewController: UIViewController {
     }
     
     @IBAction func backBtn(_ sender: Any) {
-       // self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

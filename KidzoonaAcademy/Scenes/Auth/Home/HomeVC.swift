@@ -28,6 +28,7 @@ class HomeVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
 
         
          navigationController?.navigationBar.barTintColor = UIColor(red: 149/255 , green: 135/255 , blue: 202/255 , alpha: 1)
@@ -35,9 +36,10 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = "Home"
+        navigationController?.isNavigationBarHidden = false
         
     }
-    
+        
 
 }
 

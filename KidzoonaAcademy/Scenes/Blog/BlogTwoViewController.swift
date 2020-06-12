@@ -13,7 +13,8 @@ class BlogTwoViewController: UIViewController {
     
     @IBAction func backBtn(_ sender: Any) {
         
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.popViewController(animated: true)
 
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeVC: UIViewController {
 
@@ -32,6 +33,31 @@ class HomeVC: UIViewController {
 
         
          navigationController?.navigationBar.barTintColor = UIColor(red: 149/255 , green: 135/255 , blue: 202/255 , alpha: 1)
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+       notify()
+   
+    }
+    
+    func notify(){
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Welcome"
+        content.body = "Welcome to Kidzoona let's start our journey"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
+        
+        center.add(request){(error) in
+            if error != nil {
+                print("Error = \(error?.localizedDescription ?? "error local notification")")
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,5 +69,10 @@ class HomeVC: UIViewController {
 
 }
 
+extension HomeVC : UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+}
     
 

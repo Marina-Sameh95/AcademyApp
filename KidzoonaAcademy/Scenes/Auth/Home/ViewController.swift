@@ -62,7 +62,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
     }
     
     @IBAction func NextBtnPressed(_ sender: Any) {
-        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText && academyImgString != "" && fileString != "")
+        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText)
         {
 //            let verifyNav = {
             let academy = Academy(name: academyName.text!, phone: self.self.academyPhone.text!, location: self.self.academyLocation.text!, img: self.self.academyImgString, papers: self.self.fileString,URL:"",email:"", password:"")

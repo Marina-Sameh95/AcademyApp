@@ -20,16 +20,16 @@ class Academy : Codable {
             var URL : String
     
     
-    init(name:String,phone:String,location:String,img:String,papers:String) {
+    init(name:String,phone:String,location:String,img:String,papers:String,URL:String,email:String,password:String) {
         self.name = name
         self.phone = phone
         self.location = location
         self.papersURL = papers
         self.img = img
-        self.email = ""
-        self.password = ""
+        self.email = email
+        self.password = password
         self.aID = ""
-        self.URL = ""
+        self.URL = URL
         
     }
     

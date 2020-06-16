@@ -7,81 +7,72 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var firstCollectionView: UICollectionView!
     
-    @IBOutlet weak var secondCollectionView: UICollectionView!
+    @IBAction func blog1Btn(_ sender: Any) {
+        
+        let blogOne = UIStoryboard(name: "Blog1", bundle: nil).instantiateViewController(withIdentifier: "BlogOne")
+    
+              self.navigationController?.pushViewController(blogOne, animated: true)
+        
+    }
     
     
-    @IBOutlet weak var thirdCollectionView: UICollectionView!
-    
-    let arrayTest = ["Offers", "Music", "Robotics", "Swimming", "Chess"]
-    
-    var arrayOfNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
-    var arrayOfEventsNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
+    @IBAction func blog2Btn(_ sender: Any) {
+        
+        let blogOne = UIStoryboard(name: "BlogTwo", bundle: nil).instantiateViewController(withIdentifier: "BlogTwo")
+        
+        self.navigationController?.pushViewController(blogOne, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
 
-        firstCollectionView.delegate = self
-        firstCollectionView.dataSource = self
-        secondCollectionView.delegate = self
-        secondCollectionView.dataSource = self
-        thirdCollectionView.delegate = self
-        thirdCollectionView.dataSource = self
         
          navigationController?.navigationBar.barTintColor = UIColor(red: 149/255 , green: 135/255 , blue: 202/255 , alpha: 1)
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+       notify()
+   
+    }
+    
+    func notify(){
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Welcome"
+        content.body = "Welcome to Kidzoona let's start our journey"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2.0, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
+        
+        center.add(request){(error) in
+            if error != nil {
+                print("Error = \(error?.localizedDescription ?? "error local notification")")
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = "Home"
+        navigationController?.isNavigationBarHidden = false
         
     }
-    
+        
 
 }
 
-extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == firstCollectionView {
-            return arrayTest.count
-        }else if collectionView == secondCollectionView {
-            return arrayOfNames.count
-        }else{
-            return arrayOfEventsNames.count
-        }
+extension HomeVC : UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if collectionView == firstCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCell", for: indexPath) as? FirstCollectionViewCell
-            
-            cell?.CatagoryLBLHome.text = arrayTest[indexPath.row]
-            
-            return cell!
-            
-        }else if collectionView == secondCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCell", for: indexPath) as? SecondCollectionViewCell
-            // IMAGE ... come from count of courses in courses list -> image child offer in it
-            cell?.courseNameOfOffersColl.text = arrayOfNames[indexPath.row]
-            // DISCOUNT ... come from count of courses in courses list -> discount child offer in it
-            
-            return cell!
-            
-        }else{
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdCell", for: indexPath) as? ThirdCollectionViewCell
-            // IMAGE & eventName ... come from count of Events in events list -> image child offer in it
-            cell?.EventNameOfEventsColl.text = arrayOfEventsNames[indexPath.row]
-            return cell!
-        }
-        
-    }
-
-    
-    
 }
+    
+

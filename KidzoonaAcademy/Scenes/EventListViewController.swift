@@ -32,6 +32,7 @@ class EventListViewController: UIViewController {
           
     }
     
+    
     @IBAction func addBtnPressed(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "CreateEvent", bundle:nil)
         
@@ -64,8 +65,8 @@ func getAcademyEvents(){
                 let seats = event?["availableSeats"] as! String
                 let coach = event?["coach"] as! String
                 let img = event?["image"] as! String
-                let discount = event?["discount"] as! String
-                let eventModel = EventModel(name: name , date: date, time: time, price: price, descrption: desc, image: img, coach: coach, discount: discount, availableSeats: seats)
+                let location = event?["location"] as! String
+                let eventModel = EventModel(name: name , date: date, time: time, price: price, descrption: desc, image: img, coach: coach, location:location, availableSeats: seats,id: id)
                 print(eventModel.price)
                 self?.events.append(eventModel)
                 self?.tableView.reloadData()
@@ -143,6 +144,7 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Event", bundle: nil)
         var selectedEvent = events[indexPath.row]
@@ -160,5 +162,11 @@ extension EventListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       return 144
     }
-
+  
+    @IBAction func unwind(for unwindSegue:UIStoryboardUnwindSegueSource, towards subsequentVC: UIViewController) {
+        
+    }
+    
+    @IBAction func toEventsList(_ unwindSegue: UIStoryboardSegue){}
+    
 }

@@ -77,7 +77,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-Ua-vuL" customClass="RoundedTextField" customModule="KidzoonaAcademy" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="438" width="335" height="45"/>
@@ -86,7 +86,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GA-jQ-IdV" customClass="RoundedButton" customModule="KidzoonaAcademy" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="523" width="335" height="45"/>
@@ -123,7 +123,6 @@
                                             <constraint firstItem="TQF-Ua-vuL" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="20" id="WMa-Kn-hix"/>
                                             <constraint firstItem="b5n-1u-GVz" firstAttribute="top" secondItem="BQV-sB-gpR" secondAttribute="bottom" constant="20" id="Wnm-4D-BVY"/>
                                             <constraint firstItem="wDc-5S-gZf" firstAttribute="top" secondItem="b5n-1u-GVz" secondAttribute="bottom" constant="40" id="a9h-Er-hgR"/>
-                                            <constraint firstAttribute="trailing" secondItem="BQV-sB-gpR" secondAttribute="trailing" constant="152.5" id="cRc-8H-cyX"/>
                                             <constraint firstItem="3GA-jQ-IdV" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="20" id="dav-iG-V5v"/>
                                             <constraint firstItem="hqV-QQ-2Fq" firstAttribute="top" secondItem="z7o-Be-tau" secondAttribute="top" id="e3Y-mE-bSd"/>
                                             <constraint firstItem="Tf3-xC-hf4" firstAttribute="top" secondItem="wDc-5S-gZf" secondAttribute="bottom" constant="30" id="fPB-M8-0vT"/>
@@ -135,7 +134,6 @@
                                             <constraint firstAttribute="trailing" secondItem="wDc-5S-gZf" secondAttribute="trailing" constant="20" id="r8t-jm-AFM"/>
                                             <constraint firstItem="hie-Wd-Cxd" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="10" id="rFi-CT-9Qb"/>
                                             <constraint firstItem="BQV-sB-gpR" firstAttribute="centerX" secondItem="z7o-Be-tau" secondAttribute="centerX" id="rHh-fH-cHB"/>
-                                            <constraint firstItem="BQV-sB-gpR" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="152.5" id="sKG-Dw-Eqc"/>
                                             <constraint firstItem="TQF-Ua-vuL" firstAttribute="top" secondItem="Tf3-xC-hf4" secondAttribute="bottom" constant="30" id="sdB-oe-p7F"/>
                                             <constraint firstItem="Tf3-xC-hf4" firstAttribute="leading" secondItem="z7o-Be-tau" secondAttribute="leading" constant="20" id="yhf-P9-WK8"/>
                                         </constraints>

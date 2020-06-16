@@ -17,11 +17,12 @@ class EventModel {
     var descrption: String
     var image: String
     var coach: String
-    var discount: String
+    var location: String
     var availableSeats: String
+    var id : String
     
     init(name: String, date: String, time: String, price: String, descrption: String, image: String, coach: String,
-         discount: String, availableSeats: String)
+         location: String, availableSeats: String,id: String)
     {
         self.name = name
         self.date = date
@@ -30,8 +31,9 @@ class EventModel {
         self.descrption = descrption
         self.image = image
         self.coach = coach
-        self.discount = discount
+        self.location = location
         self.availableSeats = availableSeats
+        self.id = id
     }
     
     init()
@@ -43,7 +45,8 @@ class EventModel {
         self.descrption = ""
         self.image = ""
         self.coach = ""
-        self.discount = ""
+        self.location = ""
         self.availableSeats = ""
+        self.id = ""
     }
 }

@@ -46,13 +46,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
     }
     
     @IBAction func uploadFile(_ sender: Any) {
-        //uploading = "Papers"
         flag = "paper"
         presentImgPicker()
     }
     
     @IBAction func uploadImg(_ sender: Any) {
-        //uploading = "Images"
         flag = "image"
         presentImgPicker()
 
@@ -64,23 +62,24 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
     }
     
     @IBAction func NextBtnPressed(_ sender: Any) {
-        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText && academyUIPaper.cgImage != nil && academyUIPaper.cgImage != nil)
+        if (academyName.hasText && academyPhone.hasText && academyLocation.hasText)
         {
-            let verifyNav = {
-                let academy = Academy(name: self.self.academyName.text!, phone: self.self.academyPhone.text!, location: self.self.academyLocation.text!, img: self.self.academyImgString, papers: self.self.fileString)
+//            let verifyNav = {
+            let academy = Academy(name: academyName.text!, phone: self.self.academyPhone.text!, location: self.self.academyLocation.text!, img: self.self.academyImgString, papers: self.self.fileString,URL:"",email:"", password:"")
+            
 //                academy.papersURL = self.self.fileString
 //                academy.img = self.self.academyImgString
                 academy.encode()
                 self.performSegue(withIdentifier: "Next", sender: nil)
                 
-            }
+//            }
 
-            let uploadFile = {
-            self.uploadImageToFirebase(completion: verifyNav, SelectedImg: self.academyUIPaper)
-                    print("file string=\(self.fileString)")
-            }
-        self.uploadImageToFirebase(completion:uploadFile, SelectedImg:academyUIImg)
-            print("Acdemy img=\(academyImgString)")
+//            let uploadFile = {
+//            self.uploadImageToFirebase(completion: verifyNav, SelectedImg: self.academyUIPaper)
+//                    print("file string=\(self.fileString)")
+//            }
+//        self.uploadImageToFirebase(completion:uploadFile, SelectedImg:academyUIImg)
+//            print("Acdemy img=\(academyImgString)")
          
 //            self.academyImgString = self.uploadImageToFirebase(SelectedImg: self.academyUIImg)
 //            self.fileString = self.uploadImageToFirebase(SelectedImg: self.academyUIPaper)
@@ -104,11 +103,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             if (flag == "image"){
-                print("choose an image")
+            print("choose an image")
+                print("picked image size = \(pickedImage.size)")
             academyImgBtn.setImage(pickedImage, for: .normal)
             academyImgBtn.contentMode = .scaleAspectFit
-            academyUIImg = pickedImage
-//            uploadImageToFirebase(SelectedImg: pickedImage)
+//            academyUIImg = pickedImage
+            uploadImageToFirebase(SelectedImg: pickedImage)
 
             }
             else if (flag == "paper")  {
@@ -116,7 +116,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
                 paperImg.setImage(pickedImage, for: .normal)
                 paperImg.contentMode = .scaleAspectFit
                 academyUIPaper = pickedImage
-//                uploadImageToFirebase(SelectedImg: pickedImage)
+                uploadImageToFirebase(SelectedImg: pickedImage)
             }
             
         }
@@ -134,53 +134,92 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate ,UINaviga
         return String((0...length-1).map{ _ in letters.randomElement()!})
     }
     
-    func uploadImageToFirebase(completion: (() -> ())?,SelectedImg: UIImage){
+    func uploadImageToFirebase(SelectedImg: UIImage){
+        print("selected image size = \(SelectedImg.size)")
         var ref = StorageReference()
         let randomInt = Int.random(in: 10..<25)
         let randomImgName = randomString(length: randomInt)
-        if SelectedImg.pngData() == academyUIPaper.pngData() {
-            ref = FirebaseStorage.Storage.storage().reference().child("\("Papers")/\(randomImgName).jpeg")}
-        else if SelectedImg.pngData() == academyUIImg.pngData() {
-            ref = FirebaseStorage.Storage.storage().reference().child("\("Images")/\(randomImgName).jpeg")
-            
+        if (flag == "image") {
+        ref = FirebaseStorage.Storage.storage().reference().child("\("Images")/\(randomImgName).jpeg")
+        }
+        else {
+             ref = FirebaseStorage.Storage.storage().reference().child("\("Papers")/\(randomImgName).jpeg")
         }
         if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
-        let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
-                guard metadata != nil else {
+            let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+                guard let metadata = metadata else {
+                    print(error?.localizedDescription)
+                    print("in else")
                     return
                 }
+                print("after else")
                 ref.downloadURL { (url, error) in
                     guard let downloadURL = url else {
+                        print(error?.localizedDescription)
                         return
                     }
-                    if SelectedImg.pngData() == self.academyUIPaper.pngData() {
+                    if (self.flag == "image"){
                         print("IMMMMG= \(downloadURL.absoluteString)")
-                        self.fileString = downloadURL.absoluteString
-                    }
-                    else if SelectedImg.pngData() == self.academyUIImg.pngData() {
                         self.academyImgString = downloadURL.absoluteString
                     }
-
-                    // let ImgURL = downloadURL.absoluteString
-                    //                    self.sendMsgWithImgURL(ImageURL: ImgURL)
+                    else {
+                        self.fileString = downloadURL.absoluteString
+                    }
                     print("URL=\(downloadURL.absoluteString)")
-                    completion?()
-
-                }}
-                        uploadTask.observe(.progress) { (snapshot) in
-                            if let completeUnitCount = snapshot.progress?.completedUnitCount{
-                                print(completeUnitCount)
-                                self.parent?.navigationItem.title = String(completeUnitCount)
-                            }}
-                        uploadTask.observe(.success) { (snapshot) in
-                            self.parent?.navigationItem.title = ""
-
-                        }
+                }
+            
         }
-        
-        
+            
+        }
     }
-    
+//    func uploadImageToFirebase(SelectedImg: UIImage){
+//        var ref = StorageReference()
+//        let randomInt = Int.random(in: 10..<25)
+//        let randomImgName = randomString(length: randomInt)
+////        if SelectedImg.pngData() == academyUIPaper.pngData() {
+//        if (flag == "paper"){
+//            ref = FirebaseStorage.Storage.storage().reference().child("\("Papers")/\(randomImgName).jpeg")
+//            
+//        }
+//        else if (flag == "image") {
+//            ref = FirebaseStorage.Storage.storage().reference().child("\("Images")/\(randomImgName).jpeg")
+//        }
+//        if let uploadData = SelectedImg.jpegData(compressionQuality: 0.2){
+//        let uploadTask = ref.putData(uploadData, metadata: nil) { (metadata, error) in
+//                guard metadata != nil else {
+//                    return
+//                }
+//                ref.downloadURL { (url, error) in
+//                    guard let downloadURL = url else {
+//                        return
+//                    }
+////                    if SelectedImg.pngData() == self.academyUIPaper.pngData() {
+//                    if (self.flag == "image"){
+//                        print("IMMMMG= \(downloadURL.absoluteString)")
+//                        self.academyImgString = downloadURL.absoluteString
+//                    }
+////                    else if SelectedImg.pngData() == self.academyUIImg.pngData() {
+//                    else if (self.flag == "paper"){
+//                        self.fileString = downloadURL.absoluteString
+//                    }
+//
+//                    print("URL=\(downloadURL.absoluteString)")
+//
+//                }}
+//                        uploadTask.observe(.progress) { (snapshot) in
+//                            if let completeUnitCount = snapshot.progress?.completedUnitCount{
+//                                print(completeUnitCount)
+//                                self.parent?.navigationItem.title = String(completeUnitCount)
+//                            }}
+//                        uploadTask.observe(.success) { (snapshot) in
+//                            self.parent?.navigationItem.title = ""
+//
+//                        }
+//        }
+//        
+//        
+//    }
+//    
     
 //    func upload(data: Data,
 //                withName fileName: String,

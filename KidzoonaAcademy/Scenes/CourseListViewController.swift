@@ -20,13 +20,18 @@ class CourseListViewController: UIViewController {
 
     
     @IBAction func addCourse(_ sender: Any) {
-        let courseList = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
-              self.navigationController?.pushViewController(courseList, animated: true)
+        let courseList = UIStoryboard(name: "CreateCourse",bundle:nil)
+//              self.navigationController?.pushViewController(courseList, animated: true)
+        
+        let nextViewController = courseList.instantiateViewController(withIdentifier: "CreateCourse") as! CreateCourseViewController
+        self.present(nextViewController, animated:true, completion:nil)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        courseArr = []
+        getFIRDbase()
 
         ref = Database.database().reference()
 
@@ -44,25 +49,22 @@ class CourseListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
-        courseArr = []
-        getFIRDbase()
+        self.navigationController?.isNavigationBarHidden = true
+
+      
      
     }
     
-//     @objc func addCourse(){
-//
-//        let createCourse = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
-//
-//        self.navigationController?.pushViewController(createCourse, animated: true)
-//
-//    }
+
     
     
     func getFIRDbase(){
         
         let aID = Auth.auth().currentUser?.uid
         let query = Database.database().reference().child("Academies").child(aID!).child("courses").queryLimited(toLast: 10)
+
         _ = query.observe(.value, with: {[weak self] snapshot in
+            self?.courseArr = []
 
             if let courseList = snapshot.value as? [String: Any]{
                 print(courseList)
@@ -95,9 +97,7 @@ class CourseListViewController: UIViewController {
                     print(image)
                     let type = info?["courseType"] as? String
                     print(type)
-
-
-                    let courseData = Course(courseName: name!, courseType: type!, courseDate: date!, courseDescription: description!, courseImage: image!, courseInstructor: instructor!, courseOffer: offer!, coursePlace: place!, coursePrice: price!, courseTime: time!, courseAvailablePlace: availablePlace!)
+                    let courseData = Course(courseName:name!, courseType: type!, courseDate: date!, courseDescription: description!, courseImage: image ?? "", courseInstructor: instructor!, courseOffer: offer!, coursePlace: place!, coursePrice: price!, courseTime: time!, courseAvailablePlace: availablePlace!,id:id)
 
                     self?.courseArr.append(courseData)
 
@@ -137,12 +137,14 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      //  let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
+//        let storyboard = UIStoryboard(name: "Course", bundle: nil)
+//        let nextViewController = storyboard.instantiateViewController(withIdentifier: "CourseDetails") as! CourseProfileViewController
+//        self.present(nextViewController, animated:true, completion:nil)
+//        let courseDetails = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CourseDetails")
         
         let courseDetails = UIStoryboard(name: "Course", bundle: nil)
         var selectCourse = courseArr[indexPath.row]
        performSegue(withIdentifier: "toSingleCourse", sender: selectCourse)
-     //  self.navigationController?.pushViewController(courseDetails, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -158,4 +160,6 @@ extension CourseListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
     }
+    @IBAction func toCoursesList(_ unwindSegue: UIStoryboardSegue) {}
+    
 }

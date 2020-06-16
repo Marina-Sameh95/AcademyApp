@@ -19,7 +19,7 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     
-    @IBOutlet weak var DiscountTxt: RoundedTextField!
+    @IBOutlet weak var locationTxt: RoundedTextField!
     @IBOutlet weak var seatTxt: RoundedTextField!
     @IBOutlet weak var eventName: RoundedTextField!
     @IBOutlet weak var coach: RoundedTextField!
@@ -89,7 +89,7 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     
     @IBAction func createAction(_ sender: Any) {
-        if eventName.text! == "" || price.text! == "" || date.text! == "" || time.text! == "" || coach.text! == "" || seatTxt.text! == "" || txtDescription.text == ""
+        if eventName.text! == "" || price.text! == "" || date.text! == "" || time.text! == "" || coach.text! == "" || seatTxt.text! == "" || txtDescription.text == "" || locationTxt.text! == ""
         {
             AlertController.showAlert(inViewController: self, title: "Alert", message: "Please fill out all fields.")
         }
@@ -103,37 +103,8 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     
     //increaseDiscountDiscount
-    @IBAction func increaseDiscount(_ sender: Any) {
-        print(DiscountTxt.text as Any)
-        if (Int(DiscountTxt.text?.dropLast() ?? "0") ?? 0 < 95)
-        {
-        let Currentdisc = (Int(DiscountTxt.text?.dropLast() ?? "0") ?? 0) + 5
-        print(Currentdisc as Any)
-        DiscountTxt.text = String(Currentdisc) + "%"
-            print(DiscountTxt.text as Any )
-        }
-            else
-        {
-                DiscountTxt.text =  "100%"
-                
-            }
-    }
-    //decreaseDiscountDiscount
-    @IBAction func decreaseDiscount(_ sender: Any) {
-        print(DiscountTxt.text as Any)
-        if (Int(DiscountTxt.text?.dropLast() ?? "0") ?? 0 > 5)
-        {
-        let Currentdisc = (Int(DiscountTxt.text?.dropLast() ?? "0") ?? 0) - 5
-        print(Currentdisc as Any)
-        DiscountTxt.text = String(Currentdisc) + "%"
-        print(DiscountTxt.text as Any )
-        }
-        else
-        {
-            DiscountTxt.text =  "0%"
-        }
-    }
-    
+  
+    //decreaseDiscountDiscount    
     //increaseSeats
     @IBAction func increaseSeats(_ sender: Any)
     {
@@ -143,7 +114,6 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
             let currentSeats = (Int(seatTxt.text ?? "0") ?? 0) + 1
             print(currentSeats as Any)
             seatTxt.text = String(currentSeats)
-            print(DiscountTxt.text as Any )
             
 //        }
         
@@ -157,7 +127,6 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
             let currentSeats = (Int(seatTxt.text ?? "0") ?? 0) - 1
             print(currentSeats as Any)
             seatTxt.text = String(currentSeats)
-            print(DiscountTxt.text as Any )
         }
         else
         {
@@ -174,8 +143,6 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        DiscountTxt.text = "5%"
-        DiscountTxt.isEnabled = false
         
         createDatePicker()
         createTimePicker()
@@ -184,7 +151,12 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
 
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
     //upload Event Details To DataBase
     func uploadEvent(){
         
@@ -198,8 +170,8 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         let eventsRoot = academyId.child("Events")
         let eventId = eventsRoot.childByAutoId()
         let eventToUpload = ["name":eventName.text!,"date":date.text!,"time":time.text!,"coach":coach.text!,
-                             "description":txtDescription.text!,"price":price.text!,"availableSeats":seatTxt.text!,
-                             "discount":DiscountTxt.text!,"image":eventImgString] as [String : Any]
+                             "description":txtDescription.text!,"price":price.text!+" LE","availableSeats":seatTxt.text!,
+                             "location":locationTxt.text!,"image":eventImgString] as [String : Any]
         eventId.setValue(eventToUpload)
    // }
     
@@ -220,8 +192,8 @@ extension CreateEvent{
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             print("choose img")
             eventImg.setImage(pickedImage, for: .normal)
-                eventImg.contentMode = .scaleAspectFit
-                eventUIImg = pickedImage
+            eventImg.contentMode = .scaleAspectFit
+            eventUIImg = pickedImage
         }
         
         dismiss(animated: true, completion: nil)

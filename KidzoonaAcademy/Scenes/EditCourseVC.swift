@@ -151,7 +151,8 @@ class EditCourse: UIViewController ,UIImagePickerControllerDelegate ,UINavigatio
 
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
-    
+        self.navigationController?.isNavigationBarHidden = true
+
     }
     
     

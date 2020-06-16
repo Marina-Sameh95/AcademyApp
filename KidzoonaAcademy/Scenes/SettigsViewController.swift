@@ -20,8 +20,10 @@ class SettigsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
         
     }
+    
     @IBAction func goToProfile(_ sender: Any) {
         let storyboard = UIStoryboard(name: "AcademyProfile", bundle: nil)
         let nextViewController = storyboard.instantiateViewController(withIdentifier: "AcademyProfile") as! AcademyProfileViewController

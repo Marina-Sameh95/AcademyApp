@@ -55,13 +55,7 @@ class CourseListViewController: UIViewController {
      
     }
     
-//     @objc func addCourse(){
-//
-//        let createCourse = UIStoryboard(name: "CreateCourse", bundle: nil).instantiateViewController(withIdentifier: "CreateCourse")
-//
-//        self.navigationController?.pushViewController(createCourse, animated: true)
-//
-//    }
+
     
     
     func getFIRDbase(){

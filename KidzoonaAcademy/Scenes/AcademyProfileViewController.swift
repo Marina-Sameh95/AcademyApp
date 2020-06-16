@@ -20,9 +20,7 @@ class AcademyProfileViewController: UIViewController {
     @IBOutlet weak var LocationLbl: UILabel!
     @IBOutlet weak var PhoneLbl: UILabel!
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         retrieveProfileData()
@@ -34,6 +32,13 @@ class AcademyProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
 
@@ -104,17 +109,7 @@ class AcademyProfileViewController: UIViewController {
         
 
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func toAcademyProfile (_ unwindSegue: UIStoryboardSegue){}
 

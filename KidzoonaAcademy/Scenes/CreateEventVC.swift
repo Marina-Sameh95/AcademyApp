@@ -151,7 +151,12 @@ class CreateEvent: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
 
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
     //upload Event Details To DataBase
     func uploadEvent(){
         

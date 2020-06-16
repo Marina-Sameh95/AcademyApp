@@ -82,7 +82,8 @@ self.presentingViewController?.dismiss(animated: true, completion: nil)
     
     override func viewWillAppear(_ animated: Bool) {
         self.parent?.title = ""
-
+        self.navigationController?.isNavigationBarHidden = true
+        
     }
 
 }

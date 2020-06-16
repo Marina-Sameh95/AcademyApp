@@ -36,6 +36,12 @@ class EventProfileViewController: UIViewController  {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
+    
     func displayEvent(){
         descTxt.text = eventObj?.descrption
         pricetxt.text = eventObj?.price ?? "" + " LE"
@@ -68,17 +74,6 @@ class EventProfileViewController: UIViewController  {
     }
     
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
 
     

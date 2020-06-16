@@ -42,6 +42,12 @@ class EditEvent: UIViewController,UIImagePickerControllerDelegate ,UINavigationC
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.parent?.title = ""
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
+    
     func displayEventDetails() {
         print("in display")
         eventImgString = eventObj?.image ?? ""
